@@ -257,7 +257,7 @@
 						<li>
 							<div class="row">
 								<div class="col-sm-6">
-									<img src="images/icons/datascience_ml_icon.png" alt="DataScience_ML_logo"  width="15" height="15" class="rounded"> Data Science  &#38; ML
+									<img src="images/icons/datascience_ml_icon.png" alt="DataScience_ML_logo"  width="15" height="15" class="rounded"> Data Science
 								</div>
 								<div class="col-sm-6">
 									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
@@ -515,230 +515,244 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<ul>
-						<li>
-							<a href="https://drive.google.com/file/d/1bZ6nd9AIeNKrFkgkRLbsXbrJ7rB1eSVv/view?usp=sharing" target="_blank" >	<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1bZ6nd9AIeNKrFkgkRLbsXbrJ7rB1eSVv/view?usp=sharing" target="_blank" >	<img src="images/cert_icons/acm_icpc_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>ACM-ICPC-2018 Certificate</u>
 						</li>
 
-						<li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1XYMO1p31tg-SeVV_GbxcrV7uiwV6DQsb/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/acm_icpc_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>ACM-ICPC-2018 Regionals</u>
 						</li>
 
-						<li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1hscWUy2h8w1CXt6on1EUXnQaHhNV1_3k/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/binplus-icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							BinPlus Developer Certificate
 						</li>
 
-						<li>
-							<a href="https://drive.google.com/file/d/1RxXaqar7887RHhQ8cfDZ3VeuPkz2gqqr/view?usp=sharing" target="_blank" ><img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/></a> 
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1RxXaqar7887RHhQ8cfDZ3VeuPkz2gqqr/view?usp=sharing" target="_blank" ><img src="images/cert_icons/bits_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/></a> 
 							BITS Talent Certificate
 						</li>
-
-						<li>
-							<a href="https://drive.google.com/file/d/1yYmv0DNUGRnHw8D7R1B9jkclriv5Klgp/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>CodersCup Certificate</u>
-						</li>
-
-						<li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1U81Rx549w_VkZsojJOCTwhkTfI4t146-/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/datapure_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>DataPure Python Internship</u>
 						</li>
 
-						<li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1fQlyGyTgqANvOpt38TMA2A0U_EvwI45V/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/datapure_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>DataPure Recommendation</u>
 						</li>
 
-						<li>
-							<a href="https://drive.google.com/file/d/1Ini2uQSYc5SYLhSCZnqTUjqQZheD7hDY/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1yYmv0DNUGRnHw8D7R1B9jkclriv5Klgp/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/cossco_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
-							Disha Adobe Creative
+							<u>CodersCup Certificate</u>
 						</li>
 
-						<li>
+						
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1pSC2S-Inxv7LqmvYiJy4xPqjuqxSWL5e/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/cossco_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>Emerging Junior Certificate</u>
 						</li>
 
-						<li>
-							<a href="https://drive.google.com/file/d/1hKQ29AQuPgOhSb8w3kXQyDSG2ftYKcS_/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1IRdD7i81GKucNXYEY1v9QCW1HsbfzIwZ/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/cossco_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
-							<u>ICT Certification Regionals</u>
+							Synergia Certificate
 						</li>
-						<li>
+						
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1MMa6OnPcbMgXBfZfN9Ns5Mj-COqd03KF/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>Udemy Python</u>
 						</li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/122bblOW7o98vYnYWmnBUT2AXQVw0DjUK/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Udemy Python Flask</u>
+						</li>
+						
 					</ul>
 				</div>
 				<div class="col-sm-4">
 					<ul>
-						<li>
+						
+
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1z54QuBoWfqwPcEtgFDpNkDn9r9QQwHbW/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Udemy Python &amp; Tkinter</u>
+						</li>
+
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1TVC7bhE6c-j3W2hyI8KKMQrqk6WrtRtY/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Udemy Python OOPS</u>
+						</li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1OE68L3VABldgDtTjzvG6Cw0SUbsQb8eh/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/hackerrank_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>Hackerrank Problem Solving 1</u>
 						</li>
 
-						<li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1D2gPItEWfPWQMvrbXKJal76rQH04a9dc/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/hackerrank_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>Hackerrank Problem Solving 2</u>
 						</li>
 
-						<li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/17rkuC4zVATpoFHrKESMqhkZ1TfAf7IEg/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/hackerrank_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>Hackerrank Python Certificate</u>
 						</li>
+						
 
-						<li>
-							<a href="https://drive.google.com/file/d/1BJbX4SliFPYze-2G1zkWE_3wuiPg_WI1/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>Infosys Python Certification</u>
-						</li>
-
-						<li>
-							<a href="https://drive.google.com/file/d/1yY21_oxLDRlyohQfhHOdJixDLDacjkmr/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							NCC C-Label Certificate
-						</li>
-
-						<li>
-							<a href="https://drive.google.com/file/d/1bAcYNi3yJQk4aZIfCFpEzg9H0xGgTJ2C/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>PDA Cyber Security Certificate</u>
-						</li>
-
-						<li>
-							<a href="https://drive.google.com/file/d/1_cQ7gQEJPlE5M_s3c3Kmq9iQjhiC3Tvr/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>Programmr Internship</u>
-						</li>
-						<li>
-							<a href="https://drive.google.com/file/d/1YMopYa5cwHi4ruRIPHkzHCJLC8QBuIaN/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							RPCL Android Certification
-						</li>
-
-						<li>
-							<a href="https://drive.google.com/file/d/1e7bEPZNxiGTKpqtnwtEiDMmnMZi3pBs3/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							RPCL Big Data &amp; Hadoop
-						</li>
-
-						<li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1cERRpjlI_-RsRdGex0kiaERCQ75pM_js/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/codechef_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>Snackdown 2017</u>
 						</li>
-						<li>
-							<a href="https://drive.google.com/file/d/1d2U2OASyMN_mnYLGvfu38uJVXFAhN8Ii/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1OAwbp1kmHSgMpucM4j75oHhgpD6U2Dkd/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/codechef_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
-							<u>Udemy Cloud Security</u>
+							<u>Snackdown 2019</u>
 						</li>
+
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1Ru6Q5FYrvjGUhLIhB8yfxeiJQjxR_XFZ/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/codechef_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Snackdown 2021</u>
+						</li>
+						
+
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1yY21_oxLDRlyohQfhHOdJixDLDacjkmr/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/ncc_icon.png" width="20" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							NCC Level-C Certificate
+						</li>
+
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1bAcYNi3yJQk4aZIfCFpEzg9H0xGgTJ2C/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/AICTE_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>AICTE Cyber Security Certificate</u>
+						</li>
+
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1_cQ7gQEJPlE5M_s3c3Kmq9iQjhiC3Tvr/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/programr_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Programmr Internship</u>
+						</li>
+						
+						
 					</ul>
 				</div>
 				<div class="col-sm-4">
 				
 					<ul>
-						<li>
-							<a href="https://drive.google.com/file/d/1OAwbp1kmHSgMpucM4j75oHhgpD6U2Dkd/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+						
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/15Mz8zoSlYxCqC1qHZIQPCf5k89Ywk749/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
-							<u>Snackdown 2019</u>
+							<u>Udemy CISCO Networks</u>
+						</li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1d2U2OASyMN_mnYLGvfu38uJVXFAhN8Ii/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Udemy Cloud Security</u>
+						</li>
+						
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/169BSTEJNAnHqtCTGJW5diMIHRC9HlN61/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/teqip_icon.png" width="38" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							TEQUIP Machine Learning
+						</li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1BJbX4SliFPYze-2G1zkWE_3wuiPg_WI1/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/infosys_icon.png" width="38" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Infosys Python Certification</u>
+						</li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1YMopYa5cwHi4ruRIPHkzHCJLC8QBuIaN/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/rcpl_icon.png" width="38" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							RCPL Android Certification
 						</li>
 
-						<li>
-							<a href="https://drive.google.com/file/d/1Ru6Q5FYrvjGUhLIhB8yfxeiJQjxR_XFZ/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1e7bEPZNxiGTKpqtnwtEiDMmnMZi3pBs3/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/rcpl_icon.png" width="38" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
-							<u>Snackdown 2021</u>
+							RCPL Big Data &amp; Hadoop
 						</li>
 
-						<li>
-							<a href="https://drive.google.com/file/d/1IRdD7i81GKucNXYEY1v9QCW1HsbfzIwZ/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							Synergia Certificate
-						</li>
-
-						<li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/157J5vDNOTvdml02SKPonSURRtIrzZtoT/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/techgig_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>TechGIG C Programming</u>
 						</li>
 
-						<li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1lXrVQOBbtodXY2Q41sTLEis7icKaYmf-/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/techgig_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>TechGIG Technical Certificate</u>
 						</li>
 
-						<li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1lXrVQOBbtodXY2Q41sTLEis7icKaYmf-/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								<img src="images/cert_icons/techgig_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
 							<u>TechGIG Software Engineer</u>
 						</li>
-
-						<li>
-							<a href="https://drive.google.com/file/d/169BSTEJNAnHqtCTGJW5diMIHRC9HlN61/view?usp=sharing" target="_blank">
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+						
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1Ini2uQSYc5SYLhSCZnqTUjqQZheD7hDY/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/ilfs_icon.png" width="38" height="20" class="rounded" alt="cert_icon"/>
 							</a> 
-							TEQUIP Machine Learning
+							IL&amp;FS Adobe Creative
 						</li>
 
-						<li>
-							<a href="https://drive.google.com/file/d/122bblOW7o98vYnYWmnBUT2AXQVw0DjUK/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1hKQ29AQuPgOhSb8w3kXQyDSG2ftYKcS_/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/ict_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
-							<u>Udemy Python Flask</u>
+							<u>ICT Certification Regionals</u>
 						</li>
 
-						<li>
-							<a href="https://drive.google.com/file/d/1z54QuBoWfqwPcEtgFDpNkDn9r9QQwHbW/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>Udemy Python &amp; Tkinter</u>
-						</li>
-
-						<li>
-							<a href="https://drive.google.com/file/d/1TVC7bhE6c-j3W2hyI8KKMQrqk6WrtRtY/view?usp=sharing" target="_blank" >
-								<img src="images/icons/certificate_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>Udemy Python OOPS</u>
-						</li>
 					</ul>
 				</div>
 		  </div>
