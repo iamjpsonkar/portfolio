@@ -22,6 +22,28 @@
 			  height: 500px;
 			}
 		</style>
+		<script type="text/javascript">
+			function setExp() 
+			{
+				var dateString="2020-10-15";
+				var today = new Date();
+				var joinDate = new Date(dateString);
+				var yxp = today.getFullYear() - joinDate.getFullYear();
+				var mxp = today.getMonth() - joinDate.getMonth();
+				if (mxp < 0 || (mxp === 0 && today.getDate() < joinDate.getDate())) 
+				{
+					yxp--;
+					mxp=mxp*-1;
+				}
+				//alert(age);
+				//alert(m);
+				//return [age,m];
+				document.getElementById("eYear").innerHTML = yxp;
+				document.getElementById("eMonth").innerHTML = mxp;
+				document.getElementById("pYear").innerHTML = yxp+2;
+			}
+			window.onload = setExp;
+        </script>
   	</head>
 	<body class="bg-light" style="padding-left: 30px;padding-right: 60px;1">
 		<hr/>
@@ -77,7 +99,7 @@
 		<hr/>
 		<div class="container-fluid">
 			<h3>Summary</h3>
-			<p class="text-justify" style="padding-left: 10px;">My name is Jay Prakash Sonkar, working as a System Engineer in Tata Consultancy Services having 1+ years of experience in solving TRs, uplifting various components, and adding new features to the product. I have 4+ years of Personnel Experience in python application development, and in Competitive Programming. 
+			<p class="text-justify" style="padding-left: 10px;">My name is Jay Prakash Sonkar, working as a System Engineer in Tata Consultancy Services having <span id="eYear">1</span> year and <span id="eMonth">7</span> months of experience in solving TRs, uplifting various components, and adding new features to the product. I have <span id="pYear">3</span>+ years of Personnel Experience in python application development, and in Competitive Programming. 
 			</p>
 			<ul>
 				<li>30+ repositories on Github</li>
