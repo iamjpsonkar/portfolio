@@ -36,84 +36,452 @@
 			background: radial-gradient(circle, rgba(238,174,302,1) 0%, rgba(148,187,233,1) 100%);
 		}
 	</style>
+	<script type="text/javascript">
+			function setExp() 
+			{
+				var dateString="2020-10-15";
+				var today = new Date();
+				var joinDate = new Date(dateString);
+				var yxp = today.getFullYear() - joinDate.getFullYear();
+				var mxp = today.getMonth() - joinDate.getMonth();
+				if (mxp < 0) 
+				{
+					yxp--;
+					mxp=12+mxp;
+				}
+				document.getElementById("eYear").innerHTML = yxp;
+				document.getElementById("eMonth").innerHTML = mxp;
+				document.getElementById("pYear").innerHTML = yxp+2;
+			}
+			window.onload = setExp;
+        </script>
 </head>
 <body>
-	<hr/>
+	<br/>
 	<div class="container-fluid">
-		<div style="margin-left: 100px;margin-right: 50px;">
-			<div class="row" style="color:black;">
-				<div style="margin-right:10px;">
-					<h2>Jay Prakash Sonkar</h2>
-					<h5>Python Developer</h5>
-					<h5>System Engineer, TCS Mumbai</h5>
+		<div class="row" style="color:black;">
+			<div class="col-sm-2 align-content-center">
+				<a href="https://iamjpsonkar.github.io/portfolio/" >
+					<img src="../images/icons/myself_icon.png" alt="myself.png"    width="180" height="180" class="img-fluid align-middle" style="padding-left: 30px;"/>
+				</a>
+			</div>
+			<div class="col-sm-4">
+				<h2>Jay Prakash Sonkar</h2>
+				<h5>Python Developer</h5>
+				<h5>System Engineer (Digital)</h5>
+				<h5>TCS Mumbai</h5>
+			</div>
+			<div class="col-sm-3">
+				<span class="text-dark"><img src="../images/icons/phone_icon.png" height="30px" width="30px" alt="Phone">+91-8004023840</span>
+				<br/>
+				<a target="_blank" href="mailto:iamjpsonkar@gmail.com">
+					<img src="../images/icons/gmail_icon.png" height="30px" width="30px" alt="Gmail">
+				</a>
+				<span class="text-dark">iamjpsonkar@gmail.com</span>
+				<br/>
+				<a target="_blank" href="https://www.linkedin.com/in/iamjpsonkar/">
+					<img src="../images/icons/linkedin_icon.png" height="30px" width="30px" alt="linkedin">
+				</a>
+				<span class="text-dark">LinkedIn : iamjpsonkar</span>
+				<br/>
+				<a target="_blank" href="https://github.com/iamjpsonkar">
+					<img src="../images/icons/github_icon.png" height="30px" width="30px" alt="Github">
+				</a>
+				<span class="text-dark">Github : iamjpsonkar</span>
+				<br/>
+				<a href="https://iamjpsonkar.github.io/portfolio/" target="_blank">
+					<img src="../images/icons/web_icon.png" height="30px" width="30px" alt="portfoling_icon">
+				</a>
+				<span class="text-dark">Portfolio : Github</span>
+			</div>
+            <div class="col-sm-3">
+				<a target="_blank" href="https://www.hackerrank.com/iamjpsonkar" >
+					  <img src="../images/icons/hackerrank_icon.png" height="30px" width="30px" alt="Hackerrank_logo">
+				</a>
+				<span class="text-dark"> Hackerrank: iamjpsonkar </span>
+                <br/>
+                <a target="_blank" href="https://www.codechef.com/users/iamjpsonkar" >
+                    <img src="../images/icons/codechef_icon.png" height="30px" width="30px" alt="Codechef_logo">
+                </a>
+                <span class="text-dark"> Codechef : iamjpsonkar</span>
+                <br/>
+                <a target="_blank" href="https://www.techgig.com/iamjpsonkar">
+                    <img src="../images/icons/techgig_icon.png" height="30px" width="30px" alt="Techgig_logo">
+                </a>
+                <span class="text-dark">&nbsp;Techgig : iamjpsonkar</span>
+                <br/>
+                <a target="_blank" href="https://www.hackerearth.com/@iamjpsonkar" >
+                    <img src="../images/icons/hackerearth_icon.png" height="30px" width="30px" alt="Hackerearth_logo">
+                </a>
+                <span class="text-dark" >&nbsp;Hackerearth : iamjpsonkar</span>
+                <br/>
+                <a target="_blank" href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile" >
+                    <img src="../images/icons/geeksforgeeks_icon.png" height="30px" width="30px" alt="Geegksforgeeks_logo">
+                </a>
+                <span class="text-dark" >&nbsp;GeeksForGeeks : iamjpsonkar</span>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+        <h4>Summary</h4>
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="text-justify" style="padding-left: 10px;">
+                    My name is Jay Prakash Sonkar, working as a System Engineer in <strong>Tata Consultancy Services</strong> having <strong><span id="eYear">1</span> Year and <span id="eMonth">5+</span> Months</strong> of experience with the <strong>Ericsson Media Plane Project</strong>. My day-to-day responsibilities include solving TRs, uplifting various components, and adding new features to the product. I have <span id="pYear">3</span>+ years of Personal Experience in Python Application Development, and also in Competitive Programming.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <ul>
+                    <li>40+ Technical Courses <strong>(TCS)</strong></li>
+                    <li>5+ Awards &amp; 6+ Certification <strong>(TCS)</strong></li>
+                    <li>4.5+ Rating <strong>(2 times in TCS)</strong></li>
+                    <li>70+ Repositories <strong>(Github)</strong></li>
+                    <li>250+ Problem Solved <strong>(GeeksForGeeks)</strong></li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <ul>
+                    <li>Regionals Qualified <strong>(ACM-ICPC 2018)</strong></li>
+                    <li>Semi Finalist <strong>(Techgig Codegladiator)</strong></li>
+                    <li>6 Star in Problem-Solving <strong>(Hackerrank)</strong></li>
+                    <li>1300+ Student Doubts Solved <strong>(Chegg)</strong></li>
+                    <li>200+ Problem Solved <strong>(Codechef)</strong></li>
+                </ul>
+            </div>
+        </div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6">
+				<h4>Work Experience</h4>
+				<div style="margin-left:20px;">
+                    ◙ System Engineer (Digital) at <strong>Tata Consultancy Services <img src="../images/icons/tcs_icon.png" alt="TCS_Logo" width="28" height="28" class="rounded" /></strong>
+                    <br/>
+                    Oct-2020 to Present <strong>[Ericsson Media Plane Project]</strong>
+                    <br/>
+                    <span style="margin-left:20px;">◽ Uplifting in Yocto (Bitbake Build System), Developing Features</span>
+                    <br/>
+                    <span style="margin-left:20px;">◽ add-on utilities for product</span>
+                    <br/>
+                    <span style="margin-left:20px;">◽ TTCN and Robot Framework, Unit Testing &#38; Functional Testing</span>
+                    <br/>
+                    ◙ Chegg Expert at <strong>Chegg India <img src="../images/icons/chegg_icon.png" alt="Chegg_Logo" width="28" height="28" class="rounded" /></strong> 
+                    <br/>
+                    Oct-2019 to Dec-2020
+                    <br/>
+                    <span style="margin-left:20px;">◽ Solved 1300+ Doubts Asked by students on the Chegg Portal </span>
+                    <br/>
+                    ◙ Python Developer at <strong>Data Pure, Indore <img src="../images/icons/datapure_icon.png" alt="Chegg_Logo" width="28" height="28" class="rounded" /></strong>
+                    <br/>
+                    May-2019 to June-2019
+                    <br/>
+                    <span style="margin-left:20px;">◽ Developing Desktop Application and Linkedin Web Scrapper</span>
+                    <br/>
+                    ◙ Python Developer at <strong> Programmr.com <img src="../images/icons/programr_icon.png" alt="Programmr_Logo" width="28" height="28" class="rounded"/></strong>
+                    <br/>
+                    May-2019 to June-2019
+                    <br/>
+                    <span style="margin-left:20px;">◽ Creating Interview Problems &amp; their Solutions </span>
 				</div>
-				<div class="align-content-center" style="margin:10px 30px 10px 10px;">
-					<a href="https://iamjpsonkar.github.io/portfolio/" >
-						<img src="../images/icons/myself_icon.png" alt="myself.png"    width="150" height="150" class="img-fluid align-middle" style="padding-left: 30px;"/>
-					</a>
-				</div>
-				<div style="margin-right:10px;">
-					<span class="text-dark"><img src="../images/icons/phone_icon.png" height="30px" width="30px" alt="Phone">+91-8004023840</span>
-					<br/>
-					<a target="_blank" href="mailto:iamjpsonkar@gmail.com">
-						<img src="../images/icons/gmail_icon.png" height="30px" width="30px" alt="Gmail">
-					</a><span class="text-dark">iamjpsonkar@gmail.com</span>
-					<br/>
-					<a target="_blank" href="https://www.linkedin.com/in/iamjpsonkar/">
-						<img src="../images/icons/linkedin_icon.png" height="30px" width="30px" alt="linkedin">
-					</a><span class="text-dark">LinkedIn : iamjpsonkar</span>
-					<br/>
-					<a target="_blank" href="https://github.com/iamjpsonkar">
-						<img src="../images/icons/github_icon.png" height="30px" width="30px" alt="Github">
-					</a><span class="text-dark">Github : iamjpsonkar</span>
-					<br/>
-					<a href="https://iamjpsonkar.github.io/portfolio/" target="_blank">
-						<img src="../images/icons/web_icon.png" height="30px" width="30px" alt="portfoling_icon">
-					</a><span class="text-dark">Portfolio : Github</span>
-				</div>
-				<div style="margin-right:10px;">
-					
-						<a target="_blank" href="https://www.hackerrank.com/iamjpsonkar" >
-							<img src="../images/icons/hackerrank_icon.png" height="30px" width="30px" alt="Hackerrank_logo">
-						</a><span class="text-dark"> Hackerrank: iamjpsonkar </span>
-						<br/>
-						<a target="_blank" href="https://www.codechef.com/users/iamjpsonkar" >
-							<img src="../images/icons/codechef_icon.png" height="30px" width="30px" alt="Codechef_logo">
-						</a><span class="text-dark"> Codechef : iamjpsonkar</span>
-						<br/>
-						<a target="_blank" href="https://www.techgig.com/iamjpsonkar">
-							<img src="../images/icons/techgig_icon.png" height="30px" width="30px" alt="Techgig_logo">
-						</a><span class="text-dark">&nbsp;Techgig : iamjpsonkar</span>
-						<br/>
-						<a target="_blank" href="https://www.hackerearth.com/@iamjpsonkar" >
-							<img src="../images/icons/hackerearth_icon.png" height="30px" width="30px" alt="Hackerearth_logo">
-						</a><span class="text-dark" >&nbsp;Hackerearth : iamjpsonkar</span>
-						<br/>
-						<a target="_blank" href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile" >
-							<img src="../images/icons/geeksforgeeks_icon.png" height="30px" width="30px" alt="Geegksforgeeks_logo">
-						</a><span class="text-dark" >&nbsp;GeeksForGeeks : iamjpsonkar</span>
+			</div>
+			<div class="col-sm-6">
+				<h4>Education &amp; Qualifications</h4>
+				<div style="margin-left:20px;">
+					<div>
+						<strong>Bachelor Of Technology</strong> 
+                        <br/> 
+                        Computer Science &#38; Engineering
+                        <br/>
+                        <img src="../images/icons/BIET_icon.png" alt="BIET_Logo" width="28" height="28" class="rounded" /> BIET Jhansi 
+                        <br/>
+                        2016 to 2020
+                        <br/>
+                        71.94%
+					</div>
+					<div>
+						<strong>Intermediate(12th)</strong> 
+                        <br/> 
+                        PCM &#38; Computer Science
+                        <br/>
+                        <img src="../images/icons/JNV_icon.png" alt="JNV_Logo" width="28" height="28" class="rounded" /> JNV Faizabad
+                        <br/>
+                        2014 to 2015
+                        <br/>
+                        81.60%
+					</div>
+					<div>
+						<strong>Matriculation(10th)</strong> 
+                        <br/>
+                        <img src="../images/icons/JNV_icon.png" alt="JNV_Logo" width="28" height="28" class="rounded" /> JNV Faizabad
+                        <br/>
+                        2012 to 2013
+                        <br/>
+                        8.6 CGPA (81.70%)
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<hr/>
-	<br/>
 	<div class="container-fluid">
-		<div style="margin-left: 100px;margin-right: 50px;">
-			<p class="text-justify">I am Jay Prakash Sonkar, working as a System Engineer in Tata Consultancy Services having 1+ years of experience in solving TRs, uplifting various components, and adding new features to the product. I have 4+ years of experience in python application development, also I am very good in Competitive Programming. I have more than 25 repositories on github.</p>
-			
-			
-			
+			<h4>Technical Skills</h4>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="../images/icons/python_icon.png" alt="Python_logo"  width="15" height="15" class="rounded"> Python
+								</div>
+								<div class="col-sm-6">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="../images/icons/flask_icon.png" alt="Flask_logo"  width="15" height="15" class="rounded"> Flask Framework
+								</div>
+								<div class="col-sm-6">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="../images/icons/tkinter_icon.png" alt="Tkinter_logo"  width="15" height="15" class="rounded"> Tkinter
+								</div>
+								<div class="col-sm-6">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="../images/icons/datascience_ml_icon.png" alt="DataScience_ML_logo"  width="15" height="15" class="rounded"> Data Science
+								</div>
+								<div class="col-sm-6">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="../images/icons/github_icon.png" alt="Github_logo"  width="15" height="15" class="rounded"> Git &#38; GitHUB
+								</div>
+								<div class="col-sm-6">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<ul>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="../images/icons/c_icon.png" alt="C_logo"  width="15" height="15" class="rounded"> C Programming
+								</div>
+								<div class="col-sm-6">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="../images/icons/cpp_icon.png" alt="C++_logo"  width="15" height="15" class="rounded"> C++
+								</div>
+								<div class="col-sm-6">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="../images/icons/java_icon.png" alt="Java_logo"  width="15" height="15" class="rounded"> Java
+								</div>
+								<div class="col-sm-6">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="../images/icons/web_d_icon.png" alt="Web_D_logo"  width="15" height="15" class="rounded"> HTML &#38; CSS &#38; Javascript
+								</div>
+								<div class="col-sm-6">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="../images/icons/yocto_icon.png" alt="Yocto_logo"  width="15" height="15" class="rounded"> Yocto (Bitbake)
+								</div>
+								<div class="col-sm-6">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-	</div>
-	
-	
-	
 	<div class="container-fluid">
-		<div style="margin-left: 100px;">
-			
-			
-			
+		<div class="row">
+			<div class="col-sm-6">
+				<h4>Area Of Interest</h4>
+				<ul>
+					<li>Desktop Application Development</li>
+					<li>Full Stack Development</li>
+					<li>Data Science &#38; Machine Learning</li>
+					<li>Competitive Programming</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<h4>Hobbies</h4>
+				<ul>
+					<li>Coding</li>
+					<li>Playing Chess</li>
+					<li>Listening To Music</li>
+					<li>Watching Movies</li>
+				</ul>
+			</div>
+        </div>
+	</div>
+	<div class="container-fluid">
+		<h4>Technical Projects [ Personal ]</h4>
+		<div class="row">
+			<div class="col-sm-6">
+				<ul>
+					<li>
+						<a target="_blank" href="http://iamjpsonkar.pythonanywhere.com/" class="text-dark">
+							<strong>JaySoft : JS Code [ 2021 ]</strong>
+							<img src="../images/icons/JS_Code_icon.png" alt="JS_Code_logo"  width="60" height="40" class="rounded"/>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://imsoftkid.pythonanywhere.com/" class="text-dark">
+							<strong>JaySoft : BIET Coders [ 2020 ]</strong>
+							<img src="../images/icons/bietcoder_icon.png" alt="BIETCoders_logo"  width="40" height="40" class="rounded"/>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://github.com/iamjpsonkar/IASTool" class="text-dark">
+							<strong>JaySoft : IAST App [ 2019 ]</strong>
+							<img src="../images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+                        </a>
+					</li>
+					<li>
+						<a target="_blank" href="https://github.com/iamjpsonkar/JaySoft-Paint" class="text-dark">
+							<strong>JaySoft : JS Paint [ 2019 ]</strong>
+							<img src="../images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://github.com/iamjpsonkar/JaySoft-ImageViewer" class="text-dark">
+							<strong>JaySoft : Image View [ 2019 ]</strong>
+							<img src="../images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://github.com/iamjpsonkar/Youtube_trending" class="text-dark">
+							<strong>JaySoft : YouTube Trend [2019 ]</strong>
+							<img src="../images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<ul>
+					<li>
+						<a target="_blank" href="https://github.com/iamjpsonkar/Know-The-Tweets" class="text-dark">
+							<strong>JaySoft : Know Your Tweets [ 2019 ]</strong>
+							<img src="../images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://github.com/iamjpsonkar/JSText"  class="text-dark">
+							<strong>JaySoft : JS Text [ 2018 ]</strong>
+							<img src="../images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://github.com/iamjpsonkar/JaySoftDictionary" class="text-dark">
+							<strong>JaySoft : Dictionary [ 2018 ]</strong>
+							<img src="../images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://github.com/iamjpsonkar/H2E-translator" class="text-dark">
+							<strong>JaySoft : H2E Translator [ 2018 ]</strong>
+							<img src="../images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://github.com/iamjpsonkar/MusicPlayer" class="text-dark">
+							<strong>JaySoft : Music Player [ 2018 ]</strong>
+							<img src="../images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+						</a>
+					</li>
+					<li>
+						<a href="https://drive.google.com/file/d/1hKQ29AQuPgOhSb8w3kXQyDSG2ftYKcS_/view?usp=sharing" target="_blank"  class="text-dark" >
+							<strong>JaySoft : GDMA [ 2014 ]</strong>
+							<img src="../images/icons/ict_icon.png" alt="ict_logo"  width="40" height="40" class="rounded"/>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </body>
