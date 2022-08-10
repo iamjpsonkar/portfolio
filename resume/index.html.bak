@@ -75,9 +75,9 @@
         </script>
 </head>
 <body>
-	<hr/>
+	<br/>
 	<div class="container-fluid">
-		<div class="row" style="color:black;">
+		<div class="row" style="color:black;border-top: 1px solid #D3D3D3;border-bottom: 1px solid #D3D3D3;">
 			<div class="col-sm-2 align-content-center">
 				<a href="https://iamjpsonkar.github.io/portfolio/resume" >
 					<img src="../images/icons/myself_icon.png" alt="myself.png"    width="180" height="180" class="img-fluid align-middle" style="padding-left: 2.5em;"/>
@@ -140,8 +140,7 @@
 			</div>
 		</div>
 	</div>
-	<hr/>
-	<div class="container-fluid">
+	<div class="container-fluid" style="border-bottom: 1px solid #D3D3D3;">
         <h4>Summary</h4>
         <div class="row">
             <div class="col-sm-12">
@@ -180,21 +179,22 @@
         </div>
 	</div>
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-5">
+		<div class="row"   style="border-bottom: 1px solid #D3D3D3;">
+			<div class="col-sm-4" style="border-right: 1px solid #D3D3D3;">
 				<h4>Work Experience</h4>
 				<div>
 					<div name="tcs">
-						<img src="../images/icons/tcs_icon.png" alt="TCS_Logo" width="35" height="35" class="rounded" />System Engineer(Digital) at <strong>Tata Consultancy Services </strong>
+						<img src="../images/icons/tcs_icon.png" alt="TCS_Logo" width="35" height="35" class="rounded" />
+						<strong>Tata Consultancy Services</strong> <i>2020 to Present</i>
 						<br/>
-						<span  style="margin-left:0.5em;">Oct-2020 to Present <strong>[Ericsson Media Plane Project]</strong></span>
+						<span  style="margin-left:2em;"><strong>System Engineer(Digital)</strong><br>
+						<strong  style="margin-left:2em;">[Ericsson Media Plane Project]</strong></span>
 						<br/>
-						<span style="margin-left:1em;">◽ Feature Development/Bitbake Uplift</span>
+						<span style="margin-left:2.5em;">◽ Feature Development/Bitbake Uplift</span>
 						<br/>
-						<span style="margin-left:1em;">◽ Create/Maintain Python Utilities</span>
-						<br/>
-						<span style="margin-left:1em;">◽ Functional Testing</span>
+						<span style="margin-left:2.5em;">◽ Create/Maintain Python Utilities</span>
 					</div>
+				<h4>Internships &amp; Part Time Jobs</h4>
 					<div name="chegg">
 						<img src="../images/icons/chegg_icon.png" alt="Chegg_Logo" width="38" height="38" class="rounded" /> Chegg Expert at <strong>Chegg India</strong> 
 						<br/>
@@ -204,21 +204,13 @@
                     </div>
 					<div name="datapure">
 						<img src="../images/icons/datapure_icon.png" alt="Chegg_Logo" width="28" height="28" class="rounded" /> Python Developer at <strong>Data Pure, Indore </strong>
-						<br/>
-						<span  style="margin-left:0.5em;">May-2019 to June-2019 <strong> [Internship]</strong></span>
-						<br/>
-						<span style="margin-left:1em;">◽ Developed Desktop Application and Web Scrappers</span>
                     </div>
 					<div name="programmr">
 						<img src="../images/icons/programr_icon.png" alt="Programmr_Logo" width="28" height="28" class="rounded"/> Python Developer at <strong> Programmr</strong>
-						<br/>
-						<span  style="margin-left:0.5em;">May-2019 to June-2019  <strong>[Internship]</strong></span>
-						<br/>
-						<span style="margin-left:1em;">◽ Creating Interview Problems &amp; their Solutions </span>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4"   style="border-right: 1px solid #D3D3D3;">
 				<h4>Education &amp; Qualifications</h4>
 				<div style="margin-left:2em;">
 					<div>
@@ -247,6 +239,56 @@
                         8.6 CGPA (81.70%)
 					</div>
 				</div>
+			</div>		
+			<div class="col-sm-4">
+				<div name="udemy">
+						<h4>Udemy Certificate</h4>
+						<ul>
+							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
+								<a href="https://drive.google.com/file/d/1MMa6OnPcbMgXBfZfN9Ns5Mj-COqd03KF/view?usp=sharing" target="_blank" >
+									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/> 
+									<strong>Python Advance</strong>
+								</a>
+							</li>
+							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
+								<a href="https://drive.google.com/file/d/1z54QuBoWfqwPcEtgFDpNkDn9r9QQwHbW/view?usp=sharing" target="_blank" >
+									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/> 
+									<strong>Python Tkinter</strong>
+								</a>
+							</li>
+							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
+								<a href="https://drive.google.com/file/d/1TVC7bhE6c-j3W2hyI8KKMQrqk6WrtRtY/view?usp=sharing" target="_blank" >
+									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+									<strong>Python OOPS</strong>
+								</a>
+							</li>
+							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
+								<a href="https://drive.google.com/file/d/122bblOW7o98vYnYWmnBUT2AXQVw0DjUK/view?usp=sharing" target="_blank" >
+									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+									<strong>Python Flask</strong>
+								</a>
+							</li>
+							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
+								<a href="https://drive.google.com/file/d/1qOHGYS2rGD2XqAmnM2NMSu2M2kNVY9xK/view?usp=sharing" target="_blank" >
+									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+									<strong>Python Django</strong>
+								</a>
+							</li>
+							
+							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
+								<a href="https://drive.google.com/file/d/15Mz8zoSlYxCqC1qHZIQPCf5k89Ywk749/view?usp=sharing" target="_blank" >
+									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+									<strong>CISCO Networks</strong>
+								</a>
+							</li>
+							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
+								<a href="https://drive.google.com/file/d/1d2U2OASyMN_mnYLGvfu38uJVXFAhN8Ii/view?usp=sharing" target="_blank" >
+									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+									<strong>Cloud Security</strong>
+								</a> 
+							</li>
+						</ul>
+					</div>
 				<div name="Intrests">
 					<h4>Area Of Interest</h4>
 					<ul>
@@ -255,66 +297,12 @@
 						<li>Desktop Application Developent</li>
 					</ul>
 				</div>
-			</div>		
-			<div class="col-sm-3">
-				<div name="udemy">
-						<h4>Udemy Certificate</h4>
-						<ul>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/1MMa6OnPcbMgXBfZfN9Ns5Mj-COqd03KF/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/> 
-									<strong>Udemy Python Certificate</strong>
-								</a>
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/122bblOW7o98vYnYWmnBUT2AXQVw0DjUK/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-									<strong>Udemy Python Flask</strong>
-								</a>
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/15Mz8zoSlYxCqC1qHZIQPCf5k89Ywk749/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-									<strong>Udemy CISCO Networks</strong>
-								</a>
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/1d2U2OASyMN_mnYLGvfu38uJVXFAhN8Ii/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-									<strong>Udemy Cloud Security</strong>
-								</a> 
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/1z54QuBoWfqwPcEtgFDpNkDn9r9QQwHbW/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/> 
-									<strong>Udemy Python &amp; Tkinter</strong>
-								</a>
-							</li>
-
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/1TVC7bhE6c-j3W2hyI8KKMQrqk6WrtRtY/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-									<strong>Udemy Python OOPS</strong>
-								</a>
-							</li>
-						</ul>
-					</div>
-				<div name="hobbies">
-					<h4>Hobbies</h4>
-					<ul>
-						<li>Coding</li>
-						<li>Playing Chess</li>
-						<li>Listening To Music</li>
-						<li>Watching Movies</li>
-					</ul>
-				</div>
 			</div>
 		</div>
 	</div>
-	<hr/>
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-4" style="border-right: 1px light gray;">
+		<div class="row"   style="border-bottom: 1px solid #D3D3D3;">
+			<div class="col-sm-4" style="border-right: 1px solid #D3D3D3;">
                 <div name="technical">
                     <h4>Technical Skills</h4>
                     <ul>
@@ -341,6 +329,20 @@
                                     <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
                                     <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
                                     <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                                </div>
+                            </div>
+                        </li>
+						<li>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img src="../images/icons/django_icon.png" alt="Django_logo"  width="15" height="15" class="rounded"> Django
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
                                     <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
                                     <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
                                 </div>
@@ -476,6 +478,20 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <img src="../images/icons/database_icon.png" alt="DB_logo"  width="15" height="15" class="rounded"> DB &amp; SQL
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                                </div>
+                            </div>
+                        </li>
+						<li>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img src="../images/icons/linux_icon.png" alt="Linux_logo"  width="15" height="15" class="rounded"> Linux
                                 </div>
                                 <div class="col-sm-6">
                                     <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
@@ -661,10 +677,41 @@
                     </div>
                 </div>
 			</div>
-			<div class="col-sm-8">
+			<div class="col-sm-8" style="text-align: justify;">
 				<div class="row">
-					<h4 style="margin-left:0.5em;">Techincal Projects [Personal]</h4>
+					<h4 style="margin-left:0.5em;">Techincal Projects</h4>
 					<ul>
+						<li style="margin-bottom:0.2em;">
+							<div name="EMP_proj">
+								<span class="text-primary">
+									<strong>Ericsson Media Plane Project [Current TCS Project]</strong>
+									<img src="../images/icons/ericsson_icon.png" alt="Ericsson_logo"  width="100" height="50" class="rounded"/>
+								</span>
+								<br/>
+								Developing Features, Creating utilites ,Solving TRs , Functional &amp; Unit testing
+								<br/>
+								My utility contribution in Ericsson:
+								<div class="row">
+									<div class="col-sm-4">
+										<strong>◽ JaySoft-LogViewer</strong>
+									</div>
+									<div class="col-sm-4">
+										<strong>◽ JaySoft-TTCNRunner</strong>
+									</div>
+									<div class="col-sm-4">
+										<strong>◽ JaySoft-RobotRunner</strong>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<strong>◽ JaySoft-WM_Grepper</strong>
+									</div>
+									<div class="col-sm-4">
+										<strong>◽ JaySoft-BB_Downloader</strong>
+									</div>
+								</div>
+							</div>
+						</li>
 						<li style="margin-bottom:0.2em;">
 							<div name="JS_Code">
 								<a target="_blank" href="http://iamjpsonkar.pythonanywhere.com/" >

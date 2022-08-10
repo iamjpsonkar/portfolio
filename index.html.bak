@@ -22,71 +22,131 @@
 			  height: 500px;
 			}
 		</style>
+		<script type="text/javascript">
+			function setExp() 
+			{
+				var dateString="2020-10-15";
+				var today = new Date();
+				var joinDate = new Date(dateString);
+				var yxp = today.getFullYear() - joinDate.getFullYear();
+				var mxp = today.getMonth() - joinDate.getMonth();
+				if (mxp < 0) 
+				{
+					yxp--;
+					mxp=12+mxp;
+				}
+				document.getElementById("eYear").innerHTML = yxp;
+				document.getElementById("eMonth").innerHTML = mxp;
+				document.getElementById("pYear").innerHTML = yxp+2;
+			}
+			window.onload = setExp;
+        </script>
   	</head>
-	<body class="bg-light" style="padding-left: 30px;padding-right: 60px;1">
+	<body class="bg-light" style="padding-left: 30px;padding-right: 60px;">
 		<hr/>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-3 align-content-center">
+		<div class="container-fluid" style="margin-top: 0.5em;">
+			<div class="row" style="color:black;">
+				<div class="col-sm-2 align-content-center">
 					<a href="https://iamjpsonkar.github.io/portfolio/" >
-						<img src="images/icons/myself_icon.png" alt="myself.png"    width="150" height="150" class="img-fluid align-middle" style="padding-left: 20px;"/>
+						<img src="images/icons/myself_icon.png" alt="myself.png"    width="180" height="180" class="img-fluid align-middle" style="padding-left: 2.5em;"/>
 					</a>
 				</div>
-				<div class="col-sm-5 align-content-start">
-				     <h2 class="text-info"><strong>Jay Prakash Sonkar</strong></h2>
-					 <h5 class="text-info">System Engineer (Digital)<br/> Tata Consultancy Services, Mumbai<br/>Python Developer</h5>
+				<div class="col-sm-4">
+					<h2>Jay Prakash Sonkar<a target="_blank" href="https://iamjpsonkar.github.io/portfolio/resume/" ><img src="images/icons/resume_icon.png" alt="(Resume)" width="30" height="30"></a></h2>
+					<h5>Python Developer</h5>
+					<h5>System Engineer (Digital)</h5>
+					<h5>Tata Consultancy Services</h5>
 				</div>
-				<div class="col-sm-4 align-content-start">
-					<p style="padding-top: 5px;">
-						<strong style="padding-left:52px;">
-							+91-8004023840
-						</strong>
-						<br/>
-						<a style="margin-left: 10px;" target="_blank" href="mailto:iamjpsonkar@gmail.com">
-							<img src="images/icons/gmail_icon.png" alt="Gmail">
-						</a>
-						<a target="_blank" href="https://www.linkedin.com/in/iamjpsonkar/">
-							<img src="images/icons/linkedin_icon.png" alt="LinkedIn">
-						</a>
-						<a target="_blank" href="https://github.com/iamjpsonkar">
-							<img src="images/icons/github_icon.png" alt="GitHub">
-						</a>
-						<a href="https://iamjpsonkar.github.io/portfolio/" target="_blank">
-						<img src="images/icons/web_icon.png" alt="portfoling_icon">
-						</a>
-						<br/>
-						<a style="margin-right: 5px;margin-left: 8px;" target="_blank" href="https://www.hackerrank.com/iamjpsonkar" >
-							<img src="images/icons/hackerrank_icon.png" height="30px" width="30px" alt="Hackerrank_logo">
-						</a>
-						<a style="margin-right: 5px;margin-left: 5px;" target="_blank" href="https://www.codechef.com/users/iamjpsonkar" >
-							<img src="images/icons/codechef_icon.png" height="30px" width="30px" alt="Codechef_logo">
-						</a>
-						<a style="margin-right: 5px;margin-left: 5px;" target="_blank" href="https://www.techgig.com/iamjpsonkar">
-							<img src="images/icons/techgig_icon.png" height="30px" width="30px" alt="Techgig_logo">
-						</a>
-						<a style="margin-right: 5px;margin-left: 5px;" target="_blank" href="https://www.hackerearth.com/@iamjpsonkar" >
-							<img src="images/icons/hackerearth_icon.png" height="30px" width="30px" alt="Hackerearth_logo">
-						</a>
-						<a style="margin-right: 5px;margin-left: 5px;" target="_blank" href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile" >
-							<img src="images/icons/geeksforgeeks_icon.png" height="30px" width="30px" alt="Geegksforgeeks_logo">
-						</a>
-					</p>
+				<div class="col-sm-3">
+					<span class="text-dark"><img src="images/icons/phone_icon.png" height="25" width="25" alt="Phone">+91-8004023840</span>
+					<br/>
+					<a target="_blank" href="mailto:iamjpsonkar@gmail.com">
+						<img src="images/icons/gmail_icon.png" height="25" width="25" alt="Gmail">
+					</a>
+					<span class="text-dark">iamjpsonkar@gmail.com</span>
+					<br/>
+					<a target="_blank" href="https://www.linkedin.com/in/iamjpsonkar/">
+						<img src="images/icons/linkedin_icon.png" height="25" width="25" alt="linkedin">
+					</a>
+					<span class="text-dark">LinkedIn : iamjpsonkar</span>
+					<br/>
+					<a target="_blank" href="https://github.com/iamjpsonkar">
+						<img src="images/icons/github_icon.png" height="25" width="25" alt="Github">
+					</a>
+					<span class="text-dark">Github : iamjpsonkar</span>
+					<br/>
+					<a href="https://iamjpsonkar.github.io/portfolio/" target="_blank">
+						<img src="images/icons/web_icon.png" height="25" width="25" alt="portfoling_icon">
+					</a>
+					<span class="text-dark">Portfolio : Github</span>
+				</div>
+				<div class="col-sm-3">
+					<a target="_blank" href="https://www.hackerrank.com/iamjpsonkar" >
+						  <img src="images/icons/hackerrank_icon.png" height="25" width="25" alt="Hackerrank_logo">
+					</a>
+					<span class="text-dark"> Hackerrank: iamjpsonkar </span>
+					<br/>
+					<a target="_blank" href="https://www.codechef.com/users/iamjpsonkar" >
+						<img src="images/icons/codechef_icon.png" height="25" width="25" alt="Codechef_logo">
+					</a>
+					<span class="text-dark"> Codechef : iamjpsonkar</span>
+					<br/>
+					<a target="_blank" href="https://www.techgig.com/iamjpsonkar">
+						<img src="images/icons/techgig_icon.png" height="25" width="25" alt="Techgig_logo">
+					</a>
+					<span class="text-dark">&nbsp;Techgig : iamjpsonkar</span>
+					<br/>
+					<a target="_blank" href="https://www.hackerearth.com/@iamjpsonkar" >
+						<img src="images/icons/hackerearth_icon.png" height="25" width="25" alt="Hackerearth_logo">
+					</a>
+					<span class="text-dark" >&nbsp;Hackerearth : iamjpsonkar</span>
+					<br/>
+					<a target="_blank" href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile" >
+						<img src="images/icons/geeksforgeeks_icon.png" height="25" width="25" alt="Geegksforgeeks_logo">
+					</a>
+					<span class="text-dark" >&nbsp;GeeksForGeeks : iamjpsonkar</span>
 				</div>
 			</div>
 		</div>
 		<hr/>
 		<div class="container-fluid">
 			<h3>Summary</h3>
-			<p class="text-justify" style="padding-left: 10px;">My name is Jay Prakash Sonkar, working as a System Engineer in Tata Consultancy Services having 1+ years of experience in solving TRs, uplifting various components, and adding new features to the product. I have 4+ years of Personnel Experience in python application development, and in Competitive Programming. 
-			</p>
-			<ul>
-				<li>30+ repositories on Github</li>
-				<li>250+ problem solved on GeeksForGeeks</li>
-				<li>ACM-ICPC 2018 Regionals Qualified</li>
-				<li>SemiFinalist in Techgig Codegladiator</li>
-				<li>6 Star in Problem solving on Hackerrank</li>
-				<li>1300+ student doubts solved in Chegg</li>
-			</ul>
+			<div class="row">
+				<div class="col-sm-12">
+					<p class="text-justify" style="padding-left: 0.5em;">
+						My name is Jay Prakash Sonkar, working as a System Engineer in <strong>Tata Consultancy Services</strong> having <strong><span id="eYear">1</span> Year and <span id="eMonth">5+</span> Months</strong> of experience with the <strong>Ericsson Media Plane Project</strong>. My day-to-day responsibilities include solving TRs, uplifting various components, and adding new features to the product. I have <span id="pYear">3</span>+ years of Personal Experience in Python Application Development, and also in Competitive Programming.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<ul>
+						<li>40+ Technical Courses <strong>(TCS)</strong></li>
+						<li>5+ Awards &amp; 6+ Certification <strong>(TCS)</strong></li>
+						<li>4.5+ Rating <strong>(2 times in TCS)</strong></li>
+						<li>70+ Repositories <strong>(Github)</strong></li>
+						<li>250+ Problem Solved <strong>(GeeksForGeeks)</strong></li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul>
+						<li>Regionals Qualified <strong>(ACM-ICPC 2018)</strong></li>
+						<li>Semi Finalist <strong>(Techgig Codegladiator)</strong></li>
+						<li>6 Star in Problem-Solving <strong>(Hackerrank)</strong></li>
+						<li>1300+ Student Doubts Solved <strong>(Chegg)</strong></li>
+						<li>200+ Problem Solved <strong>(Codechef)</strong></li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul>
+						<li>Solved 20+ Tickets <strong>(TCS-Ericsson)</strong></li>
+						<li>Developed 8 Utilities <strong>(TCS-Ericsson)</strong></li>
+						<li>8+ Presentation <strong>(TCS-Ericsson)</strong></li>
+						<li>Mentor for 4 new joinies <strong>(TCS-Ericsson)</strong></li>
+						<li>2 Internships <strong>(DataPure &amp; Programmr)</strong></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 		<div class="container-fluid">
 			<h3>Work Experience</h3>
@@ -99,7 +159,7 @@
 							<br/> 
 							System Engineer (Digital)
 							<br/>
-							Oct-2020 to Present
+							Oct-2020 to Present [ <strong>Ericsson Media Plane Project</strong> ]
 							<ul type="square">
 								<li>Uplifting in Yocto (Bitbake) build system</li>
 								<li>Developing Features in Telecom Domain and add-on utilities</li>
@@ -113,7 +173,7 @@
 							<br/> 
 							Chegg Expert [Part Time]
 							<br/>
-							Oct-2019 to Present
+							Oct-2019 to Dec-2020
 							<ul type="square">
 								<li>Solved 1300+ Doubts Asked by students on the Chegg Portal</li>
 							</ul>
@@ -132,6 +192,8 @@
 							<ul type="square">
 								<li>Desktop Applications in Python</li>
 								<li>Data Analytics &#38; Computer Vision Expert</li>
+								<li>Web Scraper to grab Company Details from Google</li>
+								<li>Web Scrapper to grab people's information from LinkedIn</li>
 							</ul>
 						</li>
 						<li>
@@ -149,6 +211,7 @@
 				</div>
 			</div>
 		</div>
+		<br/>
 		<div class="container-fluid">
 			<h3>Education &#38; Qualifications</h3>
 			<div class="row">
@@ -243,6 +306,20 @@
 						<li>
 							<div class="row">
 								<div class="col-sm-6">
+									<img src="images/icons/django_icon.png" alt="Django_logo"  width="15" height="15" class="rounded"> Django Framework
+								</div>
+								<div class="col-sm-6">
+									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
 									<img src="images/icons/tkinter_icon.png" alt="Tkinter_logo"  width="15" height="15" class="rounded"> Tkinter
 								</div>
 								<div class="col-sm-6">
@@ -278,6 +355,20 @@
 									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
 									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
 									<img src="images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="images/icons/dsa_icon.png" alt="DSA_logo"  width="15" height="15" class="rounded"> Data Structure &amp; Algorithm
+								</div>
+								<div class="col-sm-6">
+									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="images/icons/cstar_icon.png" alt=""  width="15" height="15" class="rounded">
 									<img src="images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
 								</div>
 							</div>
@@ -356,6 +447,20 @@
 								</div>
 							</div>
 						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-6">
+									<img src="images/icons/database_icon.png" alt="DB_logo"  width="15" height="15" class="rounded"> Database &amp; SQL
+								</div>
+								<div class="col-sm-6">
+									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+									<img src="images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+									<img src="images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+								</div>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -377,6 +482,7 @@
 				</div>
 			</div>
 		</div>
+		<br/>
 		<div class="container-fluid">
 			<h3>Hobbies</h3>
 			<div class="row">
@@ -396,126 +502,245 @@
 		</div>
 		<br/>
 		<div class="container-fluid">
-			<h3>Technical Projects</h3>
+			<h3>Technical Projects [ TCS ]</h3>
+			<div name="EMP_proj">
+              <span class="text-primary">
+                  <strong>Ericsson Media Plane Project [Current TCS Project]</strong>
+                  <img src="images/icons/ericsson_icon.png" alt="Ericsson_logo"  width="100" height="50" class="rounded"/>
+              </span>
+              <br/>
+              Developing Features, Creating utilites ,Solving TRs , Functional &amp; Unit testing
+              <br/>
+              Utilities Developed by me:
+              <div class="row">
+                  <div class="col-sm-4">
+                      <strong>◽ JaySoft-LogViewer</strong>
+                  </div>
+                  <div class="col-sm-4">
+                      <strong>◽ JaySoft-TTCNRunner</strong>
+                  </div>
+                  <div class="col-sm-4">
+                      <strong>◽ JaySoft-RobotRunner</strong>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-4">
+                      <strong>◽ JaySoft-WM_Grepper</strong>
+                  </div>
+                  <div class="col-sm-4">
+                      <strong>◽ JaySoft-BB_Downloader</strong>
+                  </div>
+              </div>
+          </div>
+		</div>
+		<br/>
+		<div class="container-fluid">
+			<h3>Technical Projects [ Personal ]</h3>
 			<div class="row">
-				<ul>
-					<li>
-						<a target="_blank" href="http://iamjpsonkar.pythonanywhere.com/">
-							<img src="images/icons/JS_Code_icon.png" alt="JS_Code_logo"  width="56" height="28" class="rounded"/>
-							<strong>JaySoft : JS_Code (2021)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							An online Python IDE, Developed in Python Flask. Anyone can easily compile, run and share Python Code in a snap. It suports Python2 and Python3 both.
-						</p>
-					</li>
-					<li>
-						<a target="_blank" href="http://imsoftkid.pythonanywhere.com/">
-							<img src="images/icons/bietcoder_icon.png" alt="BIETCoders_logo"  width="28" height="28" class="rounded"/>
-							<strong>JaySoft : BIETCoders (2020)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							A Socaial Networking Website, Developed in Python Flask. Anyone can easily signup, login and use a college social network. It allows you to enjoy a safe social connection.
-						</p>
-					</li>
-					<li>
-						<a target="_blank" href="https://github.com/iamjpsonkar/IASTool">
-							<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
-							<strong> JaySoft: IASTapp (2019)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							A GUI based Image Annotation &#38; Segmentation Application, Designed and Implemented in Python Tkinter.
-						</p>
-					</li>
-					<li>
-						<a target="_blank" href="https://github.com/iamjpsonkar/JaySoft-Paint">
-							<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
-							<strong> JaySoft: JS_Paint (2019)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							A GUI based Paint Application, Designed and Implemented in Python Pyqt5.
-						</p>
-					</li>
-					<li>
-						<a target="_blank" href="https://github.com/iamjpsonkar/JaySoft-ImageViewer">
-							<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
-							<strong> JaySoft: JS_ImageViewer (2019)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							A GUI based Image Viewer, Designed and Implemented in Python Pyqt5.
-						</p>
-					</li>
-					<li>
-						<a target="_blank" href="https://github.com/iamjpsonkar/Youtube_trending">
-							<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
-							<strong> JaySoft: Youtube-Trending (2019)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							A Simple Web Scraping Script, Designed and Implemented in Python. It uses web scraping and creates an csv file that contain top 50 You-tube trending video title and link.
-						</p>
-					</li>
-					<li>
-						<a target="_blank" href="https://github.com/iamjpsonkar/Know-The-Tweets">
-							<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
-							<strong> JaySoft: Know The Tweets (2019)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							A simple GUI based Tweet Extractor Developed in python. It mainly uses Tkinter and tweepy of python. With the help of API of twitter, it picks top 100 tweets related to the searched keywwords.
-						</p>
-					</li>
-					<li>
-						<a target="_blank" href="https://github.com/iamjpsonkar/JSText">
-							<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
-							<strong> JaySoft: JSText (2018)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							A simple GUI based Text Editor Developed in python. It Allows you to create, modify and save files with the extension .jst using Tkinter.
-						</p>
-					</li>
-					<li>
-						<a target="_blank" href="https://github.com/iamjpsonkar/JaySoftDictionary">
-							<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
-							<strong> JaySoft: Dictionary (2018)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							A simple GUI based Offline Dictionary, Developed in python. It mainly uses Tkinter and JSON of python.
-						</p>
-					</li>
-					<li>
-						<a target="_blank" href="https://github.com/iamjpsonkar/H2E-translator">
-							<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
-							<strong> JaySoft: H2E Translator (2018)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							A console based google translator, developed in python. It allows you to get the English translation of your talks.
-						</p>
-					</li>
-					<li>
-						<a target="_blank" href="https://github.com/iamjpsonkar/MusicPlayer">
-							<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
-							<strong> JaySoft: Music-Player (2018)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							A simple GUI based Music Player Developed in python. It mainly uses Tkinter and Pygame modules of python.
-						</p>
-					</li>
-					<li>
-						<a href="https://drive.google.com/file/d/1hKQ29AQuPgOhSb8w3kXQyDSG2ftYKcS_/view?usp=sharing" target="_blank" >
-							<img src="images/icons/ict_icon.png" alt="ict_logo"  width="40" height="40" class="rounded"/>
-							<strong>  JaySoft: GDMA (2014)</strong>
-						</a>
-						<p class="text-justify" style="padding-left: 10px;">
-							Developed an App GDMA (Global Data Managing App) in C++, it can manage any type of database like school database, library database
-						</p>
-					</li>
-				</ul>
+				<div class="col-sm-3">
+					<div class="card" style="height:17rem;">
+						<div class="card-body">
+							<h6 class="card-title">
+								<a target="_blank" href="http://iamjpsonkar.pythonanywhere.com/">
+									<img src="images/icons/JS_Code_icon.png" alt="JS_Code_logo"  width="60" height="40" class="rounded"/>
+									<strong>JaySoft:JS_Code</strong>
+								</a>
+							</h6>
+							<p class="card-text text-justify">
+								An online Python IDE, Developed in Python Flask. Compile, Run and Share your Python Code easily.
+							</p>
+						</div>
+						<h2 class="card-subtitle mb-2 text-muted text-center">[ 2021 ]</h2>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card" style="height:17rem;">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                <a target="_blank" href="http://imsoftkid.pythonanywhere.com/">
+                                    <img src="images/icons/bietcoder_icon.png" alt="BIETCoders_logo"  width="40" height="40" class="rounded"/>
+                                    <strong>JaySoft:BIETCoders</strong>
+                                </a>
+                            </h6>
+                            <p class="card-text text-justify">
+                                A Social Networking Website, Developed in Python Flask. Just signup and login to use a college social network.
+                            </p>
+                        </div>
+                        <h2 class="card-subtitle mb-2 text-muted text-center" style="bottom: 0;" >[ 2020 ]</h2>
+                    </div>
+				</div>
+				<div class="col-sm-3">
+                    <div class="card" style="height:17rem;">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                <a target="_blank" href="https://github.com/iamjpsonkar/IASTool">
+                                    <img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+                                    <strong>JaySoft:IASTapp </strong>
+                                </a>
+                            </h6>
+                            <p class="card-text text-justify">
+                                A GUI-based developed in Python, Image Annotation &amp; Segmentation tool.
+                            </p>
+                        </div>
+                        <h2 class="card-subtitle mb-2 text-muted text-center">[ 2019 ]</h2>
+                    </div>
+				</div>
+                <div class="col-sm-3">
+                    <div class="card" style="height:17rem;">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                <a target="_blank" href="https://github.com/iamjpsonkar/JaySoft-Paint">
+                                    <img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+                                    <strong>JaySoft:JS_Paint </strong>
+                                </a>
+                            </h6>
+                            <p class="card-text text-justify">
+                                A GUI-based Paint Application, Designed and Implemented in Python Pyqt5.
+                            </p>
+                        </div>
+                        <h2 class="card-subtitle mb-2 text-muted text-center">[ 2019 ]</h2>
+                    </div>
+                </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="card" style="  height:17rem;">
+						<div class="card-body">
+							<h6 class="card-title">
+								<a target="_blank" href="https://github.com/iamjpsonkar/JaySoft-ImageViewer">
+									<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+									<strong>JaySoft:ImgView</strong>
+								</a>
+							</h6>
+							<p class="card-text text-justify">
+								A GUI-based Image Viewer, Designed and Implemented in Python Pyqt5.
+							</p>
+						</div>
+						<h2 class="card-subtitle mb-2 text-muted text-center">[ 2019 ]</h2>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card" style=" height:17rem;">
+						<div class="card-body">
+							<h6 class="card-title">
+								<a target="_blank" href="https://github.com/iamjpsonkar/Youtube_trending">
+									<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+									<strong>JaySoft:YT-Trend</strong>
+								</a>
+							</h6>
+							<p class="card-text text-justify">
+								A Simple Web Scraping Script, developed in Python. You can grab top 50 YouTube trending video titles and their links.
+							</p>
+						</div>
+						<h2 class="card-subtitle mb-2 text-muted text-center" style="bottom: 0;" >[ 2019 ]</h2>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card" style=" height:17rem;">
+						<div class="card-body">
+							<h6 class="card-title">
+								<a target="_blank" href="https://github.com/iamjpsonkar/Know-The-Tweets">
+									<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+									<strong>JaySoft:KT-Tweets</strong>
+								</a>
+							</h6>
+							<p class="card-text text-justify">
+								A simple GUI-based Tweet Grabber Developed in Python. Grab top 100 tweets based on your searched keyword.
+							</p>
+						</div>
+						<h2 class="card-subtitle mb-2 text-muted text-center">[ 2019 ]</h2>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card" style="  height:17rem;">
+						<div class="card-body">
+							<h6 class="card-title">
+								<a target="_blank" href="https://github.com/iamjpsonkar/JSText">
+									<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+									<strong>JaySoft:JSText</strong>
+								</a>
+							</h6>
+							<p class="card-text text-justify">
+								A simple GUI-based Text Editor Developed in python. Create, modify and save files with the extension .jst using JSText.
+							</p>
+						</div>
+						<h2 class="card-subtitle mb-2 text-muted text-center">[ 2018 ]</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="card" style="  height:17rem;">
+						<div class="card-body">
+							<h6 class="card-title">
+								<a target="_blank" href="https://github.com/iamjpsonkar/JaySoftDictionary">
+									<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+									<strong>JaySoft:Dict</strong>
+								</a>
+							</h6>
+							<p class="card-text text-justify">
+								A simple GUI-based Offline Dictionary, Developed in Python.
+							</p>
+						</div>
+						<h2 class="card-subtitle mb-2 text-muted text-center">[ 2018 ]</h2>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card" style=" height:17rem;">
+						<div class="card-body">
+							<h6 class="card-title">
+								<a target="_blank" href="https://github.com/iamjpsonkar/H2E-translator">
+									<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+									<strong>JaySoft:H2Etrans</strong>
+								</a>
+							</h6>
+							<p class="card-text text-justify">
+								A CLI-based google translator, developed in python. Real-Time English translation of your sentences.
+							</p>
+						</div>
+						<h2 class="card-subtitle mb-2 text-muted text-center" style="bottom: 0;" >[ 2018 ]</h2>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card" style=" height:17rem;">
+						<div class="card-body">
+							<h6 class="card-title">
+								<a target="_blank" href="https://github.com/iamjpsonkar/MusicPlayer">
+									<img src="images/icons/github_icon.png" alt="Github_logo"  width="40" height="40" class="rounded"/>
+									<strong>JaySoft:M-Player</strong>
+								</a>
+							</h6>
+							<p class="card-text text-justify">
+								A simple GUI-based Music Player Developed in python. It mainly uses Tkinter and Pygame modules of python.
+							</p>
+						</div>
+						<h2 class="card-subtitle mb-2 text-muted text-center">[ 2018 ]</h2>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card" style="  height:17rem;">
+						<div class="card-body">
+							<h6 class="card-title">
+								<a href="https://drive.google.com/file/d/1hKQ29AQuPgOhSb8w3kXQyDSG2ftYKcS_/view?usp=sharing" target="_blank" >
+									<img src="images/icons/ict_icon.png" alt="ict_logo"  width="40" height="40" class="rounded"/>
+									<strong>JaySoft:GDMA</strong>
+								</a>
+							</h6>
+							<p class="card-text text-justify" >
+								A CLI-based application GDMA (Global Data Managing App) developed in C++. Universal Management System.
+							</p>
+						</div>
+						<h2 class="card-subtitle mb-2 text-muted text-center">[ 2014 ]</h2>
+					</div>
+				</div>
 			</div>
 		</div>
+		<br/>
 		<div class="container-fluid">
-			<h3>Certifications</h3>
+			<h3>Udemy Certifications</h3>
 			<div class="row">
 				<div class="col-sm-4">
 					<ul>
-						
 						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1MMa6OnPcbMgXBfZfN9Ns5Mj-COqd03KF/view?usp=sharing" target="_blank" >
 								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
@@ -528,8 +753,55 @@
 							</a> 
 							<u>Udemy Python Flask</u>
 						</li>
+						<li style="marign-top:0.1em;margin-bottom: 0.1em;">
+								<a href="https://drive.google.com/file/d/1qOHGYS2rGD2XqAmnM2NMSu2M2kNVY9xK/view?usp=sharing" target="_blank" >
+									<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+								</a><u>Python Django</u>
+							</li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul>
 						
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/15Mz8zoSlYxCqC1qHZIQPCf5k89Ywk749/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Udemy CISCO Networks</u>
+						</li>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1d2U2OASyMN_mnYLGvfu38uJVXFAhN8Ii/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Udemy Cloud Security</u>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul>
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1z54QuBoWfqwPcEtgFDpNkDn9r9QQwHbW/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Udemy Python &amp; Tkinter</u>
+						</li>
 
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1TVC7bhE6c-j3W2hyI8KKMQrqk6WrtRtY/view?usp=sharing" target="_blank" >
+								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>Udemy Python OOPS</u>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="container-fluid">
+			<h3>Other Certifications</h3>
+			<div class="row">
+				<div class="col-sm-4">
+					<ul>
 						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1cERRpjlI_-RsRdGex0kiaERCQ75pM_js/view?usp=sharing" target="_blank">
 								<img src="images/cert_icons/codechef_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
@@ -593,21 +865,6 @@
 				</div>
 				<div class="col-sm-4">
 					<ul>
-						
-
-						<li style="marign-top:4px;margin-bottom: 4px;">
-							<a href="https://drive.google.com/file/d/1z54QuBoWfqwPcEtgFDpNkDn9r9QQwHbW/view?usp=sharing" target="_blank" >
-								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>Udemy Python &amp; Tkinter</u>
-						</li>
-
-						<li style="marign-top:4px;margin-bottom: 4px;">
-							<a href="https://drive.google.com/file/d/1TVC7bhE6c-j3W2hyI8KKMQrqk6WrtRtY/view?usp=sharing" target="_blank" >
-								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>Udemy Python OOPS</u>
-						</li>
 						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1OE68L3VABldgDtTjzvG6Cw0SUbsQb8eh/view?usp=sharing" target="_blank">
 								<img src="images/cert_icons/hackerrank_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
@@ -677,19 +934,26 @@
 				</div>
 				<div class="col-sm-4">
 				
-					<ul>
-						
+					<ul>						
 						<li style="marign-top:4px;margin-bottom: 4px;">
-							<a href="https://drive.google.com/file/d/15Mz8zoSlYxCqC1qHZIQPCf5k89Ywk749/view?usp=sharing" target="_blank" >
-								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							<a href="https://drive.google.com/file/d/157J5vDNOTvdml02SKPonSURRtIrzZtoT/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/techgig_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
-							<u>Udemy CISCO Networks</u>
+							<u>TechGIG C Programming</u>
 						</li>
+
 						<li style="marign-top:4px;margin-bottom: 4px;">
-							<a href="https://drive.google.com/file/d/1d2U2OASyMN_mnYLGvfu38uJVXFAhN8Ii/view?usp=sharing" target="_blank" >
-								<img src="images/cert_icons/udemy_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							<a href="https://drive.google.com/file/d/1lXrVQOBbtodXY2Q41sTLEis7icKaYmf-/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/techgig_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
 							</a> 
-							<u>Udemy Cloud Security</u>
+							<u>TechGIG Technical Certificate</u>
+						</li>
+
+						<li style="marign-top:4px;margin-bottom: 4px;">
+							<a href="https://drive.google.com/file/d/1lXrVQOBbtodXY2Q41sTLEis7icKaYmf-/view?usp=sharing" target="_blank">
+								<img src="images/cert_icons/techgig_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
+							</a> 
+							<u>TechGIG Software Engineer</u>
 						</li>
 						
 						<li style="marign-top:4px;margin-bottom: 4px;">
@@ -719,27 +983,6 @@
 						</li>
 
 						<li style="marign-top:4px;margin-bottom: 4px;">
-							<a href="https://drive.google.com/file/d/157J5vDNOTvdml02SKPonSURRtIrzZtoT/view?usp=sharing" target="_blank">
-								<img src="images/cert_icons/techgig_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>TechGIG C Programming</u>
-						</li>
-
-						<li style="marign-top:4px;margin-bottom: 4px;">
-							<a href="https://drive.google.com/file/d/1lXrVQOBbtodXY2Q41sTLEis7icKaYmf-/view?usp=sharing" target="_blank">
-								<img src="images/cert_icons/techgig_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>TechGIG Technical Certificate</u>
-						</li>
-
-						<li style="marign-top:4px;margin-bottom: 4px;">
-							<a href="https://drive.google.com/file/d/1lXrVQOBbtodXY2Q41sTLEis7icKaYmf-/view?usp=sharing" target="_blank">
-								<img src="images/cert_icons/techgig_icon.png" width="28" height="28" class="rounded" alt="cert_icon"/>
-							</a> 
-							<u>TechGIG Software Engineer</u>
-						</li>
-						
-						<li style="marign-top:4px;margin-bottom: 4px;">
 							<a href="https://drive.google.com/file/d/1Ini2uQSYc5SYLhSCZnqTUjqQZheD7hDY/view?usp=sharing" target="_blank">
 								<img src="images/cert_icons/ilfs_icon.png" width="38" height="20" class="rounded" alt="cert_icon"/>
 							</a> 
@@ -758,5 +1001,7 @@
 				</div>
 		  </div>
 		</div>
+		<hr/>
+		<br/>
     </body>
 </html>
