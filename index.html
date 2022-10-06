@@ -38,6 +38,12 @@
 				document.getElementById("eYear").innerHTML = yxp;
 				document.getElementById("eMonth").innerHTML = mxp;
 				document.getElementById("pYear").innerHTML = yxp+2;
+
+				const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+				var today = new Date();
+				const LastWorkingDay = new Date("2022-12-26");
+				const npd = 1+Math.round(Math.abs((LastWorkingDay - today) / oneDay));
+				document.getElementById("NPD").innerHTML = npd;
 			}
 			window.onload = setExp;
         </script>
@@ -53,7 +59,7 @@
 				</div>
 				<div class="col-sm-4">
 					<h2>Jay Prakash Sonkar<a target="_blank" href="https://iamjpsonkar.github.io/portfolio/resume/" ><img src="images/icons/resume_icon.png" alt="(Resume)" width="30" height="30"></a></h2>
-					<h5>[Serving Notice Period]</h5>
+					<h5><span id="NPD">90</span> Days [Serving Notice Period]</h5>
 					<h5>Python Developer </h5>
 					<h5>System Engineer (Digital) at TCS</h5>
 				</div>
