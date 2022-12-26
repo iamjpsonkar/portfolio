@@ -1,0 +1,157 @@
+body {
+  background-color: aliceblue;
+  margin: 0em;
+  padding: 0;
+  border: #00BBFF;
+  border-width: thin;
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+  color:rgb(100, 100, 100);
+}
+
+/* visited link */
+a:visited {
+  color:rgb(100, 100, 100);
+}
+
+/* mouse over link */
+/* a:hover {
+  font-size:
+} */
+
+/* selected link */
+a:active {
+  text-decoration: none;
+  color:rgb(100, 100, 100);
+  font-weight: bold;
+}
+
+.main-div{
+  margin:5px;
+  border:100px red;;
+  border-radius: 1%;
+}
+
+/* .header {
+  border:2px solid rgb(100, 100, 100);
+} */
+
+.top-header-div{
+  display: flex;
+
+  justify-content:space-around;
+  align-items:center;
+
+  padding: 5px;
+  
+}
+
+.profile_link {
+  text-decoration: none;
+  /* border: 1px solid rgb(100, 100, 100); */
+}
+
+.profile-pic{
+  height: 180px;
+  width:180px;
+}
+
+/* .name-div{
+  
+} */
+
+
+.contact-info{
+  line-height: 2rem;
+}
+
+.coding-prof{
+  line-height: 2rem;
+}
+
+.bottom-header-div{
+
+}
+
+.summary{
+  font-size: larger;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  /* text-align: center; */
+}
+
+.extras{
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+
+  font-style: italic;
+  font-size: large;
+}
+
+.work-experience, 
+.education, 
+.udemy-certificates,
+.technical-skills,
+.t-certificates,
+.Scripts
+{
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+.education{
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.education{
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skill-set{
+  display: flex;
+  /* padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-around;
+  align-items: center; */
+}
+
+.company-info, .college-info{
+  display: flex;
+  gap:20px;
+}
+
+.company-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .education{
+  border-left: 2px solid rgb(100, 100, 100);
+  border-right: 2px solid rgb(100, 100, 100);
+
+  padding-left: 10px;
+  padding-right: 10px;
+} */
+
+.skills{
+  padding-left: 5px;;
+  padding-right: 5px;;
+}

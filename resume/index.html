@@ -6,901 +6,729 @@
 	<link rel = "icon" href ="../images/icons/resume_icon.png" type = "image/x-icon">
     <!-- Bootstrap -->
     <link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
-	  
+
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
     <script src="../js/jquery-3.4.1.min.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed --> 
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap-4.4.1.js"></script>
-	<style>
 
-		.vl {
-			border-left: 2px solid gray;
-			align-items: stretch;
-		}
-/*		.bg_2{
-			 border:2px solid black;
-		}
-		.namefont{
-			font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-		}
-*/
-		a{
-			style="text-decoration: none;";
-		}
-		
-		html,body{
-/*			width: 100%;*/
-/*			height: 100%;*/
-			background-color: aliceblue;
-			margin: 0em; /* Space from this element (entire page) and others*/
-			padding: 0; /*space from content and border*/
-			border: #00BBFF;
-			border-width: thin;
-/*			overflow:hidden;*/
-/*			display:block;*/
-}
-/*
-		body {
-			height: 100%;
-			background-color: aliceblue;
-			margin: 0em;
-			
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background: rgb(238,174,302);
-			background: radial-gradient(circle, rgba(238,174,302,1) 0%, rgba(148,187,233,1) 100%);
-		}
-*/
-	</style>
-	<script type="text/javascript">
-			function setExp() 
-			{
-				var dateString="2022-12-26";
-				var today = new Date();
-				var joinDate = new Date(dateString);
-				var yxp = 2 + today.getFullYear() - joinDate.getFullYear();
-				var mxp = 2 + today.getMonth() - joinDate.getMonth();
-				if (mxp < 0) 
-				{
-					yxp--;
-					mxp=12+mxp;
-				}
-				document.getElementById("eYear").innerHTML = yxp;
-				document.getElementById("eMonth").innerHTML = mxp;
-				document.getElementById("pYear").innerHTML = yxp+2;
-
-                
-				const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-				var today = new Date();
-				const LastWorkingDay = new Date("2022-12-26");
-				const npd = 1+Math.round(Math.abs((LastWorkingDay - today) / oneDay));
-				document.getElementById("NPD").innerHTML = npd;
-			}
-			window.onload = setExp;
-        </script>
+    
+    <link href="../css/stylesheet.css" rel="stylesheet">
+    <script src="../js/javascript.js"></script>
 </head>
 <body>
-	<br/>
-	<div class="container-fluid">
-		<div class="row" style="color:black;border-top: 1px solid #D3D3D3;border-bottom: 1px solid #D3D3D3;">
-			<div class="col-sm-2 align-content-center">
-				<a href="https://iamjpsonkar.github.io/portfolio/resume" >
-					<img src="../images/icons/myself_icon.png" alt="myself.png"    width="180" height="180" class="img-fluid align-middle" style="padding-left: 2.5em;"/>
-				</a>
-			</div>
-			<div class="col-sm-4">
-				<h2>Jay Prakash Sonkar<a target="_blank" href="https://iamjpsonkar.github.io/portfolio/resume/" ><img src="../images/icons/resume_icon.png" alt="(Resume)" width="32" height="32"></a></h2>
-<!--				<h5><span id="NPD">90</span> Days [Serving Notice Period]</h5>-->
-                <h5>Python Developer</h5>
-<!--				<h5>System Engineer (Digital) at TCS</h5>-->
-				<h5>SDE-I at Fynd, Noida</h5>
-			</div>
-			<div class="col-sm-3">
-				<span ><img src="../images/icons/phone_icon.png" height="25" width="25" alt="Phone">+91-8004023840</span>
-				<br/>
-				<a target="_blank" href="mailto:iamjpsonkar@gmail.com">
-					<img src="../images/icons/gmail_icon.png" height="25" width="25" alt="Gmail">
-				</a>
-				<span >iamjpsonkar@gmail.com</span>
-				<br/>
-				<a target="_blank" href="https://www.linkedin.com/in/iamjpsonkar/">
-					<img src="../images/icons/linkedin_icon.png" height="25" width="25" alt="linkedin">
-				</a>
-				<span >LinkedIn : iamjpsonkar</span>
-				<br/>
-				<a target="_blank" href="https://github.com/iamjpsonkar">
-					<img src="../images/icons/github_icon.png" height="25" width="25" alt="Github">
-				</a>
-				<span >Github : iamjpsonkar</span>
-				<br/>
-				<a href="https://iamjpsonkar.github.io/portfolio/" target="_blank">
-					<img src="../images/icons/web_icon.png" height="25" width="25" alt="portfoling_icon">
-				</a>
-				<span >Portfolio : Github</span>
-			</div>
-            <div class="col-sm-3">
-				<a target="_blank" href="https://www.hackerrank.com/iamjpsonkar" >
-					  <img src="../images/icons/hackerrank_icon.png" height="25" width="25" alt="Hackerrank_logo">
-				</a>
-				<span > Hackerrank: iamjpsonkar </span>
-                <br/>
-                <a target="_blank" href="https://www.codechef.com/users/iamjpsonkar" >
-                    <img src="../images/icons/codechef_icon.png" height="25" width="25" alt="Codechef_logo">
+    <div class="main-div">
+        <hr/>
+        <div class="header">
+            <div class="top-header-div">
+                <a href="https://iamjpsonkar.github.io/portfolio/resume" class="profile-link">
+                    <img src="../images/icons/myself_icon.png" alt="Profile_pic.png" class="profile-pic"/>
                 </a>
-                <span > Codechef : iamjpsonkar</span>
-                <br/>
-                <a target="_blank" href="https://www.techgig.com/iamjpsonkar">
-                    <img src="../images/icons/techgig_icon.png" height="25" width="25" alt="Techgig_logo">
-                </a>
-                <span >&nbsp;Techgig : iamjpsonkar</span>
-                <br/>
-                <a target="_blank" href="https://www.hackerearth.com/@iamjpsonkar" >
-                    <img src="../images/icons/hackerearth_icon.png" height="25" width="25" alt="Hackerearth_logo">
-                </a>
-                <span>&nbsp;Hackerearth : iamjpsonkar</span>
-                <br/>
-                <a target="_blank" href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile" >
-                    <img src="../images/icons/geeksforgeeks_icon.png" height="25" width="25" alt="Geegksforgeeks_logo">
-                </a>
-                <span>&nbsp;GeeksForGeeks : iamjpsonkar</span>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid" style="border-bottom: 1px solid #D3D3D3;">
-        <h4>Summary</h4>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="text-justify" style="padding-left: 0.5em;">My name is Jay Prakash Sonkar, working as a SDE-I in <strong>Fynd</strong>. I am having a total of <strong><span id="eYear">2</span> Year and <span id="eMonth">5+</span> Months</strong> of experience. I have <span id="pYear">4</span>+ years of Personal Experience in Competitive Programming and Python Application Development.
-				</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <ul>
-                    <li>40+ Technical Courses <strong>(TCS)</strong></li>
-                    <li>5+ Awards &amp; 6+ Certification <strong>(TCS)</strong></li>
-                    <li>5/5 Rating <strong>(2 times in TCS)</strong></li>
-                    <li>70+ Repositories <strong>(Github)</strong></li>
-                    <li>400+ Problem Solved <strong>(GeeksForGeeks)</strong></li>
-                </ul>
-            </div>
-            <div class="col-sm-4">
-                <ul>
-                    <li>Regionals Qualified <strong>(ACM-ICPC 2018)</strong></li>
-                    <li>Semi Finalist <strong>(Techgig Codegladiator)</strong></li>
-                    <li>6 Star in Problem-Solving <strong>(Hackerrank)</strong></li>
-                    <li>1300+ Student Doubts Solved <strong>(Chegg)</strong></li>
-                    <li>200+ Problem Solved <strong>(Codechef)</strong></li>
-                </ul>
-            </div>
-			<div class="col-sm-4">
-                <ul>
-                    <li>Solved 20+ Tickets <strong>(TCS-Ericsson)</strong></li>
-                    <li>Developed 8 Utilities <strong>(TCS-Ericsson)</strong></li>
-                    <li>8+ Presentation <strong>(TCS-Ericsson)</strong></li>
-					<li>Mentor for 15 new joinies <strong>(TCS-Ericsson)</strong></li>
-                    <li>2 Internships <strong>(DataPure &amp; Programmr)</strong></li>
-                </ul>
-            </div>
-        </div>
-	</div>
-	<div class="container-fluid">
-		<div class="row"   style="border-bottom: 1px solid #D3D3D3;">
-			<div class="col-sm-4" style="border-right: 1px solid #D3D3D3;">
-				<h4>Work Experience</h4>
-				<div>
-					<div name="tcs">
-						<img src="../images/icons/fynd_icon.png" alt="Fynd_Logo" width="35" height="35" class="rounded" />
-						<strong>Fynd</strong> 
-						<br/>
-						<span style="margin-left:2em;">Dec 2022 to Present</span>
-						<br/>
-						<span  style="margin-left:2em;"><strong>SDE-I</strong><br>
-<!--						<strong  style="margin-left:2em;">[Ericsson Media Plane Project]</strong>-->
-						</span>
-<!--
-						<br/>
-						<span style="margin-left:2.5em;">◽ Feature Development/Bitbake Uplift</span>
-						<br/>
-						<span style="margin-left:2.5em;">◽ Create/Maintain Python Utilities</span>
--->
-					</div>
-					<div name="tcs">
-						<img src="../images/icons/tcs_icon.png" alt="TCS_Logo" width="35" height="35" class="rounded" />
-						<strong>Tata Consultancy Services</strong> 
-						<br/>
-						<span style="margin-left:2em;">Oct 2020 to Dec 2022</span>
-						<br/>
-						<span  style="margin-left:2em;"><strong>System Engineer(Digital)</strong><br>
-<!--						<strong  style="margin-left:2em;">[Ericsson Media Plane Project]</strong>-->
-						</span>
-<!--
-						<br/>
-						<span style="margin-left:2.5em;">◽ Feature Development/Bitbake Uplift</span>
-						<br/>
-						<span style="margin-left:2.5em;">◽ Create/Maintain Python Utilities</span>
--->
-					</div>
-				<h4>Internships &amp; Part Time Jobs</h4>
-					<div name="chegg">
-						<img src="../images/icons/chegg_icon.png" alt="Chegg_Logo" width="38" height="38" class="rounded" /> Chegg Expert at <strong>Chegg India</strong> 
-						<br/>
-						<span  style="margin-left:0.5em;">Oct-2019 to Dec-2020 <strong>[Part Time]</strong></span>
-						<br/>
-						<span style="margin-left:1em;">◽ Solved 1300+ Doubts for students from dashboard </span>
-                    </div>
-					<div name="datapure">
-						<img src="../images/icons/datapure_icon.png" alt="Chegg_Logo" width="28" height="28" class="rounded" /> Python Developer at <strong>Data Pure, Indore </strong>
-                    </div>
-					<div name="programmr">
-						<img src="../images/icons/programr_icon.png" alt="Programmr_Logo" width="28" height="28" class="rounded"/> Python Developer at <strong> Programmr</strong>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4"   style="border-right: 1px solid #D3D3D3;">
-				<h4>Education &amp; Qualifications</h4>
-				<div style="margin-left:2em;">
-					<div>
-                        <img src="../images/icons/BIET_icon.png" alt="BIET_Logo" width="18" height="18" class="rounded" /> BIET Jhansi [2016 to 2020]
-                        <br/>
-						<strong>Bachelor Of Technology</strong> 
-                        <br/> 
-                        Computer Science &#38; Engineering
-                        <br/>
-                        71.94%
-					</div>
-					<div>
-                        <img src="../images/icons/JNV_icon.png" alt="JNV_Logo" width="18" height="18" class="rounded" /> JNV Faizabad [2014 to 2015]
-                        <br/>
-						<strong>Intermediate(12th)</strong> 
-                        <br/> 
-                        PCM &#38; Computer Science
-                        <br/>
-                        81.60%
-					</div>
-					<div>
-                        <img src="../images/icons/JNV_icon.png" alt="JNV_Logo" width="18" height="18" class="rounded" /> JNV Faizabad [2012 to 2013]
-                        <br/>
-						<strong>Matriculation(10th)</strong> 
-                        <br/>
-                        8.6 CGPA (81.70%)
-					</div>
-				</div>
-			</div>		
-			<div class="col-sm-4">
-				<div name="udemy">
-						<h5>Udemy Certificate</h5>
-						<ul>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/1MMa6OnPcbMgXBfZfN9Ns5Mj-COqd03KF/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-								</a>
-								<a href="https://www.udemy.com/certificate/UC-04c4e63e-3d09-4b03-bac2-5362094a32c8/" target="_blank" >
-									<strong>Python Advance</strong>
-								</a>
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/1z54QuBoWfqwPcEtgFDpNkDn9r9QQwHbW/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-								</a>
-								<a href="https://www.udemy.com/certificate/UC-dbe260a7-4173-4913-afec-850a2bb35dde/" target="_blank" >
-									<strong>Python Tkinter</strong>
-								</a>
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/1TVC7bhE6c-j3W2hyI8KKMQrqk6WrtRtY/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-								</a>
-								<a href="https://www.udemy.com/certificate/UC-7294146a-f05d-475c-bfa9-72c17f7ba3ef/" target="_blank" >
-									<strong>Python OOPS</strong>
-								</a>
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/122bblOW7o98vYnYWmnBUT2AXQVw0DjUK/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-								</a>
-								<a href="https://www.udemy.com/certificate/UC-71df7363-fc5d-4c57-b621-5e09a41c4bb1/" target="_blank" >
-									<strong>Python Flask</strong>
-								</a>
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/1qOHGYS2rGD2XqAmnM2NMSu2M2kNVY9xK/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-								</a>
-								<a href="https://www.udemy.com/certificate/UC-75dbdf82-be3d-466b-8f8c-cdde811a5bbd/" target="_blank" >
-									<strong>Python Django</strong>
-								</a>
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/15Mz8zoSlYxCqC1qHZIQPCf5k89Ywk749/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-								</a>
-								<a href="https://www.udemy.com/certificate/UC-0a3e30f0-16d1-4a54-99a5-ce0a8273259b/" target="_blank" >
-									<strong>CISCO Networks</strong>
-								</a>
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/1d2U2OASyMN_mnYLGvfu38uJVXFAhN8Ii/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-								</a> 
-								<a href="https://www.udemy.com/certificate/UC-a44cc82b-eef1-4b08-8cbb-be28c0abfb3d/" target="_blank" >
-									<strong>Cloud Security</strong>
-								</a> 
-							</li>
-							<li style="marign-top:0.1em;margin-bottom: 0.1em;">
-								<a href="https://drive.google.com/file/d/1NU7P3n1iaAgMOZMSUuvPdjnDyJ11JKUm/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-								</a> 
-								<a href="https://www.udemy.com/certificate/UC-cd2c33e9-7cc6-4e3d-86e6-304b7002250e/" target="_blank" >
-									<strong>Machine Learning A-Z<sup>TM</sup></strong>
-								</a> 
-							</li>
-							<li>
-								<a href="https://drive.google.com/file/d/1QmKSVIMgWMahwmr_j8Fpjo8kYSpQh89U/view?usp=sharing" target="_blank" >
-									<img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
-								</a> 
-								<a href="https://www.udemy.com/certificate/UC-ce97f306-2ca2-46c3-909b-4749d93b1e32/" target="_blank" >
-									<strong>Responsive HTML and CSS</strong>
-								</a> 
-							</li>
-						</ul>
-					</div>
-				<div name="Intrests">
-					<h5>Area Of Interest</h5>
-					<ul>
-						<li>Data Science &amp; Machine Learning</li>
-						<li>Full Stack &amp; Application Development</li>
-						<li>Competitive Programming</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="row"   style="border-bottom: 1px solid #D3D3D3;">
-			<div class="col-sm-4" style="border-right: 1px solid #D3D3D3;">
-                <div name="technical">
-                    <h4>Technical Skills</h4>
-                    <ul>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/python_icon.png" alt="Python_logo"  width="15" height="15" class="rounded"> Python
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/flask_icon.png" alt="Flask_logo"  width="15" height="15" class="rounded"> Flask
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-						<li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/django_icon.png" alt="Django_logo"  width="15" height="15" class="rounded"> Django
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/tkinter_icon.png" alt="Tkinter_logo"  width="15" height="15" class="rounded"> Tkinter
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/datascience_ml_icon.png" alt="DataScience_ML_logo"  width="15" height="15" class="rounded"> Data Science
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/github_icon.png" alt="Github_logo"  width="15" height="15" class="rounded"> Git
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/dsa_icon.png" alt="DSA_logo"  width="15" height="15" class="rounded"> DS &amp; Algo
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/c_icon.png" alt="C_logo"  width="15" height="15" class="rounded"> C 
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cpp_icon.png" alt="C++_logo"  width="15" height="15" class="rounded"> C++
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/java_icon.png" alt="Java_logo"  width="15" height="15" class="rounded"> Java
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/web_d_icon.png" alt="Web_D_logo"  width="15" height="15" class="rounded"> Web Dev.
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/yocto_icon.png" alt="Yocto_logo"  width="15" height="15" class="rounded"> Yocto 
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/database_icon.png" alt="DB_logo"  width="15" height="15" class="rounded"> DB &amp; SQL
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-						<li>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/linux_icon.png" alt="Linux_logo"  width="15" height="15" class="rounded"> Linux
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                    <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="name-div">
+                    <h2>Jay Prakash Sonkar</h2>
+                    <h4>Python Developer</h4>
+                    <h4>Software Development Engineer - I</h4>
+                    <h4>Fynd, Noida</h4>
                 </div>
-                <div name="certifiates">
-					<h4>Technical Certifications</h4>
-                    <div name="n_cert">
+                <div class="contact-info">
+                    <span>
+                        <img src="../images/icons/phone_icon.png" height="25" width="25" alt="Phone">
+                        +91-8004023840
+                    </span>
+                    <br/>
+                    <span>
+                        <a target="_blank" href="mailto:iamjpsonkar@gmail.com">
+                            <img src="../images/icons/gmail_icon.png" height="25" width="25" alt="Gmail">
+                            iamjpsonkar@gmail.com
+                        </a>
+                    </span>
+                    <br/>
+                    <span>
+                        <a target="_blank" href="https://www.linkedin.com/in/iamjpsonkar/">
+                            <img src="../images/icons/linkedin_icon.png" height="25" width="25" alt="linkedin">
+                            LinkedIn : iamjpsonkar
+                        </a>
+                    </span>
+                    <br/>
+                    <span>
+                        <a Github target="_blank" href="https://github.com/iamjpsonkar/">
+                            <img src="../images/icons/github_icon.png" height="25" width="25" alt="Github">
+                            Github : iamjpsonkar
+                        </a>
+                    </span>
+                    <br/>
+                    <span>
+                        <a href="https://iamjpsonkar.github.io/portfolio/" target="_blank">
+                            <img src="../images/icons/web_icon.png" height="25" width="25" alt="portfoling_icon">
+                            Portfolio : Github
+                        </a>
+                    </span>
+                </div>
+                <div class="coding-prof">
+                    <span>
+                        <a target="_blank" href="https://www.hackerrank.com/iamjpsonkar/" >
+                            <img src="../images/icons/hackerrank_icon.png" height="25" width="25" alt="Hackerrank_logo">
+                            Hackerrank: iamjpsonkar
+                        </a>
+                    </span>
+                    <br/>
+                    <span>
+                        <a target="_blank" href="https://www.codechef.com/users/iamjpsonkar" >
+                            <img src="../images/icons/codechef_icon.png" height="25" width="25" alt="Codechef_logo">
+                            Codechef : iamjpsonkar
+                        </a>
+                    </span>
+                    <br/>
+                    <span>
+                        <a target="_blank" href="https://www.techgig.com/iamjpsonkar">
+                            <img src="../images/icons/techgig_icon.png" height="25" width="25" alt="Techgig_logo">
+                            Techgig : iamjpsonkar
+                        </a>   
+                    </span>
+                    <br/>
+                    <span>
+                        <a target="_blank" href="https://www.hackerearth.com/@iamjpsonkar" >
+                            <img src="../images/icons/hackerearth_icon.png" height="25" width="25" alt="Hackerearth_logo">
+                            Hackerearth : iamjpsonkar
+                        </a>
+                    </span>
+                    <br/>
+                    <span>
+                        <a target="_blank" href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile" >
+                            <img src="../images/icons/geeksforgeeks_icon.png" height="25" width="25" alt="Geegksforgeeks_logo">
+                            GeeksForGeeks : iamjpsonkar
+                        </a>
+                    </span>
+                    <br/>
+                </div>
+            </div>
+            <hr/>
+            <div class="bottom-header-div">
+                <p class="summary">
+                    <i>
+                        Results-oriented software engineer with a focus on the design and implementation of application/software. Having a total of <span id="eYear">2</span>.<span id="eMonth">2</span> years of experience in developing python based applications. Skilled in agile processes, backend and frontend development, and creating web applications.
+                    </i>
+                </p>
+                <div class="extras">
+                    <div class="extras-data">
                         <ul>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/icons/codechef_icon.png" alt="BIET_Logo" width="20" height="20" class="rounded" /> 
-                                        <span>Snackdown </span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/1cERRpjlI_-RsRdGex0kiaERCQ75pM_js/view?usp=sharing" target="_blank"> 2017 </a>, 
-                                            <a href="https://drive.google.com/file/d/1OAwbp1kmHSgMpucM4j75oHhgpD6U2Dkd/view?usp=sharing" target="_blank">19 </a>&amp; 
-                                            <a href="https://drive.google.com/file/d/1Ru6Q5FYrvjGUhLIhB8yfxeiJQjxR_XFZ/view?usp=sharing" target="_blank"> 21 </a> 
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/cert_icons/hackerrank_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/> 
-                                        <span>Hackerrank</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/17rkuC4zVATpoFHrKESMqhkZ1TfAf7IEg/view?usp=sharing" target="_blank" >
-                                                Python Certificate
-                                            </a>
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/cert_icons/hackerrank_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/> 
-                                        <span>Hackerrank</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/1D2gPItEWfPWQMvrbXKJal76rQH04a9dc/view?usp=sharing" target="_blank" >
-                                                Problem Solving
-                                            </a>
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/cert_icons/techgig_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
-                                        <span>Techgig</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/157J5vDNOTvdml02SKPonSURRtIrzZtoT/view?usp=sharing" target="_blank">
-                                                C Programming
-                                            </a>
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/cert_icons/techgig_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
-                                        <span>Techgig</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/1dHS1kEnEloSj9IjCAMzSENBbxYQAKRJJ/view?usp=sharing" target="_blank">
-                                                Python Programming
-                                            </a>
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/cert_icons/datapure_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
-                                        <span>Datapure</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/1U81Rx549w_VkZsojJOCTwhkTfI4t146-/view?usp=sharing" target="_blank" >
-                                                Internship
-                                            </a>
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/cert_icons/datapure_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
-                                        <span>Datapure</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/1fQlyGyTgqANvOpt38TMA2A0U_EvwI45V/view?usp=sharing" target="_blank"   >
-                                                Recommendation
-                                            </a>
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/cert_icons/programr_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
-                                        <span>Programmr</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/1_cQ7gQEJPlE5M_s3c3Kmq9iQjhiC3Tvr/view?usp=sharing" target="_blank" >
-                                                Internship
-                                            </a> 
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/cert_icons/acm_icpc_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
-                                        <span>ACM ICPC</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/1XYMO1p31tg-SeVV_GbxcrV7uiwV6DQsb/view?usp=sharing" target="_blank">
-                                                2018 Regionals
-                                            </a> 
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/cert_icons/infytq_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
-                                        <span>Infosys</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/1K9FrcH-dlY6TJhaRchVsqJ6OwOpY8ctF/view?usp=sharing" target="_blank">
-                                                Python Certificate
-                                            </a> 
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <img src="../images/cert_icons/teqip_icon.png" width="20" height="28" class="rounded" alt="cert_icon"/>
-                                        <span>TEQIP-3</span>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <strong>
-                                            <a href="https://drive.google.com/file/d/169BSTEJNAnHqtCTGJW5diMIHRC9HlN61/view?usp=sharing" target="_blank">
-                                                Machine Learning
-                                            </a> 
-                                        </strong>
-                                    </div>
-                                </div>
-                            </li>
+                            <li>40+ Technical Courses <strong>(TCS)</strong></li>
+                            <li>5+ Awards &amp; 6+ Certification <strong>(TCS)</strong></li>
+                            <li>5/5 Rating <strong>(2 times in TCS)</strong></li>
+                            <li>70+ Repositories <strong>(Github)</strong></li>
+                            <li>400+ Problem Solved <strong>(GeeksForGeeks)</strong></li>
+                        </ul>
+                    </div>
+                    <div class="extras-data">
+                        <ul>
+                            <li>Regionals Qualified <strong>(ACM-ICPC 2018)</strong></li>
+                            <li>Semi Finalist <strong>(Techgig Codegladiator)</strong></li>
+                            <li>6 Star in Problem-Solving <strong>(Hackerrank)</strong></li>
+                            <li>1300+ Student Doubts Solved <strong>(Chegg)</strong></li>
+                            <li>200+ Problem Solved <strong>(Codechef)</strong></li>
+                        </ul>
+                    </div>
+                    <div class="extras-data">
+                        <ul>
+                            <li>Solved 20+ Tickets <strong>(TCS-Ericsson)</strong></li>
+                            <li>Developed 8 Utilities <strong>(TCS-Ericsson)</strong></li>
+                            <li>8+ Presentation <strong>(TCS-Ericsson)</strong></li>
+                            <li>Mentor for 15 new joinies <strong>(TCS-Ericsson)</strong></li>
+                            <li>2 Internships <strong>(DataPure &amp; Programmr)</strong></li>
                         </ul>
                     </div>
                 </div>
-			</div>
-			<div class="col-sm-8" style="text-align: justify;">
-				<div class="row">
-					<h4 style="margin-left:0.5em;">Techincal Projects</h4>
-					<ul>
-						<li style="margin-bottom:0.2em;">
-							<div name="EMP_proj">
-								<span class="text-primary">
-									<strong>Ericsson Media Plane Project [Current TCS Project]</strong>
-									<img src="../images/icons/ericsson_icon.png" alt="Ericsson_logo"  width="100" height="50" class="rounded"/>
-								</span>
-								<br/>
-								Developing Features, Creating utilites ,Solving TRs , Functional &amp; Unit testing
-								<br/>
-								My utility contribution in Ericsson:
-								<div class="row">
-									<div class="col-sm-4">
-										<strong>◽ JaySoft-LogViewer</strong>
-									</div>
-									<div class="col-sm-4">
-										<strong>◽ JaySoft-TTCNRunner</strong>
-									</div>
-									<div class="col-sm-4">
-										<strong>◽ JaySoft-RobotRunner</strong>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-4">
-										<strong>◽ JaySoft-WM_Grepper</strong>
-									</div>
-									<div class="col-sm-4">
-										<strong>◽ JaySoft-BB_Downloader</strong>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li style="margin-bottom:0.2em;">
-							<div name="JS_Code">
-								<a target="_blank" href="http://iamjpsonkar.pythonanywhere.com/" >
-									<strong>JaySoft : JS Code [ 2021 ]</strong>
-									<img src="../images/icons/JS_Code_icon.png" alt="JS_Code_logo"  width="80" height="25" class="rounded"/>
-								</a>
-								<span  style="margin-left:1em;">An online Python IDE, Developed in Python Flask. Compile, Run and Share your Python Code easily.
-								</span>
-							</div>
-						</li>
-						<li style="margin:0.2em;">
-							<div name="bietcoders">
-								<a target="_blank" href="http://imsoftkid.pythonanywhere.com/">
-									<strong>JaySoft : BIET Coders [ 2020 ]</strong>
-									<img src="../images/icons/bietcoder_icon.png" alt="BIETCoders_logo"  width="25" height="25" class="rounded"/>
-								</a>
-								<span> A Social Networking Website, Developed in Python Flask. Just signup and login to use a college social network.
-								</span>
-							</div>
-						</li>
-                        <li style="margin:0.2em;">
-                            <div name="iast">
-								<a target="_blank" href="https://github.com/iamjpsonkar/IASTool" >
-									<strong>JaySoft : IAST App [ 2019 ]</strong>
-									<img src="../images/icons/github_icon.png" alt="Github_logo"  width="25" height="25" class="rounded"/>
-								</a>
-								<span> A GUI-based developed in Python, Image Annotation &amp; Segmentation tool.
-								</span>
-                            </div>
-                        </li>
-                        <li style="margin:0.2em;">
-                            <div name="jspaint">
-								<a target="_blank" href="https://github.com/iamjpsonkar/JaySoft-Paint">
-									<strong>JaySoft : JS Paint [ 2019 ]</strong>
-									<img src="../images/icons/github_icon.png" alt="Github_logo"  width="25" height="25" class="rounded"/>
-								</a>
-								<span> A GUI-based Paint Application, Designed and Implemented in Python Pyqt5.
-								</span>
-                            </div>
-                        </li>
-                        <li style="margin:0.2em;">
-                            <div name="imgview">
-								<a target="_blank" href="https://github.com/iamjpsonkar/JaySoft-ImageViewer">
-									<strong>JaySoft : Image View [ 2019 ]</strong>
-									<img src="../images/icons/github_icon.png" alt="Github_logo"  width="25" height="25" class="rounded"/>
-								</a>
-								<span>
-									 A GUI-based Image Viewer, Designed and Implemented in Python Pyqt5.
-								</span>
-                            </div>
-                        </li>
-                        <li style="margin:0.2em;">
-                            <div name="ytview">
-								<a target="_blank" href="https://github.com/iamjpsonkar/Youtube_trending" >
-									<strong>JaySoft : YouTube Trend [2019 ]</strong>
-									<img src="../images/icons/github_icon.png" alt="Github_logo"  width="25" height="25" class="rounded"/>
-								</a>
-								<span>
-									A Simple Web Scraping Script, developed in Python. You can grab top 50 YouTube trending video titles and their links.
-								</span>
-                            </div>
-                        </li>
-                        <li style="margin:0.2em;">
-                            <div name="greptweet">
-								<a target="_blank" href="https://github.com/iamjpsonkar/Know-The-Tweets">
-									<strong>JaySoft : Grep Tweets [ 2019 ]</strong>
-									<img src="../images/icons/github_icon.png" alt="Github_logo"  width="25" height="25" class="rounded"/>
-								</a>
-								<span>
-									A simple GUI-based Tweet Grabber Developed in Python. Grab top 100 tweets based on your searched keyword.
-								</span>
-                            </div>
-                        </li>
-                        <li style="margin:0.2em;">
-                            <div name="jstxt">
-								<a target="_blank" href="https://github.com/iamjpsonkar/JSText"  >
-									<strong>JaySoft : JS Text [ 2018 ]</strong>
-									<img src="../images/icons/github_icon.png" alt="Github_logo"  width="25" height="25" class="rounded"/>
-								</a>
-								<span> A simple GUI-based Text Editor Developed in python. Create, modify and save files with the extension .jst using JSText.
-								</span>
-                            </div>
-                        </li>
-                        <li style="margin:0.2em;">
-                            <div name="jsdict">
-								<a target="_blank" href="https://github.com/iamjpsonkar/JaySoftDictionary" >
-									<strong>JaySoft : Dictionary [ 2018 ]</strong>
-									<img src="../images/icons/github_icon.png" alt="Github_logo"  width="25" height="25" class="rounded"/>
-								</a>
-								<span>
-									A simple GUI-based Offline Dictionary, Developed in Python.
-								</span>
-                            </div>
-                        </li>
-                        <li style="margin:0.2em;">
-                            <div name="jstranslate">
-								<a target="_blank" href="https://github.com/iamjpsonkar/H2E-translator" >
-									<strong>JaySoft : H2E Translator [ 2018 ]</strong>
-									<img src="../images/icons/github_icon.png" alt="Github_logo"  width="25" height="25" class="rounded"/>
-								</a>
-								<span>
-									A CLI-based google translator, developed in python. Real-Time English translation of your sentences.
-								</span>
-                            </div>
-                        </li>
-                        <li style="margin:0.2em;">
-                            <div name="JS-MP">
-								<a target="_blank" href="https://github.com/iamjpsonkar/MusicPlayer" >
-									<strong>JaySoft : Music Player [ 2018 ]</strong>
-									<img src="../images/icons/github_icon.png" alt="Github_logo"  width="25" height="25" class="rounded"/>
-								</a>
-								<span>
-									A simple GUI-based Music Player Developed in python. It mainly uses Tkinter and Pygame modules of python.
-								</span>
-                            </div>
-                        </li>
-                        <li style="margin-top:0.2em;">
-                            <div name="gdma">
-								<a href="https://drive.google.com/file/d/1hKQ29AQuPgOhSb8w3kXQyDSG2ftYKcS_/view?usp=sharing" target="_blank">
-									<strong>JaySoft : GDMA [ 2014 ]</strong>
-									<img src="../images/icons/ict_icon.png" alt="ict_logo"    width="25" height="25" class="rounded"/>
-								</a>
-								<span>
-									A CLI-based application GDMA (Global Data Managing App) developed in C++. Universal Management System.
-								</span>
-							</div>
-                        </li>
-					</ul>
-				</div>
-			</div>
+            </div>
 		</div>
+        <hr/>
+        <div class="middle">
+            <h4 style="margin-left: 20px;">Work Experience</h4>
+            <div class="work-experience">
+                <div class="Fynd">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <img src="../images/icons/fynd_icon.png" alt="Fynd_Logo" width="35" height="35" class="rounded" />
+                        </div>
+                        <div class="company-detail">
+                            <strong>Fynd</strong> 
+                            <br/>
+                            <span>
+                                <i>Shopsense Retail Technologies Limited</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>Dec 2022 to Present</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>Software Development Engineer-I</i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="TCS">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <img src="../images/icons/tcs_icon.png" alt="TCS_Logo" width="35" height="35" class="rounded" />
+                        </div>
+                        <div class="company-detail">
+                            <strong>TCS</strong> 
+                            <br/>
+                            <span>
+                                <i>TCS-Ericssson Project</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>Oct 2020 to Dec 2022</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>System Engineer</i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Chegg">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <img src="../images/icons/chegg_icon.png" alt="Chegg_Logo" width="35" height="35" class="rounded" />
+                        </div>
+                        <div class="company-detail">
+                            <strong>Chegg [Part-Time]</strong> 
+                            <br/>
+                            <span>
+                                <i>Solved 1300+ Computer Science Doubts</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>Oct 2019 to Dec 2020</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>Chegg Expert</i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Internship">
+                    <div class="Datapure">
+                        <img src="../images/icons/datapure_icon.png" alt="datapure_Logo" width="35" height="35" class="rounded" />
+                        <strong>Datapure [2 Month Internship]</strong>
+                    </div>
+                    <br/>
+                    <div class="Programmer">
+                        <img src="../images/icons/programr_icon.png" alt="datapure_Logo" width="35" height="35" class="rounded" />
+                        <strong>Programmer [2 Month Internship]</strong>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <h4 style="margin-left: 20px;">Education &amp; Qualifications</h4>
+            <div class="education">
+                <div class="btech">
+                    <div class="college-info">
+                        <div class="college-logo">
+                            <img src="../images/icons/BIET_icon.png" alt="BIET_Logo" width="35" height="35" class="rounded" />
+                        </div>
+                        <div class="college-detail">
+                            <strong>B.Tech, Computer Science &amp; Engineering</strong> 
+                            <br/>
+                            <span>
+                                <i>BIET, Jhansi [AKTU]</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>July 2016 to Sep 2020</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>71.94%</i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="intermediate">
+                    <div class="college-info">
+                        <div class="college-logo">
+                            <img src="../images/icons/JNV_icon.png" alt="JNV_Logo" width="35" height="35" class="rounded" />
+                        </div>
+                        <div class="college-detail">
+                            <strong>Intermediate, 12th</strong> 
+                            <br/>
+                            <span>
+                                <i>JNV, Faizabad [CBSE]</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>April 2014 to March 2015</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>81.60%</i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="highschool">
+                    <div class="college-info">
+                        <div class="college-logo">
+                            <img src="../images/icons/JNV_icon.png" alt="JNV_Logo" width="35" height="35" class="rounded" />
+                        </div>
+                        <div class="college-detail">
+                            <strong>highschool, 10th</strong> 
+                            <br/>
+                            <span>
+                                <i>JNV, Faizabad [CBSE]</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>April 2013 to March 2014</i>
+                            </span>
+                            <br/>
+                            <span>
+                                <i>81.70% [8.6 CGPA]</i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <h4 style="margin-left: 20px;">Udemy Certifications</h4>
+            <div class="udemy-certificates">
+                <div class="Udemy">
+                    <ul>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1MMa6OnPcbMgXBfZfN9Ns5Mj-COqd03KF/view?usp=sharing" target="_blank" >
+                                <img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-04c4e63e-3d09-4b03-bac2-5362094a32c8/" target="_blank" >
+                                <strong>Python Advance</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1z54QuBoWfqwPcEtgFDpNkDn9r9QQwHbW/view?usp=sharing" target="_blank" >
+                                <img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-dbe260a7-4173-4913-afec-850a2bb35dde/" target="_blank" >
+                                <strong>GUI with Tkinter</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Udemy">
+                    <ul>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1TVC7bhE6c-j3W2hyI8KKMQrqk6WrtRtY/view?usp=sharing" target="_blank" >
+                                <img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-7294146a-f05d-475c-bfa9-72c17f7ba3ef/" target="_blank" >
+                                <strong>Python3 OOPs</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/122bblOW7o98vYnYWmnBUT2AXQVw0DjUK/view?usp=sharing" target="_blank" >
+                                <img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-71df7363-fc5d-4c57-b621-5e09a41c4bb1/" target="_blank" >
+                                <strong>Web with Flask</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Udemy">
+                    <ul>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1qOHGYS2rGD2XqAmnM2NMSu2M2kNVY9xK/view?usp=sharing" target="_blank" >
+                                <img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-75dbdf82-be3d-466b-8f8c-cdde811a5bbd/" target="_blank" >
+                                <strong>Django Full Stack</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1NU7P3n1iaAgMOZMSUuvPdjnDyJ11JKUm/view?usp=sharing" target="_blank" >
+                                <img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+                            </a> 
+                            <a href="https://www.udemy.com/certificate/UC-cd2c33e9-7cc6-4e3d-86e6-304b7002250e/" target="_blank" >
+                                <strong>Machine Learning A-Z™</sup></strong>
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="Udemy">
+                    <ul>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1QmKSVIMgWMahwmr_j8Fpjo8kYSpQh89U/view?usp=sharing" target="_blank" >
+                                <img src="../images/cert_icons/udemy_icon.png" width="19" height="19" class="rounded" alt="cert_icon"/>
+                            </a> 
+                            <a href="https://www.udemy.com/certificate/UC-ce97f306-2ca2-46c3-909b-4749d93b1e32/" target="_blank" >
+                                <strong>HTML and CSS</strong>
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr/>
+            <h4 style="margin-left: 20px;">Technical Skills</h4>
+            <div class="technical-skills">
+                <div class="skill">
+                    <img src="../images/icons/python_icon.png" alt="Python_logo"  width="15" height="15" class="rounded">
+                    <span class="skills">Python</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                    <img src="../images/icons/flask_icon.png" alt="Flask_logo"  width="15" height="15" class="rounded">
+                    <span class="skills">Flask</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                    <img src="../images/icons/django_icon.png" alt="Django_logo"  width="15" height="15" class="rounded">
+                    <span class="skills">Django</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                </div>
+                <div class="skill">
+                    <img src="../images/icons/tkinter_icon.png" alt="Tkinter_logo"  width="15" height="15" class="rounded">
+                    <span class="skills"> Tkinter</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                    <img src="../images/icons/datascience_ml_icon.png" alt="DataScience_ML_logo"  width="15" height="15" class="rounded">
+                    <span class="skills"> Data Science</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                    <img src="../images/icons/github_icon.png" alt="Github_logo"  width="15" height="15" class="rounded">
+                    <span class="skills"> Git</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                </div>
+                <div class="skill">
+                    <img src="../images/icons/dsa_icon.png" alt="DSA_logo"  width="15" height="15" class="rounded">
+                    <span class="skills"> DS &amp; Algo</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                    <img src="../images/icons/web_d_icon.png" alt="Web_D_logo"  width="15" height="15" class="rounded">
+                    <span class="skills"> Web Dev.</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                    <img src="../images/icons/yocto_icon.png" alt="Yocto_logo"  width="15" height="15" class="rounded">
+                    <span class="skills"> Yocto</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                </div>
+                <div class="skill">
+                    <img src="../images/icons/database_icon.png" alt="DB_logo"  width="15" height="15" class="rounded">
+                    <span class="skills"> DB &amp; SQL</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                    <img src="../images/icons/linux_icon.png" alt="Linux_logo"  width="15" height="15" class="rounded">
+                    <span class="skills"> Linux</span>
+                    <span class="stars">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/cstar_icon.png" alt="*"  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                        <img src="../images/icons/ostar_icon.png" alt=""  width="15" height="15" class="rounded">
+                    </span>
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="footer">
+            <h4 style="margin-left: 20px;">Technical Certifications</h4>
+            <div name="n_cert" class="t-certificates">
+                <div class=""certificates>
+                    <span class="c-skill">
+                        <img src="../images/icons/codechef_icon.png" alt="BIET_Logo" width="20" height="20" class="rounded" /> 
+                        <span>Snackdown </span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/1cERRpjlI_-RsRdGex0kiaERCQ75pM_js/view?usp=sharing" target="_blank"> 2017 </a>, 
+                            <a href="https://drive.google.com/file/d/1OAwbp1kmHSgMpucM4j75oHhgpD6U2Dkd/view?usp=sharing" target="_blank">19 </a>&amp; 
+                            <a href="https://drive.google.com/file/d/1Ru6Q5FYrvjGUhLIhB8yfxeiJQjxR_XFZ/view?usp=sharing" target="_blank"> 21 </a> 
+                        </strong>
+                    </span>
+                    <br/>
+                    <span class="c-skill">
+                        <img src="../images/cert_icons/hackerrank_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/> 
+                        <span>Hackerrank</span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/17rkuC4zVATpoFHrKESMqhkZ1TfAf7IEg/view?usp=sharing" target="_blank" >
+                                Python Certificate
+                            </a>
+                        </strong>
+                    </span>
+                    <br/>
+                    <span class="c-skill">
+                        <img src="../images/cert_icons/hackerrank_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/> 
+                        <span>Hackerrank</span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/1D2gPItEWfPWQMvrbXKJal76rQH04a9dc/view?usp=sharing" target="_blank" >
+                                Problem Solving
+                            </a>
+                        </strong>
+                    </span>
+                    
+                </div>
+                <div class=""certificates>
+                    <span class="c-skill">
+                        <img src="../images/cert_icons/techgig_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
+                        <span>Techgig</span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/157J5vDNOTvdml02SKPonSURRtIrzZtoT/view?usp=sharing" target="_blank">
+                                C Programming
+                            </a>
+                        </strong>
+                    </span>
+                    <br/>
+                    <span class="c-skill">
+                        <img src="../images/cert_icons/techgig_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
+                        <span>Techgig</span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/1dHS1kEnEloSj9IjCAMzSENBbxYQAKRJJ/view?usp=sharing" target="_blank">
+                                Python Programming
+                            </a>
+                        </strong>
+                    </span>
+                    <br/>
+                    <span class="c-skill">
+                        <img src="../images/cert_icons/teqip_icon.png" width="20" height="28" class="rounded" alt="cert_icon"/>
+                        <span>TEQIP-3</span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/169BSTEJNAnHqtCTGJW5diMIHRC9HlN61/view?usp=sharing" target="_blank">
+                                Machine Learning
+                            </a> 
+                        </strong>
+                    </span>
+                </div>
+                <div class=""certificates>
+                    <span class="c-skill">
+                        <img src="../images/cert_icons/datapure_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
+                        <span>Datapure</span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/1U81Rx549w_VkZsojJOCTwhkTfI4t146-/view?usp=sharing" target="_blank" >
+                                Internship
+                            </a>
+                        </strong>
+                    </span>
+                    <br/>
+                    <span class="c-skill">
+                        <img src="../images/cert_icons/datapure_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
+                        <span>Datapure</span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/1fQlyGyTgqANvOpt38TMA2A0U_EvwI45V/view?usp=sharing" target="_blank"   >
+                                Recommendation
+                            </a>
+                        </strong>
+                    </span>
+                    <br/>
+                    <span class="c-skill">
+                        <img src="../images/cert_icons/programr_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
+                        <span>Programmr</span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/1_cQ7gQEJPlE5M_s3c3Kmq9iQjhiC3Tvr/view?usp=sharing" target="_blank" >
+                                Internship
+                            </a> 
+                        </strong>
+                    </span>
+                
+                
+                </div>
+                <div class=""certificates>
+                    <span class="c-skill">
+                        <img src="../images/cert_icons/acm_icpc_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
+                        <span>ACM ICPC</span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/1XYMO1p31tg-SeVV_GbxcrV7uiwV6DQsb/view?usp=sharing" target="_blank">
+                                2018 Regionals
+                            </a> 
+                        </strong>
+                    </span>
+                    <br/>
+                    <span class="c-skill">
+                        <img src="../images/cert_icons/infytq_icon.png" width="20" height="20" class="rounded" alt="cert_icon"/>
+                        <span>Infosys</span>
+                    </span>
+                    <span class="c-skill-cert">
+                        <strong>
+                            <a href="https://drive.google.com/file/d/1K9FrcH-dlY6TJhaRchVsqJ6OwOpY8ctF/view?usp=sharing" target="_blank">
+                                Python Certificate
+                            </a> 
+                        </strong>
+                    </span>
+                </div>
+            </div>
+            <hr/>
+            <h4 style="margin-left: 20px;">Technical Projects</h4>
+            <div class="Projects" style="margin-left: 25px;">
+                <div class="project">
+                    <span class="text-primary">
+                        <img src="../images/icons/ericsson_icon.png" alt="Ericsson_logo"  width="70" height="50" class="rounded"/>
+                        <strong>Media Plane Project [TCS Projects]</strong>
+                    </span>
+                    Utility contributions for Ericsson:
+                    <div class="Scripts">
+                        <div class="TCS-E-S">
+                            <strong> JaySoft-LogViewer</strong>
+                        </div>
+                        <div class="TCS-E-S">
+                            <strong> JaySoft-TTCNRunner</strong>
+                        </div>
+                        <div class="TCS-E-S">
+                            <strong> JaySoft-RobotRunner</strong>
+                        </div>
+                        <div class="TCS-E-S">
+                            <strong> JaySoft-WM_Grepper</strong>
+                        </div>
+                        <div class="TCS-E-S">
+                            <strong> JaySoft-BB_Downloader</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <span class="text-primary">
+                        <img src="../images/icons/github_icon.png" alt="Ericsson_logo"  width="50" height="50" class="rounded"/>
+                        <strong>Freelancing contribution [Github Projects]</strong>
+                    </span>
+                    <div class="Scripts">
+                        <div class="TCS-E-S">
+                            <a target="_blank" href="http://iamjpsonkar.pythonanywhere.com/" >
+                                <strong>◽ JaySoft:JSCode</strong>
+                            </a>
+                            <br/>
+                            <a target="_blank" href="http://imsoftkid.pythonanywhere.com/">
+                                <strong>◽ JaySoft:BIET Coders</strong>
+                            </a>
+                        </div>
+                        <div class="TCS-E-S">
+                            <a target="_blank" href="https://github.com/iamjpsonkar/IASTool" >
+                                <strong>◽ JaySoft:IASTApp</strong>
+                            </a>
+                            <br/>
+                            <a target="_blank" href="https://github.com/iamjpsonkar/JaySoft-Paint">
+                                <strong>◽ JaySoft:JSPaint</strong>
+                            </a>
+                        </div>
+                        <div class="TCS-E-S">
+                            <a target="_blank" href="https://github.com/iamjpsonkar/JaySoft-ImageViewer">
+                                <strong>◽ JaySoft:ImageView</strong>
+                            </a>
+                            <br/>
+                            <a target="_blank" href="https://github.com/iamjpsonkar/Youtube_trending" >
+                                <strong>◽ JaySoft:YTrend </strong>
+                            </a>
+                        </div>
+                        <div class="TCS-E-S">
+                            <a target="_blank" href="https://github.com/iamjpsonkar/Know-The-Tweets">
+                                <strong>◽ JaySoft:GTweets</strong>
+                            </a>
+                            <br/>
+                            <a target="_blank" href="https://github.com/iamjpsonkar/JSText"  >
+                                <strong>◽ JaySoft:JSText</strong>
+                            </a>
+                        </div>
+                        <div class="TCS-E-S">
+                            <a target="_blank" href="https://github.com/iamjpsonkar/JaySoftDictionary" >
+                                <strong>◽ JaySoft:Dictionary</strong>
+                            </a>
+                            <br/>
+                            <a target="_blank" href="https://github.com/iamjpsonkar/H2E-translator" >
+                                <strong>◽ JaySoft:H2Etrans</strong>
+                            </a>
+                        </div>
+                        <div class="TCS-E-S">
+                            <a target="_blank" href="https://github.com/iamjpsonkar/MusicPlayer" >
+                                <strong>◽ JaySoft:MPlayer </strong>
+                            </a>
+                            <br/>
+                            <a href="https://drive.google.com/file/d/1hKQ29AQuPgOhSb8w3kXQyDSG2ftYKcS_/view?usp=sharing" target="_blank">
+                                <strong>◽ JaySoft:GDMA</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+        </div>
 	</div>
 </body>
 </html>
