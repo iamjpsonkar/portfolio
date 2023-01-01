@@ -18,121 +18,34 @@ a:visited {
 }
 
 /* mouse over link */
-/* a:hover {
-  font-size:
-} */
+a:hover {
+  color:rgb(100, 100, 100);
+  text-decoration: underline;
+}
 
 /* selected link */
 a:active {
   text-decoration: none;
   color:rgb(100, 100, 100);
-  font-weight: bold;
 }
-
-.main-div{
-  margin:5px;
-  border:100px red;;
-  border-radius: 1%;
-}
-
-/* .header {
-  border:2px solid rgb(100, 100, 100);
-} */
 
 .top-header-div{
   display: flex;
-
   justify-content:space-around;
   align-items:center;
-
   padding: 5px;
-  
-}
-
-.profile_link {
-  text-decoration: none;
-  /* border: 1px solid rgb(100, 100, 100); */
-}
-
-.profile-pic{
-  height: 180px;
-  width:180px;
-}
-
-/* .name-div{
-  
-} */
-
-
-.contact-info{
-  line-height: 2rem;
-}
-
-.coding-prof{
-  line-height: 2rem;
-}
-
-.bottom-header-div{
-
-}
-
-.summary{
-  font-size: larger;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  /* text-align: center; */
 }
 
 .extras{
   display: flex;
-
   justify-content: space-around;
   align-items: center;
-
   font-style: italic;
   font-size: large;
 }
 
-.work-experience, 
-.education, 
-.udemy-certificates,
-.technical-skills,
-.t-certificates,
-.Scripts
+.company-info
 {
-  display: flex;
-  padding-left: 10px;
-  padding-right: 10px;
-  justify-content: space-around;
-  /* align-items: center; */
-}
-
-.education{
-  display: flex;
-  padding-left: 10px;
-  padding-right: 10px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.education{
-  display: flex;
-  padding-left: 10px;
-  padding-right: 10px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.skill-set{
-  display: flex;
-  /* padding-left: 10px;
-  padding-right: 10px;
-  justify-content: space-around;
-  align-items: center; */
-}
-
-.company-info, .college-info{
   display: flex;
   gap:20px;
 }
@@ -143,15 +56,67 @@ a:active {
   align-items: center;
 }
 
-/* .education{
-  border-left: 2px solid rgb(100, 100, 100);
-  border-right: 2px solid rgb(100, 100, 100);
 
-  padding-left: 10px;
-  padding-right: 10px;
-} */
+.task-list{
+  display:flex;
+  justify-content: space-around;
+  gap:50px;
+}
+
+.education{
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: space-between;
+  gap:50px;
+} 
+
+.college-info{
+  display: flex;
+  gap:20px;
+}
+
+.udemy-certificates
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.technical-skills{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .skills{
   padding-left: 5px;;
   padding-right: 5px;;
+}
+
+
+.skill-set{
+  display: flex;
+  flex-direction:column;
+}
+.skill-row{
+  display: flex;
+  gap:5px;
+  justify-content: space-between;
+}
+.skill-detail{
+  align-self: flex-start;
+}
+.stars{
+  align-self: flex-end;
+}
+
+.t-certificates{
+  display: flex;
+  justify-content: space-between;
+}
+
+.project
+{
+  display: flex;
+  justify-content: space-between;
 }
