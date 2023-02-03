@@ -57,6 +57,14 @@ a:active {
 }
 
 
+.company-projects
+{
+  margin-top: 0.5em;
+  display:flex;
+  justify-content: space-between;
+  font-style: italic;
+}
+
 .task-list{
   display:flex;
   justify-content: space-around;
@@ -67,7 +75,7 @@ a:active {
   display: flex;
   padding-left: 15px;
   padding-right: 15px;
-  justify-content: space-between;
+  justify-content: space-around;
   gap:50px;
 } 
 
