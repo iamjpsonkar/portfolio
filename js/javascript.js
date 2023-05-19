@@ -10,12 +10,14 @@ function setExp()
 	// Calculation for TCS Experience
 	var J_date = TCS_joining_date;
 	var R_date = TCS_resigniing_date;
-	exp += (R_date.getFullYear()-J_date.getFullYear())*12+(R_date.getMonth	()-J_date.getMonth());
+	texp = (R_date.getFullYear()-J_date.getFullYear())*12+(R_date.getMonth	()-J_date.getMonth());
 	
-	// Calculation for TCS Experience
+	// Calculation for Fynd Experience
 	var J_date = Fynd_joining_date;
 	var R_date = Fynd_resigniing_date;
-	exp += (R_date.getFullYear()-J_date.getFullYear())*12+(R_date.getMonth	()-J_date.getMonth());
+	fexp = (R_date.getFullYear()-J_date.getFullYear())*12+(R_date.getMonth	()-J_date.getMonth());
+
+	exp = texp + fexp
 	
 
 	// Experience Calculation
@@ -24,6 +26,12 @@ function setExp()
 
 	document.getElementById("eYear").innerHTML = eYear;
 	document.getElementById("eMonth").innerHTML = eMonth;
+
+	document.getElementById("tYear").innerHTML = parseInt(texp/12);
+	document.getElementById("tMonth").innerHTML = texp % 12;
+
+	document.getElementById("fYear").innerHTML = parseInt(fexp/12);
+	document.getElementById("fMonth").innerHTML = fexp % 12;
 
 	// Personal Experience
 	var pYear = "2+";
