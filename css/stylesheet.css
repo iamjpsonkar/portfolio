@@ -4,6 +4,13 @@ body {
   padding: 0;
 }
 
+ul {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 a {
   text-decoration: none;
   color: rgb(100, 100, 100);
@@ -40,7 +47,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   font-style: italic;
-  margin-top: 0.3em;
+  margin-top: 0.1em;
 }
 
 .task-list, .education {
