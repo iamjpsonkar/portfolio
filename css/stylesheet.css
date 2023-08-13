@@ -1,130 +1,78 @@
 body {
   background-color: aliceblue;
-  margin: 0em;
+  margin: 0;
   padding: 0;
-  border: #00BBFF;
-  border-width: thin;
 }
 
-/* unvisited link */
-a:link {
+a {
   text-decoration: none;
-  color:rgb(100, 100, 100);
+  color: rgb(100, 100, 100);
 }
 
-/* visited link */
-a:visited {
-  color:rgb(100, 100, 100);
-}
-
-/* mouse over link */
 a:hover {
-  color:rgb(100, 100, 100);
   text-decoration: underline;
 }
 
-/* selected link */
-a:active {
-  text-decoration: none;
-  color:rgb(100, 100, 100);
-}
-
-.top-header-div{
-  display: flex;
-  justify-content:space-around;
-  align-items:center;
-  padding: 5px;
-}
-
-.extras{
+.top-header-div, .extras {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 5px;
+}
+
+.extras {
   font-style: italic;
   font-size: large;
 }
 
-.company-info
-{
+.company-info, .college-info {
   display: flex;
-  gap:20px;
+  gap: 20px;
 }
 
-.company-logo{
+.company-logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.company-projects
-{
-  margin-top: 0.3em;
-  display:flex;
+.company-projects, .udemy-certificates, .technical-skills, .t-certificates, .project {
+  display: flex;
   justify-content: space-between;
   font-style: italic;
+  margin-top: 0.3em;
 }
 
-.task-list{
-  display:flex;
-  justify-content: space-around;
-  gap:50px;
-}
-
-.education{
+.task-list, .education {
   display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.education {
   padding-left: 15px;
   padding-right: 15px;
-  justify-content: space-around;
-  gap:50px;
-} 
-
-.college-info{
-  display: flex;
-  gap:20px;
 }
 
-.udemy-certificates
-{
+.skills {
+  padding: 0 5px;
+}
+
+.skill-set {
   display: flex;
+  flex-direction: column;
+}
+
+.skill-row {
+  display: flex;
+  gap: 5px;
   justify-content: space-between;
 }
 
-.technical-skills{
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.skills{
-  padding-left: 5px;;
-  padding-right: 5px;;
-}
-
-
-.skill-set{
-  display: flex;
-  flex-direction:column;
-}
-.skill-row{
-  display: flex;
-  gap:5px;
-  justify-content: space-between;
-}
-.skill-detail{
+.skill-detail {
   align-self: flex-start;
 }
-.stars{
+
+.stars {
   align-self: flex-end;
-}
-
-.t-certificates{
-  display: flex;
-  justify-content: space-between;
-}
-
-.project
-{
-  display: flex;
-  justify-content: space-between;
 }
