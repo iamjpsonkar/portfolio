@@ -83,3 +83,20 @@ a:hover {
 .stars {
   align-self: flex-end;
 }
+
+.tasks {
+  margin-top: 0.6em;
+  font-style: italic;
+}
+
+/* Styling for each list item in tasks */
+.tasks ul li {
+  transition: 0.3s; /* Smooth transition for hover effects */
+  cursor: pointer;  /* Changes the cursor to a hand when hovering over list items */
+}
+
+/* Hover effect for each list item in tasks */
+.tasks ul li:hover {
+  text-decoration: underline; /* Underlines the list item on hover */
+}
+
