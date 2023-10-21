@@ -102,48 +102,57 @@ a:hover {
 
 
 
-    .project-container {
-        font-family: Arial, sans-serif;
-        width: 100%;
-        padding-left: 15px;
-        list-style-type: none;
-    }
+.project-container {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding-left: 15px;
+    list-style-type: none;
+}
 
-    .project-item {
-        margin: 10px 0;
-        padding: 5px 0;
-        border-bottom: 1px solid #e5e5e5;
-    }
+.project-item {
+    margin: 10px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
 
-    .project-logo {
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-        margin-right: 10px;
-        vertical-align: middle;
-    }
+.project-logo {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
 
-    .project-title {
-        font-weight: bold;
-        font-size: 1.1em;
-        color: #333;
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 10px;
-    }
+.project-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
 
-    .project-year {
-        font-weight: normal;
-        font-size: 0.9em;
-        color: #555; /* Darker color than the previous #777 */
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 10px;
-    }
+.project-year {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #555; /* Darker color than the previous #777 */
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
 
-    .project-description {
-        font-size: 0.9em;
-        color: #555;
-        margin-top: 3px;
-    }
-    
+.project-description {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 3px;
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Adding some space between rows */
+}
+.project-item {
+  width: 49%; 
+  box-sizing: border-box; 
+}
