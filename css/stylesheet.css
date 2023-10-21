@@ -150,7 +150,7 @@ a:hover {
 .project-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px; /* Adding some space between rows */
+  margin-bottom: 18px; /* Adding some space between rows */
 }
 .project-item {
   width: 49%; 
