@@ -81,6 +81,23 @@
 }
 
 
+/* css for education */
+.education table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.education td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+.education img {
+  display: block;
+  margin: 0 auto;
+}
+
+
 
 
 
