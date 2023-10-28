@@ -1,3 +1,73 @@
+
+ /* css for .top-header-div */
+.top-header-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+/* css for profile pic */
+.profile-pic {
+  height: 180px;
+  width: 180px;
+}
+
+/* css for personal info  */
+.personal-info, .contact-info, .coding-prof {
+  width: 25%; /* Adjust accordingly */
+}
+
+.personal-info ul, .contact-info ul, .coding-prof ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* css for .contact-info */
+.contact-info {
+  line-height: 2rem;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  margin-bottom: 4px;  /* Adjust based on your preferences */
+}
+
+/* css for .coding-prof */
+.coding-prof {
+  line-height: 2rem;
+}
+
+.coding-prof ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coding-prof li {
+  margin-bottom: 4px;  /* Adjust based on your preferences */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====================== */
+
+
 body {
   background-color: aliceblue;
   margin: 0;
