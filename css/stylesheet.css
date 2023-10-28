@@ -5,7 +5,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  font-size: medium;
 }
 
 /* css for profile pic */
@@ -56,10 +55,31 @@
 
 /* css for summary */
 .summary {
-  font-size: larger;
   padding-left: 20px;
   padding-right: 20px;
 }
+
+/* css for highlights */
+.extras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  min-width: 45%; /* Adjust as needed for the desired breakpoint between one and two columns */
+  padding: 0 10px; /* Adding some padding for better appearance */
+}
+
+/* Adjust for smaller screens (e.g., mobile) if necessary */
+@media (max-width: 768px) {
+  .column {
+      min-width: 100%;
+      padding: 0;
+  }
+}
+
 
 
 
@@ -96,17 +116,21 @@ a:hover {
   text-decoration: underline;
 }
 
-.top-header-div, .extras {
+.top-header-div {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 5px;
 }
 
-.extras {
+/* .extras {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
   font-style: italic;
   font-size: large;
-}
+} */
 
 .company-info, .college-info {
   display: flex;
