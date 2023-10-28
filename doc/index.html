@@ -62,6 +62,55 @@
             }
             
         </style>
+        <script>
+            function setExp() 
+            {
+                var exp = 0;
+
+                var TCS_joining_date=new Date("2020-10-15");
+                var TCS_resigniing_date=new Date("2022-12-25");
+                var Fynd_joining_date=new Date("2022-12-26");
+                var Fynd_resigniing_date=new Date();
+
+                // Calculation for TCS Experience
+                var J_date = TCS_joining_date;
+                var R_date = TCS_resigniing_date;
+                texp = (R_date.getFullYear()-J_date.getFullYear())*12+(R_date.getMonth	()-J_date.getMonth());
+                
+                // Calculation for Fynd Experience
+                var J_date = Fynd_joining_date;
+                var R_date = Fynd_resigniing_date;
+                fexp = (R_date.getFullYear()-J_date.getFullYear())*12+(R_date.getMonth	()-J_date.getMonth());
+
+                exp = texp + fexp
+                
+
+                // Experience Calculation
+                var eYear = parseInt(exp/12);
+                var eMonth = exp % 12;
+
+                document.getElementById("eYear").innerHTML = eYear;
+                document.getElementById("eMonth").innerHTML = eMonth;
+
+                document.getElementById("tYear").innerHTML = parseInt(texp/12);
+                document.getElementById("tMonth").innerHTML = texp % 12;
+
+                document.getElementById("fYear").innerHTML = parseInt(fexp/12);
+                document.getElementById("fMonth").innerHTML = fexp % 12;
+
+                // Personal Experience
+                var pYear = "2+";
+                document.getElementById("pYear").innerHTML = PYear;
+
+                // Last Working Day TCS
+                var LWD = TCS_resigniing_date;
+                const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+                var today = new Date();
+                var NPD = 1+Math.round(Math.abs((LWD - today) / oneDay));
+                document.getElementById("NPD").innerHTML = NPD;
+            }
+            window.onload = setExp;
+        </script>
     </head>
     <body class="resume-font">
         <div class="container-fluid" style="padding: 20px 30px;">
@@ -107,33 +156,72 @@
                             <!-- Summary -->
                             <tr>
                                 <td colspan="2">
-                                    Software Engineer with <span id="eYear">2</span> Years and <span id="eMonth">7</span> Months of hands-on experience in Python-based web application development and backend engineering. Demonstrated expertise in designing, developing, and optimizing dynamic web applications. Proficient in Python, data structures and algorithms, and familiar with Machine Learning and AI principles. Seeking roles in Software Development, Backend Engineering, Python Development, AI, and Data Science.
+                                    Software Engineer with <span id="eYear">2</span>
+                                    Years and <span id="eMonth">7</span> Months
+                                    of hands-on experience in Python-based web
+                                    application development and backend
+                                    engineering. Demonstrated expertise in
+                                    designing, developing, and optimizing
+                                    dynamic web applications. Proficient in
+                                    Python, data structures and algorithms, and
+                                    familiar with Machine Learning and AI
+                                    principles. Seeking roles in Software
+                                    Development, Backend Engineering, Python
+                                    Development, AI, and Data Science.
                                 </td>
                             </tr>
                             <!-- Highlights: First Column -->
                             <tr>
                                 <td>
                                     <ul>
-                                        <li><strong>Backend Development:</strong> Developed the Payments and Refund System.</li>
-                                        <li><strong>Integration Expertise:</strong> Integrated <b>Razorpay Partnership Model</b>, &amp; Custom Checkout Integration for <b>Jio1Pay, Tirabeauty</b>.</li>
-                                        <li><strong>API Development:</strong> Automated APIs, enhanced Payment and Refund APIs, and extended Payment functionalities.</li>
-                                        <li><strong>Database Management:</strong> Handled SQL Scripts and Migrations for efficient data processing.</li>
-                                        <li><strong>Scripting Skills:</strong> Proficient in Bash, and Python scripting for varied applications.</li>
+                                        <li><strong>Backend Development:</strong>
+                                            Developed the Payments and Refund
+                                            System.</li>
+                                        <li><strong>Integration Expertise:</strong>
+                                            Integrated <b>Razorpay Partnership
+                                                Model</b>, &amp; Custom Checkout
+                                            Integration for <b>Jio1Pay,
+                                                Tirabeauty</b>.</li>
+                                        <li><strong>API Development:</strong>
+                                            Automated APIs, enhanced Payment and
+                                            Refund APIs, and extended Payment
+                                            functionalities.</li>
+                                        <li><strong>Database Management:</strong>
+                                            Handled SQL Scripts and Migrations
+                                            for efficient data processing.</li>
+                                        <li><strong>Scripting Skills:</strong>
+                                            Proficient in Bash, and Python
+                                            scripting for varied applications.</li>
                                     </ul>
                                 </td>
                                 <!-- Highlights: Second Column -->
                                 <td>
                                     <ul>
-                                        <li><strong>Data Structures & Algorithms:</strong> Solved <b>700+ DSA problems</b>, showcasing problem-solving capabilities.</li>
-                                        <li><strong>Competitive Coding:</strong> Qualified for <b>ACM-ICPC 2018 Regionals</b>.</li>
-                                        <li><strong>Teaching & Mentorship:</strong> Resolved <b>1300+</b> student doubts on Chegg.</li>
-                                        <li><strong>Open-Source Contributions:</strong> Maintained <b>70+ repositories</b> on GitHub, highlighting active participation in the developer community.</li>
-                                        <li><strong>Awards & Recognition:</strong> Earned 10+ accolades and certifications for technical proficiency and achievements in software development.</li>
+                                        <li><strong>Data Structures &
+                                                Algorithms:</strong> Solved <b>700+
+                                                DSA problems</b>, showcasing
+                                            problem-solving capabilities.</li>
+                                        <li><strong>Competitive Coding:</strong>
+                                            Qualified for <b>ACM-ICPC 2018
+                                                Regionals</b>.</li>
+                                        <li><strong>Teaching & Mentorship:</strong>
+                                            Resolved <b>1300+</b> student doubts
+                                            on Chegg.</li>
+                                        <li><strong>Open-Source Contributions:</strong>
+                                            Maintained <b>70+ repositories</b>
+                                            on GitHub, highlighting active
+                                            participation in the developer
+                                            community.</li>
+                                        <li><strong>Awards & Recognition:</strong>
+                                            Earned 10+ accolades and
+                                            certifications for technical
+                                            proficiency and achievements in
+                                            software development.</li>
                                     </ul>
                                 </td>
                             </tr>
                         </table>
-                        
+
                     </td>
                 </tr>
                 <tr>
@@ -285,48 +373,66 @@
                     <td colspan="12">
                         <h3>SKILLS</h3>
                         <hr />
-                        <ul style="font-size: 14px; line-height: 1.8;"> <!-- Increased line-height -->
+                        <ul style="font-size: 14px; line-height: 1.8;">
+                            <!-- Increased line-height -->
                             <li>
-                                <strong>Backend Developer:</strong> Python, 
-                                <span style="margin-right: 5px;"></span> Flask, 
-                                <span style="margin-right: 5px;"></span> Django, 
-                                <span style="margin-right: 5px;"></span> Sanic, 
-                                <span style="margin-right: 5px;"></span> Git, 
-                                <span style="margin-right: 5px;"></span> DS &Algo, 
-                                <span style="margin-right: 5px;"></span> DB & SQL, 
-                                <span style="margin-right: 5px;"></span> Bash/Linux
+                                <strong>Backend Developer:</strong> Python,
+                                <span style="margin-right: 5px;"></span> Flask,
+                                <span style="margin-right: 5px;"></span> Django,
+                                <span style="margin-right: 5px;"></span> Sanic,
+                                <span style="margin-right: 5px;"></span> Git,
+                                <span style="margin-right: 5px;"></span> DS
+                                &Algo,
+                                <span style="margin-right: 5px;"></span> DB &
+                                SQL,
+                                <span style="margin-right: 5px;"></span>
+                                Bash/Linux
                             </li>
                             <li>
-                                <strong>DevOps:</strong> Git, 
-                                <span style="margin-right: 5px;"></span> Bash, 
-                                <span style="margin-right: 5px;"></span> Linux, 
-                                <span style="margin-right: 5px;"></span> Docker, 
-                                <span style="margin-right: 5px;"></span> AWS Cloud, 
-                                <span style="margin-right: 5px;"></span> GCP Cloud, 
-                                <span style="margin-right: 5px;"></span> Kubernetes
+                                <strong>DevOps:</strong> Git,
+                                <span style="margin-right: 5px;"></span> Bash,
+                                <span style="margin-right: 5px;"></span> Linux,
+                                <span style="margin-right: 5px;"></span> Docker,
+                                <span style="margin-right: 5px;"></span> AWS
+                                Cloud,
+                                <span style="margin-right: 5px;"></span> GCP
+                                Cloud,
+                                <span style="margin-right: 5px;"></span>
+                                Kubernetes
                             </li>
                             <li>
-                                <strong>Frontend Developer:</strong> Web Development, 
-                                <span style="margin-right: 5px;"></span> Git, 
-                                <span style="margin-right: 5px;"></span> HTML, 
-                                <span style="margin-right: 5px;"></span> CSS, 
-                                <span style="margin-right: 5px;"></span> JavaScript, 
+                                <strong>Frontend Developer:</strong> Web
+                                Development,
+                                <span style="margin-right: 5px;"></span> Git,
+                                <span style="margin-right: 5px;"></span> HTML,
+                                <span style="margin-right: 5px;"></span> CSS,
+                                <span style="margin-right: 5px;"></span>
+                                JavaScript,
                                 <span style="margin-right: 5px;"></span> Node.js
                             </li>
                             <li>
-                                <strong>AI/ML Developer:</strong> Python, 
-                                <span style="margin-right: 5px;"></span> Data Science, 
+                                <strong>AI/ML Developer:</strong> Python,
+                                <span style="margin-right: 5px;"></span> Data
+                                Science,
                                 <span style="margin-right: 5px;"></span> AI & ML
                             </li>
-                        </ul> 
+                        </ul>
                         <h3>CODING PROFILES</h3>
                         <hr />
                         <ul style="font-size: 14px;">
-                            <li><strong>Leetcode:</strong> <a href="https://leetcode.com/iamjpsonkar/" target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
-                            <li><strong>GeeksForGeeks:</strong> <a href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile" target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
-                            <li><strong>Hackerrank:</strong> <a href="https://www.hackerrank.com/iamjpsonkar/" target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
-                            <li><strong>Hackerearth:</strong> <a href="https://www.hackerearth.com/@iamjpsonkar" target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
-                        </ul>                       
+                            <li><strong>Leetcode:</strong> <a
+                                    href="https://leetcode.com/iamjpsonkar/"
+                                    target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
+                            <li><strong>GeeksForGeeks:</strong> <a
+                                    href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile"
+                                    target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
+                            <li><strong>Hackerrank:</strong> <a
+                                    href="https://www.hackerrank.com/iamjpsonkar/"
+                                    target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
+                            <li><strong>Hackerearth:</strong> <a
+                                    href="https://www.hackerearth.com/@iamjpsonkar"
+                                    target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
@@ -590,29 +696,43 @@
                             <li>
                                 <strong>Python Advance Course</strong><br>
                                 Udemy • 2022 • Python<br>
-                                • Successfully completed Udemy's "Python Advance Course", enhancing expertise in deeper nuances and advanced functionalities of Python programming.
+                                • Successfully completed Udemy's
+                                "Python Advance Course", enhancing expertise in
+                                deeper nuances and advanced functionalities of
+                                Python programming.
                             </li>
                             <li>
                                 <strong>Django Full Stack</strong><br>
                                 Udemy • 2022 • Django, Python<br>
-                                • Completed the "Django Full Stack" course on Udemy, strengthening end-to-end web development skills using Django's robust framework.
+                                • Completed the "Django Full Stack" course on
+                                Udemy, strengthening end-to-end web development
+                                skills using Django's robust framework.
                             </li>
                             <li>
                                 <strong>Web with Flask</strong><br>
                                 Udemy • 2022 • Flask, Python<br>
-                                • Accomplished the "Web with Flask" course on Udemy, honing skills in crafting dynamic web applications using the Flask framework.
+                                • Accomplished the "Web with Flask" course on
+                                Udemy, honing skills in crafting dynamic web
+                                applications using the Flask framework.
                             </li>
                             <li>
                                 <strong>Machine Learning A-Z™</strong><br>
-                                Udemy • 2022 • Machine Learning, AI, Pandas, Python, Data Science<br>
-                                • Concluded the "Machine Learning A-Z™" course on Udemy, solidifying a comprehensive understanding of machine learning techniques and applications.
+                                Udemy • 2022 • Machine Learning, AI, Pandas,
+                                Python, Data Science<br>
+                                • Concluded the "Machine Learning A-Z™" course
+                                on Udemy, solidifying a comprehensive
+                                understanding of machine learning techniques and
+                                applications.
                             </li>
                             <li>
                                 <strong>HTML and CSS | Web Development</strong><br>
                                 Udemy • 2022 • HTML, CSS, Bootstrap<br>
-                                • Completed the "HTML and CSS" course on Udemy, mastering the core principles of web design and crafting visually appealing, responsive websites.
+                                • Completed the "HTML and CSS" course on Udemy,
+                                mastering the core principles of web design and
+                                crafting visually appealing, responsive
+                                websites.
                             </li>
-                        </ul>                        
+                        </ul>
                     </td>
                 </tr>
             </table>
