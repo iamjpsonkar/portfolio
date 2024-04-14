@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resume</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap-4.4.1.js"></script>
+        <style>
+            .main {
+                padding: 1%;
+                background-color: white;
+                border: 1px solid black;
+            }
+
+            .introductionheader {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .info {
+                padding: 1%;
+            }
+
+            .contact {
+                padding: 1%;
+            }
+
+            .experience {
+                display: flex;
+                gap:1%;
+                flex-direction: column;
+            }
+
+            .experienceHeader{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .projects {
+                display: flex;
+                gap: 1%;
+                flex-direction: column;
+            }
+
+            .projectHeader {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .skillHeader {
+                display: flex;
+                margin:0px;
+                padding: 0px;
+            }
+
+            .margin1{
+                margin: 1px;
+            }
+
+            .margin-left-2{
+                margin-left: 2%;
+            }
+
+
+
+        </style>
+        <script>
+            function calculateYearMonth(dateString) {
+                const [day, month, year] = dateString.split('/').map(Number);
+                const givenDate = new Date(year, month - 1, day); // Adjust month index by subtracting 1
+                const currentDate = new Date();
+            
+                let yearsDiff = currentDate.getFullYear() - givenDate.getFullYear();
+                let monthsDiff = currentDate.getMonth() - givenDate.getMonth();
+            
+                if (monthsDiff < 0 || (monthsDiff === 0 && currentDate.getDate() < givenDate.getDate())) {
+                    yearsDiff--;
+                    monthsDiff += 12; // Adjust months difference if negative
+                }
+            
+                return { years: yearsDiff, months: monthsDiff };
+            }
+
+            function setExp(startdate){
+                let expSpan = document.getElementById("exp");
+                const result = calculateYearMonth(startdate);
+                console.log(result);
+                let expString = result.years + " Years"
+                if(result.months>0){
+                    expString += " and " + result.months + " Months"
+                }
+                expSpan.innerHTML = expString;
+            }
+
+            function createIntroductionDiv(introductionData) {
+                const introductionHTML = `
+                    <div class="introductionheader">
+                        <div class="info">
+                            <h2>${introductionData.name}</h2>
+                            <h5>${introductionData.role}</h5>
+                            <h5>${introductionData.company}</h5>
+                            <h5>${introductionData.location}</h5>
+                        </div>
+                        <div class="contact">
+                            <h6><a href="tel:${introductionData.mobile}">${introductionData.mobile}</a></h6>
+                            <h6><a href="mailto:${introductionData.email}">${introductionData.email}</a></h6>
+                            <h6><a href="${introductionData.linkedin}">${introductionData.linkedin}</a></h6>
+                            <h6><a href="${introductionData.github}">${introductionData.github}</a></h6>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="summary">
+                        <p style="font-style: italic;">${introductionData.summary}</p>
+                    </div>
+                `;
+            
+                const container = document.getElementById("introductionContainer");
+                container.innerHTML = introductionHTML;
+            }
+
+            function createCompanyDiv(company) {
+                const experienceDiv = document.createElement('div');
+                experienceDiv.classList.add('experience');
+            
+                const companyDiv = document.createElement('div');
+                companyDiv.classList.add('company');
+            
+                const experienceHeaderDiv = document.createElement('div');
+                experienceHeaderDiv.classList.add('experienceHeader');
+            
+                const headerContent = `
+                    <div>
+                        <h5 class="post">${company.roleName}</h5>
+                        <p class="company-name">${company.companyName}</p>
+                    </div>
+                    <div class="timeline">
+                        <p>${company.timeline}</p>
+                    </div>
+                `;
+                experienceHeaderDiv.innerHTML = headerContent;
+            
+                const responsibilityDiv = document.createElement('div');
+                responsibilityDiv.classList.add('responsibility');
+            
+                const ul = document.createElement('ul');
+                ul.style.listStyleType = 'disc';
+                ul.style.marginLeft = '20px';
+                ul.style.fontSize = '14px';
+            
+                company.responsibilities.forEach(responsibility => {
+                    const li = document.createElement('li');
+                    li.textContent = responsibility;
+                    ul.appendChild(li);
+                });
+            
+                responsibilityDiv.appendChild(ul);
+            
+                companyDiv.appendChild(experienceHeaderDiv);
+                companyDiv.appendChild(responsibilityDiv);
+            
+                experienceDiv.appendChild(companyDiv);
+            
+                return experienceDiv;
+            }
+            
+            function createProjectDiv(project) {
+                const projectDiv = document.createElement('div');
+                projectDiv.classList.add('project');
+            
+                const projectHeaderDiv = document.createElement('div');
+                projectHeaderDiv.classList.add('projectHeader');
+            
+                const titleDiv = document.createElement('div');
+                titleDiv.classList.add('title');
+            
+                const title = document.createElement('h5');
+                title.textContent = project.name;
+                titleDiv.appendChild(title);
+            
+                const timePeriodDiv = document.createElement('div');
+                timePeriodDiv.classList.add('timeperiod');
+            
+                const timePeriod = document.createElement('p');
+                timePeriod.textContent = project.timePeriod;
+                timePeriodDiv.appendChild(timePeriod);
+            
+                projectHeaderDiv.appendChild(titleDiv);
+                projectHeaderDiv.appendChild(timePeriodDiv);
+                projectDiv.appendChild(projectHeaderDiv);
+            
+                const descriptionDiv = document.createElement('div');
+                descriptionDiv.classList.add('description');
+            
+                const ul = document.createElement('ul');
+                ul.style.listStyleType = 'disc';
+                ul.style.marginLeft = '20px';
+                ul.style.fontSize = '14px';
+            
+                project.description.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    ul.appendChild(li);
+                });
+            
+                descriptionDiv.appendChild(ul);
+                projectDiv.appendChild(descriptionDiv);
+            
+                return projectDiv;
+            }
+            
+            function addCompanyDivs(companies) {
+                const container = document.getElementById('experienceContainer');
+                companies.forEach(company => {
+                    const companyDiv = createCompanyDiv(company);
+                    container.appendChild(companyDiv);
+                });
+            }
+
+            function addProjectDivs(projects) {
+                const projectContainer = document.getElementById('projectContainer');
+                projects.forEach(project => {
+                    const projectDiv = createProjectDiv(project);
+                    projectContainer.appendChild(projectDiv);
+                });
+            }
+
+            function createCourseDiv(coursesData){
+                let coursesHTML = '';
+                coursesData.forEach(course => {
+                    const skillsList = course.skills.join(', ');
+                    coursesHTML += `
+                        <div class="course">
+                            <b>${course.name}</b>
+                            <p>${course.provider} &bull; ${course.year} &bull; ${skillsList}
+                            <br/>
+                            ${course.description}</p>
+                        </div>
+                    `;
+                });
+                const container = document.getElementById("courseContainer");
+                container.innerHTML = coursesHTML;
+            }
+
+            function createSkillDiv(skillsData) {
+                let skillsHTML = '';
+                for (const [category, skills] of Object.entries(skillsData)) {
+                    skillsHTML += `
+                        <div class="skillHeader">
+                            <div class="skill-category">
+                                <b>${category}</b>
+                            </div>
+                            <div class="skill">
+                                <p>: ${skills}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+                const container = document.getElementById("skillContainer");
+                container.innerHTML = skillsHTML;
+            }
+            
+            function setup(){
+                const myData = {
+                    "introduction": {
+                        "name": "Jay Prakash Sonkar",
+                        "role": "Python Developer | Backend Developer",
+                        "company": "Fynd, Shopsense Retail Technologies Limited",
+                        "location": "Noida, Uttar Pradesh, India",
+                        "startDate": "15/10/2020",
+                        "mobile": "+91-8004023840",
+                        "email": "iamjpsonkar@gmail.com",
+                        "linkedin": "https://www.linkedin.com/in/iamjpsonkar/",
+                        "github": "https://github.com/iamjpsonkar/",
+                        "summary": "Dynamic software engineer boasting <span id=\"exp\" style=\"font-weight: bold;\">3 Years and 6 Months</span> of expertise in Python-based web application development. Renowned for designing robust backend systems, having seamlessly integrated platforms like <span style=\"font-weight: bold;\">Razorpay</span>, and innovating with the <span style=\"font-weight: bold;\">UPIAS Payment Mode</span>. My technical prowess is further showcased by conquering <span style=\"font-weight: bold;\">600+ DSA challenges</span> and earning qualification in the esteemed <span style=\"font-weight: bold;\">ACM-ICPC 2018 Regionals</span>. Beyond coding, I'm an avid contributor with over <span style=\"font-weight: bold;\">70+ active GitHub repositories</span>, demonstrating my dedication to both continuous learning and the broader tech community."
+                    },
+                    "projects": [
+                        {
+                            "name": "Jio1Pay Custom Checkout | Tirabeauty",
+                            "timePeriod": "September 2023 - October 2023",
+                            "description": [
+                                "Achieved smooth integration of Jio1Pay custom checkout with Tirabeauty, resulting in a 25% reduction in checkout times and facilitating over 50,000 transactions monthly.",
+                                "Designed and implemented a comprehensive system that managed both payments and refunds, increasing customer satisfaction scores by 15% due to streamlined transaction experiences.",
+                                "Collaborated closely with the Tirabeauty team to tailor the Jio1Pay integration to their specific needs, leading to a 10% rise in repeat customers and enhancing overall brand loyalty."
+                            ]
+                        },
+                        {
+                            "name": "Multi-Mode of Payment System",
+                            "timePeriod": "August 2023 - August 2023",
+                            "description": [
+                                "Rolled out a comprehensive multi-mode payment system, resulting in a 25% increase in transaction volume and catering to the preferences of over 10,000 active users.",
+                                "Facilitated over 1500 monthly transactions using reward points, boosting user loyalty and promoting a 10% increase in user retention.",
+                                "Seamlessly integrated both prepaid and postpaid payment methodologies, catering to the diverse needs of our user base and facilitating an additional 1000 transactions monthly."
+                            ]
+                        },
+                        {
+                            "name": "Control MOP | Merchant Control Over Payment Configuration",
+                            "timePeriod": "June 2023 - July 2023",
+                            "description": [
+                                "Implemented 'Control MOP', granting merchants direct oversight over payment configurations, leading to a 20% uptick in merchant satisfaction scores within the first quarter.",
+                                "Enabled over 500+ merchants to customize their payment gateways, resulting in a 15% increase in transaction completions due to more tailored user experiences.",
+                                "The 'Control MOP' feature facilitated smoother integration with diverse payment systems, reducing merchant onboarding time by 30% and accelerating go-live processes."
+                            ]
+                        },
+                        {
+                            "name": "Razorpay Partnership Model Integration",
+                            "timePeriod": "May 2023 - May 2023",
+                            "description": [
+                                "Seamlessly integrated the Razorpay partnership model across 100+ merchants, adhering to RBI guidelines and ensuring consistent payment industry compliance.",
+                                "Boosted security protocols for all transactions, implementing a no-storage policy for merchant credentials, resulting in a 30% reduction in security-related incidents and safeguarding data for over 10,000 monthly transactions.",
+                                "Optimized the transaction system by minimizing our intervention as a payment gateway, resulting in a 20% improvement in payment processing speed and elevating the user experience for over 10,000 monthly users."
+                            ]
+                        },
+                        {
+                            "name": "UPIAS | UPI at Store Payment Mode for Store OS",
+                            "timePeriod": "April 2023 - April 2023",
+                            "description": [
+                                "Developed and implemented UPIAS Payment modes feature which increased store payment collection 3x within stipulated timeline.",
+                                "Developed solutions to customer Problems as per guidelines with proper functionality, interacting with other teams for the same and for cross product/ platform integrations.",
+                                "Utilized existing infrastructures and technologies for payment solutions and optimized backend processes to ensure reliable and secure payment processing."
+                            ]
+                        }
+                    ],
+                    "companies": [
+                        {
+                            "roleName": "Software Development Engineer",
+                            "companyName": "Fynd, Shopsense Retail Technologies Limited",
+                            "timeline": "December 2022 - Present | Noida, Uttar Pradesh",
+                            "responsibilities": [
+                                "Developed CRUD APIs on the Fynd Platform for Payments & Refunds, handling aggregators, users, and their transactional statuses.",
+                                "Integrated with databases and Payment Gateway APIs to ensure seamless payment, refund, and payout processes.",
+                                "Successfully integrated Jio1Pay custom checkout for Tirabeauty, encompassing the full payment and refund process.",
+                                "Developed SDK methods to streamline API integration for both Swift and Kotlin platforms.",
+                                "Implemented callbacks and webhooks for payment processing, and managed Kafka events for all services related to payments and refunds.",
+                                "Developed 'UPI at Store' (UPIAS) feature for Cantabill on the Fynd Platform, enabling in-store payments via UPI.",
+                                "Implemented a multi-mode payment system, allowing users to pay using reward points, wallets, and both prepaid and postpaid payment methods.",
+                                "Implemented the linking, verification, and delinking of wallets for payments. Used encryption for the secure storage of tokens.",
+                                "Integrated Razorpay partnership model in compliance with RBI guidelines, ensuring no storage of merchant credentials and avoiding acting as a payment gateway.",
+                                "Continuously monitored and optimized APIs to ensure optimal performance and efficiency.",
+                                "Brunt Automation for the payment system."
+                            ]
+                        },
+                        {
+                            "roleName": "System Engineer (Digital)",
+                            "companyName": "Tata Consultancy Services [TCS]",
+                            "timeline": "October 2020 - December 2022",
+                            "responsibilities": [
+                                "Specialized in the Telecom domain with a focus on system improvements and feature enhancements.",
+                                "Developed and refined Python scripts to optimize operational processes.",
+                                "Managed system image upgrades utilizing the Yocto (Bitbake Build System).",
+                                "Contributed to enhancements for Ericsson Telecom, particularly in the announcement sector.",
+                                "Designed and implemented advanced security features for Ericsson Telecom, enhancing system integrity.",
+                                "Devised a suite of utilities and add-ons, such as JaySoft-Log Viewer and JaySoft-Test Runners, to enhance system operations.",
+                                "Further developed tools like JaySoft-WM_Grepper and JaySoft-BB_Downloader to bolster system functionality."
+                            ]
+                        }
+                    ],
+                    "courses": [
+                        {
+                            "name": "Python Advance Course",
+                            "provider": "Udemy",
+                            "year": "2022",
+                            "skills": [
+                                "Python"
+                            ],
+                            "description": "Successfully completed Udemy's 'Python Advance Course', enhancing expertise in deeper nuances and advanced functionalities of Python programming."
+                        },
+                        {
+                            "name": "Django Full Stack",
+                            "provider": "Udemy",
+                            "year": "2022",
+                            "skills": [
+                                "Django",
+                                "Python"
+                            ],
+                            "description": "Completed the 'Django Full Stack' course on Udemy, strengthening end-to-end web development skills using Django's robust framework."
+                        },
+                        {
+                            "name": "Web with Flask",
+                            "provider": "Udemy",
+                            "year": "2022",
+                            "skills": [
+                                "Flask",
+                                "Python"
+                            ],
+                            "description": "Accomplished the 'Web with Flask' course on Udemy, honing skills in crafting dynamic web applications using the Flask framework."
+                        },
+                        {
+                            "name": "Machine Learning A-Z™",
+                            "provider": "Udemy",
+                            "year": "2022",
+                            "skills": [
+                                "Machine Learning",
+                                "AI",
+                                "Pandas",
+                                "Python",
+                                "Data Science"
+                            ],
+                            "description": "Concluded the 'Machine Learning A-Z™' course on Udemy, solidifying a comprehensive understanding of machine learning techniques and applications."
+                        },
+                        {
+                            "name": "HTML and CSS | Web Development",
+                            "provider": "Udemy",
+                            "year": "2022",
+                            "skills": [
+                                "HTML",
+                                "CSS",
+                                "Bootstrap"
+                            ],
+                            "description": "Completed the 'HTML and CSS' course on Udemy, mastering the core principles of web design and crafting visually appealing, responsive websites."
+                        }
+                    ],
+                    "skills": {
+                        "Backend Developer": "Python, Flask, Django, Sanic, Node, Git, DS &Algo, DB & SQL, Bash/Linux",
+                        "DevOps": "Git, Bash, Linux, Docker, Kubernetes",
+                        "Frontend Developer": "Web Development, Git, HTML, CSS, JavaScript, React",
+                        "AI/ML Developer": "Python, Data Science, AI & ML"
+                    }
+                }
+                createIntroductionDiv(myData?.introduction);
+                addCompanyDivs(myData?.companies);
+                addProjectDivs(myData?.projects);
+                createCourseDiv(myData?.courses);
+                createSkillDiv(myData?.skills);
+
+                setExp(myData?.introduction?.startDate);
+            }
+
+            window.onload = setup;
+
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="introduction" id="introductionContainer">
+            </div>
+            <hr />
+            <h3>Experience</h3>
+            <div class="experience margin-left-2" id="experienceContainer">
+            </div>
+            <hr/>
+            <h3>Projects</h3>
+            <div class="projects margin-left-2" id="projectContainer">
+            </div>
+            <hr/>
+            <h3>Courses</h3>
+            <div class="courses margin-left-2" id="courseContainer">
+            </div>
+            <hr/>
+            <h3>Skills</h3>
+            <div class="skills margin-left-2" id="skillContainer">
+            </div>
+        </div>
+    </body>
+</html>
