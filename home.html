@@ -15,9 +15,8 @@
         <script src="js/bootstrap-4.4.1.js"></script>
         <style>
             .main {
-                padding: 1%;
+                padding: 0.5%;
                 background-color: white;
-                border: 1px solid black;
             }
 
             .introductionheader {
@@ -26,11 +25,15 @@
             }
 
             .info {
-                padding: 1%;
+                padding: 0.5%;
             }
 
+            h1,h2,h3,h4,h5,h6,p,hr,ul,li {
+                margin-top: 1.5px;
+                margin-bottom: 1.5px;
+            }
             .contact {
-                padding: 1%;
+                padding: 0.5%;
             }
 
             .experience {
@@ -38,6 +41,7 @@
                 gap:1%;
                 flex-direction: column;
             }
+
 
             .experienceHeader{
                 display: flex;
@@ -69,6 +73,10 @@
                 margin-left: 2%;
             }
 
+            .skill-course{
+                display: flex;
+                flex-grow: 1;
+            }
 
 
         </style>
@@ -114,6 +122,7 @@
                             <h6><a href="mailto:${introductionData.email}">${introductionData.email}</a></h6>
                             <h6><a href="${introductionData.linkedin}">${introductionData.linkedin}</a></h6>
                             <h6><a href="${introductionData.github}">${introductionData.github}</a></h6>
+                            <h6><a href="${introductionData.resume}">${introductionData.resume}</a></h6>
                         </div>
                     </div>
                     <hr />
@@ -233,18 +242,16 @@
             }
 
             function createCourseDiv(coursesData){
-                let coursesHTML = '';
+                let coursesHTML = '<ul>';
                 coursesData.forEach(course => {
                     const skillsList = course.skills.join(', ');
                     coursesHTML += `
-                        <div class="course">
+                        <li class="course">
                             <b>${course.name}</b>
-                            <p>${course.provider} &bull; ${course.year} &bull; ${skillsList}
-                            <br/>
-                            ${course.description}</p>
-                        </div>
+                        </li> 
                     `;
                 });
+                coursesHTML += '</ul>';
                 const container = document.getElementById("courseContainer");
                 container.innerHTML = coursesHTML;
             }
@@ -269,7 +276,7 @@
             
             function setup(){
                 const myData = {
-                    "introduction": {
+                        "introduction": {
                         "name": "Jay Prakash Sonkar",
                         "role": "Python Developer | Backend Developer",
                         "company": "Fynd, Shopsense Retail Technologies Limited",
@@ -279,72 +286,28 @@
                         "email": "iamjpsonkar@gmail.com",
                         "linkedin": "https://www.linkedin.com/in/iamjpsonkar/",
                         "github": "https://github.com/iamjpsonkar/",
+                        "resume": "https://iamjpsonkar.github.io/portfolio/doc/",
                         "summary": "Dynamic software engineer boasting <span id=\"exp\" style=\"font-weight: bold;\">3 Years and 6 Months</span> of expertise in Python-based web application development. Renowned for designing robust backend systems, having seamlessly integrated platforms like <span style=\"font-weight: bold;\">Razorpay</span>, and innovating with the <span style=\"font-weight: bold;\">UPIAS Payment Mode</span>. My technical prowess is further showcased by conquering <span style=\"font-weight: bold;\">600+ DSA challenges</span> and earning qualification in the esteemed <span style=\"font-weight: bold;\">ACM-ICPC 2018 Regionals</span>. Beyond coding, I'm an avid contributor with over <span style=\"font-weight: bold;\">70+ active GitHub repositories</span>, demonstrating my dedication to both continuous learning and the broader tech community."
-                    },
-                    "projects": [
-                        {
-                            "name": "Jio1Pay Custom Checkout | Tirabeauty",
-                            "timePeriod": "September 2023 - October 2023",
-                            "description": [
-                                "Achieved smooth integration of Jio1Pay custom checkout with Tirabeauty, resulting in a 25% reduction in checkout times and facilitating over 50,000 transactions monthly.",
-                                "Designed and implemented a comprehensive system that managed both payments and refunds, increasing customer satisfaction scores by 15% due to streamlined transaction experiences.",
-                                "Collaborated closely with the Tirabeauty team to tailor the Jio1Pay integration to their specific needs, leading to a 10% rise in repeat customers and enhancing overall brand loyalty."
-                            ]
                         },
-                        {
-                            "name": "Multi-Mode of Payment System",
-                            "timePeriod": "August 2023 - August 2023",
-                            "description": [
-                                "Rolled out a comprehensive multi-mode payment system, resulting in a 25% increase in transaction volume and catering to the preferences of over 10,000 active users.",
-                                "Facilitated over 1500 monthly transactions using reward points, boosting user loyalty and promoting a 10% increase in user retention.",
-                                "Seamlessly integrated both prepaid and postpaid payment methodologies, catering to the diverse needs of our user base and facilitating an additional 1000 transactions monthly."
-                            ]
-                        },
-                        {
-                            "name": "Control MOP | Merchant Control Over Payment Configuration",
-                            "timePeriod": "June 2023 - July 2023",
-                            "description": [
-                                "Implemented 'Control MOP', granting merchants direct oversight over payment configurations, leading to a 20% uptick in merchant satisfaction scores within the first quarter.",
-                                "Enabled over 500+ merchants to customize their payment gateways, resulting in a 15% increase in transaction completions due to more tailored user experiences.",
-                                "The 'Control MOP' feature facilitated smoother integration with diverse payment systems, reducing merchant onboarding time by 30% and accelerating go-live processes."
-                            ]
-                        },
-                        {
-                            "name": "Razorpay Partnership Model Integration",
-                            "timePeriod": "May 2023 - May 2023",
-                            "description": [
-                                "Seamlessly integrated the Razorpay partnership model across 100+ merchants, adhering to RBI guidelines and ensuring consistent payment industry compliance.",
-                                "Boosted security protocols for all transactions, implementing a no-storage policy for merchant credentials, resulting in a 30% reduction in security-related incidents and safeguarding data for over 10,000 monthly transactions.",
-                                "Optimized the transaction system by minimizing our intervention as a payment gateway, resulting in a 20% improvement in payment processing speed and elevating the user experience for over 10,000 monthly users."
-                            ]
-                        },
-                        {
-                            "name": "UPIAS | UPI at Store Payment Mode for Store OS",
-                            "timePeriod": "April 2023 - April 2023",
-                            "description": [
-                                "Developed and implemented UPIAS Payment modes feature which increased store payment collection 3x within stipulated timeline.",
-                                "Developed solutions to customer Problems as per guidelines with proper functionality, interacting with other teams for the same and for cross product/ platform integrations.",
-                                "Utilized existing infrastructures and technologies for payment solutions and optimized backend processes to ensure reliable and secure payment processing."
-                            ]
-                        }
-                    ],
-                    "companies": [
+                        "companies": [
                         {
                             "roleName": "Software Development Engineer",
                             "companyName": "Fynd, Shopsense Retail Technologies Limited",
                             "timeline": "December 2022 - Present | Noida, Uttar Pradesh",
                             "responsibilities": [
-                                "Developed CRUD APIs on the Fynd Platform for Payments & Refunds, handling aggregators, users, and their transactional statuses.",
-                                "Integrated with databases and Payment Gateway APIs to ensure seamless payment, refund, and payout processes.",
-                                "Successfully integrated Jio1Pay custom checkout for Tirabeauty, encompassing the full payment and refund process.",
-                                "Developed SDK methods to streamline API integration for both Swift and Kotlin platforms.",
-                                "Implemented callbacks and webhooks for payment processing, and managed Kafka events for all services related to payments and refunds.",
-                                "Developed 'UPI at Store' (UPIAS) feature for Cantabill on the Fynd Platform, enabling in-store payments via UPI.",
-                                "Implemented a multi-mode payment system, allowing users to pay using reward points, wallets, and both prepaid and postpaid payment methods.",
-                                "Implemented the linking, verification, and delinking of wallets for payments. Used encryption for the secure storage of tokens.",
-                                "Integrated Razorpay partnership model in compliance with RBI guidelines, ensuring no storage of merchant credentials and avoiding acting as a payment gateway.",
-                                "Continuously monitored and optimized APIs to ensure optimal performance and efficiency.",
-                                "Brunt Automation for the payment system."
+                            "Led integration of Pyfit with AIOKafka, AIORedis, and FAST Api, ensuring cross-functional collaboration and technical support.",
+                            "Implemented complex logic for order amount apportioning, ensuring accurate discounts and refunds through collaboration with JioMart and extension teams.",
+                            "Developed CRUD APIs on the Fynd Platform for Payments & Refunds, handling aggregators, users, and their transactional statuses.",
+                            "Integrated with databases and Payment Gateway APIs to ensure seamless payment, refund, and payout processes.",
+                            "Successfully integrated Jio1Pay custom checkout for Tirabeauty, encompassing the full payment and refund process.",
+                            "Developed SDK methods to streamline API integration for both Swift and Kotlin platforms.",
+                            "Implemented callbacks and webhooks for payment processing, and managed Kafka events for all services related to payments and refunds.",
+                            "Developed 'UPI at Store' (UPIAS) feature for Cantabill on the Fynd Platform, enabling in-store payments via UPI.",
+                            "Implemented a multi-mode payment system, allowing users to pay using reward points, wallets, and both prepaid and postpaid payment methods.",
+                            "Implemented the linking, verification, and delinking of wallets for payments. Used encryption for the secure storage of tokens.",
+                            "Integrated Razorpay partnership model in compliance with RBI guidelines, ensuring no storage of merchant credentials and avoiding acting as a payment gateway.",
+                            "Continuously monitored and optimized APIs to ensure optimal performance and efficiency.",
+                            "Brunt Automation for the payment system."
                             ]
                         },
                         {
@@ -352,17 +315,82 @@
                             "companyName": "Tata Consultancy Services [TCS]",
                             "timeline": "October 2020 - December 2022",
                             "responsibilities": [
-                                "Specialized in the Telecom domain with a focus on system improvements and feature enhancements.",
-                                "Developed and refined Python scripts to optimize operational processes.",
-                                "Managed system image upgrades utilizing the Yocto (Bitbake Build System).",
-                                "Contributed to enhancements for Ericsson Telecom, particularly in the announcement sector.",
-                                "Designed and implemented advanced security features for Ericsson Telecom, enhancing system integrity.",
-                                "Devised a suite of utilities and add-ons, such as JaySoft-Log Viewer and JaySoft-Test Runners, to enhance system operations.",
-                                "Further developed tools like JaySoft-WM_Grepper and JaySoft-BB_Downloader to bolster system functionality."
+                            "Specialized in the Telecom domain with a focus on system improvements and feature enhancements.",
+                            "Developed and refined Python scripts to optimize operational processes.",
+                            "Managed system image upgrades utilizing the Yocto (Bitbake Build System).",
+                            "Contributed to enhancements for Ericsson Telecom, particularly in the announcement sector.",
+                            "Designed and implemented advanced security features for Ericsson Telecom, enhancing system integrity.",
+                            "Devised a suite of utilities and add-ons, such as JaySoft-Log Viewer and JaySoft-Test Runners, to enhance system operations.",
+                            "Further developed tools like JaySoft-WM_Grepper and JaySoft-BB_Downloader to bolster system functionality."
                             ]
                         }
-                    ],
-                    "courses": [
+                        ],
+                        "projects": [
+                        {
+                            "name": "Pyfit Integration for AIOKafka, AIORedis, FAST Api | Central Task",
+                            "timePeriod": "February 2024 - March 2024",
+                            "description": [
+                            "Led the integration effort for Pyfit with AIOKafka, AIORedis, and FAST Api as part of a central task initiative.",
+                            "Collaborated with cross-functional teams to ensure compatibility and reliability of integrated systems.",
+                            "Provided technical expertise and support throughout the integration lifecycle, from planning to deployment."
+                            ]
+                        },
+                        {
+                            "name": "Sodexo, RONE and EMI Offers Apportioning | JioMart",
+                            "timePeriod": "December 2023 - January 2024",
+                            "description": [
+                            "Implemented complex logic to apportionate the order amount into article and shipment levels.",
+                            "Apportioning assists in providing accurate discounts and refunds for individual articles.",
+                            "Collaborated closely with the JioMart and extension teams to determine requirements."
+                            ]
+                        },
+                        {
+                            "name": "Jio1Pay Custom Checkout | Tirabeauty",
+                            "timePeriod": "October 2023 - November 2023",
+                            "description": [
+                            "Achieved smooth integration of Jio1Pay custom checkout with Tirabeauty, resulting in a 25% reduction in checkout times and facilitating over 50,000 transactions monthly.",
+                            "Designed and implemented a comprehensive system that managed both payments and refunds, increasing customer satisfaction scores by 15% due to streamlined transaction experiences.",
+                            "Collaborated closely with the Tirabeauty team to tailor the Jio1Pay integration to their specific needs, leading to a 10% rise in repeat customers and enhancing overall brand loyalty."
+                            ]
+                        },
+                        {
+                            "name": "Multi-Mode of Payment System",
+                            "timePeriod": "August 2023 - September 2023",
+                            "description": [
+                            "Rolled out a comprehensive multi-mode payment system, resulting in a 25% increase in transaction volume and catering to the preferences of over 10,000 active users.",
+                            "Facilitated over 1500 monthly transactions using reward points, boosting user loyalty and promoting a 10% increase in user retention.",
+                            "Seamlessly integrated both prepaid and postpaid payment methodologies, catering to the diverse needs of our user base and facilitating an additional 1000 transactions monthly."
+                            ]
+                        },
+                        {
+                            "name": "Control MOP | Merchant Control Over Payment Configuration",
+                            "timePeriod": "June 2023 - July 2023",
+                            "description": [
+                            "Implemented 'Control MOP', granting merchants direct oversight over payment configurations, leading to a 20% uptick in merchant satisfaction scores within the first quarter.",
+                            "Enabled over 500+ merchants to customize their payment gateways, resulting in a 15% increase in transaction completions due to more tailored user experiences.",
+                            "The 'Control MOP' feature facilitated smoother integration with diverse payment systems, reducing merchant onboarding time by 30% and accelerating go-live processes."
+                            ]
+                        },
+                        {
+                            "name": "Razorpay Partnership Model Integration",
+                            "timePeriod": "May 2023 - May 2023",
+                            "description": [
+                            "Seamlessly integrated the Razorpay partnership model across 100+ merchants, adhering to RBI guidelines and ensuring consistent payment industry compliance.",
+                            "Boosted security protocols for all transactions, implementing a no-storage policy for merchant credentials, resulting in a 30% reduction in security-related incidents and safeguarding data for over 10,000 monthly transactions.",
+                            "Optimized the transaction system by minimizing our intervention as a payment gateway, resulting in a 20% improvement in payment processing speed and elevating the user experience for over 10,000 monthly users."
+                            ]
+                        },
+                        {
+                            "name": "UPIAS | UPI at Store Payment Mode for Store OS",
+                            "timePeriod": "April 2023 - April 2023",
+                            "description": [
+                            "Developed and implemented UPIAS Payment modes feature which increased store payment collection 3x within stipulated timeline.",
+                            "Developed solutions to customer Problems as per guidelines with proper functionality, interacting with other teams for the same and for cross product/ platform integrations.",
+                            "Utilized existing infrastructures and technologies for payment solutions and optimized backend processes to ensure reliable and secure payment processing."
+                            ]
+                        }
+                        ],
+                        "courses": [
                         {
                             "name": "Python Advance Course",
                             "provider": "Udemy",
@@ -421,9 +449,11 @@
                         "Backend Developer": "Python, Flask, Django, Sanic, Node, Git, DS &Algo, DB & SQL, Bash/Linux",
                         "DevOps": "Git, Bash, Linux, Docker, Kubernetes",
                         "Frontend Developer": "Web Development, Git, HTML, CSS, JavaScript, React",
-                        "AI/ML Developer": "Python, Data Science, AI & ML"
+                        "AI/ML Developer": "Python, Data Science, AI & ML",
+                        "Scripting and Automation": "Bash, Python, Zsh"
                     }
                 }
+
                 createIntroductionDiv(myData?.introduction);
                 addCompanyDivs(myData?.companies);
                 addProjectDivs(myData?.projects);
@@ -439,24 +469,31 @@
     </head>
     <body>
         <div class="main">
+            <hr/>
             <div class="introduction" id="introductionContainer">
             </div>
             <hr />
             <h3>Experience</h3>
             <div class="experience margin-left-2" id="experienceContainer">
             </div>
-            <hr/>
+            <hr />
             <h3>Projects</h3>
             <div class="projects margin-left-2" id="projectContainer">
             </div>
-            <hr/>
-            <h3>Courses</h3>
-            <div class="courses margin-left-2" id="courseContainer">
+            <hr />
+            <div class="skill-course">
+                <div style="width: 60%;">
+                    <h4>Skills</h4>
+                    <div class="skills margin-left-2" id="skillContainer">
+                    </div>
+                </div>
+                <div  style="width: 40%;">
+                    <h4>Courses</h4>
+                    <div class="courses margin-left-2" id="courseContainer">
+                    </div>
+                </div>
             </div>
             <hr/>
-            <h3>Skills</h3>
-            <div class="skills margin-left-2" id="skillContainer">
-            </div>
         </div>
     </body>
 </html>
