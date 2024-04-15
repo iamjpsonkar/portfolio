@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Jay Prakash Sonkar Resume. Experience in Python, Java, and AI/ML development.">
+        <meta name="keywords"
+            content="Jay Prakash Sonkar, Software Developer, Python Developer, AI Developer, Resume">
+        <meta name="author" content="Jay Prakash Sonkar">
+
+        <meta property="og:image" content="../images/icons/resume_icon.png">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <title>Jay Prakash Sonkar - Software Developer</title>
+
+        <!-- Bootstrap -->
+        <link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap-4.4.1.js"></script>
+
+        <link rel="icon" href="../images/icons/resume_icon.png"
+            type="image/x-icon">
+        <style>
+            .resume-font{
+                font-family: "Times New Roman", Times, serif;
+                font-size: 12pt;
+                color: black;
+            }
+
+            .resume-padding{
+                padding: 5px;
+            }
+
+            .resume-margin{
+                margin: 30px;
+            }
+
+            .contact-details p {
+                margin-bottom: 3px;
+            }
+            
+            .contact-details i {
+                margin-right: 8px;
+                color: #333;
+            }
+            
+            .contact-details a {
+                text-decoration: none;
+                color: #0077b5; /* This gives a LinkedIn blue color; adjust as necessary */
+            }
+            
+            .contact-details a:hover {
+                text-decoration: underline;
+            }
+            
+        </style>
+        <script>
+            function setExp() 
+            {
+                var exp = 0;
+
+                var TCS_joining_date=new Date("2020-10-15");
+                var TCS_resigniing_date=new Date("2022-12-25");
+                var Fynd_joining_date=new Date("2022-12-26");
+                var Fynd_resigniing_date=new Date();
+
+                // Calculation for TCS Experience
+                var J_date = TCS_joining_date;
+                var R_date = TCS_resigniing_date;
+                texp = (R_date.getFullYear()-J_date.getFullYear())*12+(R_date.getMonth	()-J_date.getMonth());
+                
+                // Calculation for Fynd Experience
+                var J_date = Fynd_joining_date;
+                var R_date = Fynd_resigniing_date;
+                fexp = (R_date.getFullYear()-J_date.getFullYear())*12+(R_date.getMonth	()-J_date.getMonth());
+
+                exp = texp + fexp
+                
+
+                // Experience Calculation
+                var eYear = parseInt(exp/12);
+                var eMonth = exp % 12;
+
+                document.getElementById("eYear").innerHTML = eYear;
+                document.getElementById("eMonth").innerHTML = eMonth;
+
+                document.getElementById("tYear").innerHTML = parseInt(texp/12);
+                document.getElementById("tMonth").innerHTML = texp % 12;
+
+                document.getElementById("fYear").innerHTML = parseInt(fexp/12);
+                document.getElementById("fMonth").innerHTML = fexp % 12;
+
+                // Personal Experience
+                var pYear = "2+";
+                document.getElementById("pYear").innerHTML = PYear;
+
+                // Last Working Day TCS
+                var LWD = TCS_resigniing_date;
+                const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+                var today = new Date();
+                var NPD = 1+Math.round(Math.abs((LWD - today) / oneDay));
+                document.getElementById("NPD").innerHTML = NPD;
+            }
+            window.onload = setExp;
+        </script>
+    </head>
+    <body class="resume-font">
+        <div class="container-fluid" style="padding: 20px 30px;">
+            <hr />
+            <table style="width: 100%;">
+                <tr>  
+                    <td
+                        style="text-align:left; width: 50%; vertical-align: top;"
+                        colspan="6">
+                        <span style="font-weight:bold;font-size:xx-large;">
+                            Jay Prakash Sonkar
+                        </span>
+                        <p>
+                            Python Developer | Backend Developer<br />
+                            Fynd, Shopsense Retail Technologies Limited<br />
+                            Noida, Uttar Pradesh, India
+                        </p>
+                    </td>
+                    <td
+                        style="text-align:right; width: 50%; vertical-align: top;"
+                        colspan="6">
+                        <div class="contact-details">
+                            <p><i class="fas fa-phone-alt"></i> +91-8004023840</p>
+                            <p><i class="fas fa-envelope"></i>
+                                iamjpsonkar@gmail.com</p>
+                            <p><i class="fab fa-linkedin"></i> <a
+                                    href="https://www.linkedin.com/in/iamjpsonkar/"
+                                    target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/iamjpsonkar/</a></p>
+                            <p><i class="fas fa-globe"></i> <a
+                                    href="https://iamjpsonkar.github.io/portfolio/resume/"
+                                    target="_blank" rel="noopener noreferrer">https://iamjpsonkar.github.io/portfolio/resume/</a></p>
+                            <p><i class="fab fa-github"></i> <a
+                                    href="https://github.com/iamjpsonkar/"
+                                    target="_blank" rel="noopener noreferrer">https://github.com/iamjpsonkar/</a></p>
+                        </div>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12">
+                        <hr />
+                        <h3>SUMMARY</h3>
+                        <hr />
+                        <table style="width:100%; font-size: 14px;">
+                            <!-- Summary -->
+                            <tr>
+                                <td colspan="2">
+                                    Software Engineer with <span id="eYear">2</span>
+                                    Years and <span id="eMonth">7</span> Months
+                                    of hands-on experience in Python-based web
+                                    application development and backend
+                                    engineering. Demonstrated expertise in
+                                    designing, developing, and optimizing
+                                    dynamic web applications. Proficient in
+                                    Python, data structures and algorithms, and
+                                    familiar with Machine Learning and AI
+                                    principles. Seeking roles in Software
+                                    Development, Backend Engineering, Python
+                                    Development, AI, and Data Science.
+                                </td>
+                            </tr>
+                            <!-- Highlights: First Column -->
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li><strong>Backend Development:</strong>
+                                            Developed the Payments and Refund
+                                            System.</li>
+                                        <li><strong>Integration Expertise:</strong>
+                                            Integrated <b>Razorpay Partnership
+                                                Model</b>, &amp; Custom Checkout
+                                            Integration for <b>Jio1Pay,
+                                                Tirabeauty</b>.</li>
+                                        <li><strong>API Development:</strong>
+                                            Automated APIs, enhanced Payment and
+                                            Refund APIs, and extended Payment
+                                            functionalities.</li>
+                                        <li><strong>Database Management:</strong>
+                                            Handled SQL Scripts and Migrations
+                                            for efficient data processing.</li>
+                                        <li><strong>Scripting Skills:</strong>
+                                            Proficient in Bash, and Python
+                                            scripting for varied applications.</li>
+                                    </ul>
+                                </td>
+                                <!-- Highlights: Second Column -->
+                                <td>
+                                    <ul>
+                                        <li><strong>Data Structures &
+                                                Algorithms:</strong> Solved <b>700+
+                                                DSA problems</b>, showcasing
+                                            problem-solving capabilities.</li>
+                                        <li><strong>Competitive Coding:</strong>
+                                            Qualified for <b>ACM-ICPC 2018
+                                                Regionals</b>.</li>
+                                        <li><strong>Teaching & Mentorship:</strong>
+                                            Resolved <b>1300+</b> student doubts
+                                            on Chegg.</li>
+                                        <li><strong>Open-Source Contributions:</strong>
+                                            Maintained <b>70+ repositories</b>
+                                            on GitHub, highlighting active
+                                            participation in the developer
+                                            community.</li>
+                                        <li><strong>Awards & Recognition:</strong>
+                                            Earned 10+ accolades and
+                                            certifications for technical
+                                            proficiency and achievements in
+                                            software development.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12">
+                        <h3>EXPERIENCE</h3>
+                        <hr />
+                        <table style="width: 100%;">
+                            <tr>
+                                <td colspan="2">
+                                    <h4>Software Development Engineer</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">
+                                    <h5>Fynd, Shopsense Retail Technologies
+                                        Limited</h5>
+                                </td>
+                                <td style="text-align: right;">
+                                    <h5>December 2022 - Present | Noida, Uttar
+                                        Pradesh</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <ul
+                                        style="list-style-type: disc; margin-left: 20px; font-size: 14px;">
+                                        <li>Developed CRUD APIs on the Fynd
+                                            Platform for Payments & Refunds,
+                                            handling aggregators, users, and
+                                            their transactional statuses.</li>
+                                        <li>Integrated with databases and
+                                            Payment Gateway APIs to ensure
+                                            seamless payment, refund, and payout
+                                            processes.</li>
+                                        <li>Successfully integrated Jio1Pay
+                                            custom checkout for Tirabeauty,
+                                            encompassing the full payment and
+                                            refund process.</li>
+                                        <li>Developed SDK methods to streamline
+                                            API integration for both Swift and
+                                            Kotlin platforms.</li>
+                                        <li>Implemented callbacks and webhooks
+                                            for payment processing, and managed
+                                            Kafka events for all services
+                                            related to payments and refunds.</li>
+                                        <li>Developed 'UPI at Store' (UPIAS)
+                                            feature for Cantabill on the Fynd
+                                            Platform, enabling in-store payments
+                                            via UPI.</li>
+                                        <li>Implemented a multi-mode payment
+                                            system, allowing users to pay using
+                                            reward points, wallets, and both
+                                            prepaid and postpaid payment
+                                            methods.</li>
+                                        <li>Implemented the linking,
+                                            verification, and delinking of
+                                            wallets for payments. Used
+                                            encryption for the secure storage of
+                                            tokens.</li>
+                                        <li>Integrated Razorpay partnership
+                                            model in compliance with RBI
+                                            guidelines, ensuring no storage of
+                                            merchant credentials and avoiding
+                                            acting as a payment gateway.</li>
+                                        <li>Continuously monitored and optimized
+                                            APIs to ensure optimal performance
+                                            and efficiency.</li>
+                                        <li>Brunt Automation for the payment
+                                            system.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td colspan="2">
+                                    <h4>System Engineer (Digital)</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left;">
+                                    <h5>Tata Consultancy Services [TCS]</h5>
+                                </td>
+                                <td style="text-align: right;">
+                                    <h5>October 2020 - December 2022</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <ul
+                                        style="list-style-type: disc; margin-left: 20px; font-size: 14px;">
+                                        <li>Specialized in the Telecom domain
+                                            with a focus on system improvements
+                                            and feature enhancements.</li>
+                                        <li>Developed and refined Python scripts
+                                            to optimize operational processes.</li>
+                                        <li>Managed system image upgrades
+                                            utilizing the Yocto (Bitbake Build
+                                            System).</li>
+                                        <li>Contributed to enhancements for
+                                            Ericsson Telecom, particularly in
+                                            the announcement sector.</li>
+                                        <li>Designed and implemented advanced
+                                            security features for Ericsson
+                                            Telecom, enhancing system integrity.</li>
+                                        <li>Devised a suite of utilities and
+                                            add-ons, such as JaySoft-Log Viewer
+                                            and JaySoft-Test Runners, to enhance
+                                            system operations.</li>
+                                        <li>Further developed tools like
+                                            JaySoft-WM_Grepper and
+                                            JaySoft-BB_Downloader to bolster
+                                            system functionality.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12">
+                        <h3>EDUCATION</h3>
+                        <hr />
+                        <ul style="font-size: 14px;">
+                            <li>
+                                <strong>Bachelor of Technology, Computer Science
+                                    & Engineering</strong><br>
+                                Bundelkhand Institute of Engineering &
+                                Technology(BIET) • Jhansi, Uttar Pradesh, India<br>
+                                Year: 2020 • Score: 71.94%
+                            </li>
+                            <li>
+                                <strong>Intermediate (12th)</strong><br>
+                                Minor in PCM with Computer Science • Jawahar
+                                Navodaya Vidyalaya (JNV) • Faizabad, Uttar
+                                Pradesh, India<br>
+                                Year: 2015 • Score: 81.60%
+                            </li>
+                            <li>
+                                <strong>High School (10th)</strong><br>
+                                Jawahar Navodaya Vidyalaya (JNV) • Faizabad,
+                                Uttar Pradesh, India<br>
+                                Year: 2013 • Score: 8.6 CGPA
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12">
+                        <h3>SKILLS</h3>
+                        <hr />
+                        <ul style="font-size: 14px; line-height: 1.8;">
+                            <!-- Increased line-height -->
+                            <li>
+                                <strong>Backend Developer:</strong> Python,
+                                <span style="margin-right: 5px;"></span> Flask,
+                                <span style="margin-right: 5px;"></span> Django,
+                                <span style="margin-right: 5px;"></span> Sanic,
+                                <span style="margin-right: 5px;"></span> Git,
+                                <span style="margin-right: 5px;"></span> DS
+                                &Algo,
+                                <span style="margin-right: 5px;"></span> DB &
+                                SQL,
+                                <span style="margin-right: 5px;"></span>
+                                Bash/Linux
+                            </li>
+                            <li>
+                                <strong>DevOps:</strong> Git,
+                                <span style="margin-right: 5px;"></span> Bash,
+                                <span style="margin-right: 5px;"></span> Linux,
+                                <span style="margin-right: 5px;"></span> Docker,
+                                <span style="margin-right: 5px;"></span> AWS
+                                Cloud,
+                                <span style="margin-right: 5px;"></span> GCP
+                                Cloud,
+                                <span style="margin-right: 5px;"></span>
+                                Kubernetes
+                            </li>
+                            <li>
+                                <strong>Frontend Developer:</strong> Web
+                                Development,
+                                <span style="margin-right: 5px;"></span> Git,
+                                <span style="margin-right: 5px;"></span> HTML,
+                                <span style="margin-right: 5px;"></span> CSS,
+                                <span style="margin-right: 5px;"></span>
+                                JavaScript,
+                                <span style="margin-right: 5px;"></span> Node.js
+                            </li>
+                            <li>
+                                <strong>AI/ML Developer:</strong> Python,
+                                <span style="margin-right: 5px;"></span> Data
+                                Science,
+                                <span style="margin-right: 5px;"></span> AI & ML
+                            </li>
+                        </ul>
+                        <h3>CODING PROFILES</h3>
+                        <hr />
+                        <ul style="font-size: 14px;">
+                            <li><strong>Leetcode:</strong> <a
+                                    href="https://leetcode.com/iamjpsonkar/"
+                                    target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
+                            <li><strong>GeeksForGeeks:</strong> <a
+                                    href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile"
+                                    target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
+                            <li><strong>Hackerrank:</strong> <a
+                                    href="https://www.hackerrank.com/iamjpsonkar/"
+                                    target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
+                            <li><strong>Hackerearth:</strong> <a
+                                    href="https://www.hackerearth.com/@iamjpsonkar"
+                                    target="_blank" rel="noopener noreferrer">iamjpsonkar</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12">
+                        <br/>
+                        <h3>PROJECTS</h3>
+                        <hr />
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <h5>
+                                        <strong>Jio1Pay Custom Checkout |
+                                            Tirabeauty</strong>
+                                        <br>
+                                        Fynd, Shopsense Retail Technologies
+                                        Limited
+                                        • September 2023 - October 2023
+                                    </h5>
+                                    <ul style="font-size: 14px;">
+                                        <li>
+                                            Achieved smooth integration of
+                                            Jio1Pay
+                                            custom checkout with Tirabeauty,
+                                            resulting in a 25% reduction in
+                                            checkout
+                                            times and facilitating over 50,000
+                                            transactions monthly.
+                                        </li>
+                                        <li>
+                                            Designed and implemented a
+                                            comprehensive
+                                            system that managed both payments
+                                            and
+                                            refunds, increasing customer
+                                            satisfaction scores by 15% due to
+                                            streamlined transaction experiences.
+                                        </li>
+                                        <li>
+                                            Collaborated closely with the
+                                            Tirabeauty
+                                            team to tailor the Jio1Pay
+                                            integration
+                                            to their specific needs, leading to
+                                            a
+                                            10% rise in repeat customers and
+                                            enhancing overall brand loyalty.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>
+                                        <strong>Multi-Mode of Payment System</strong>
+                                        <br>
+                                        Fynd, Shopsense Retail Technologies
+                                        Limited • August 2023 - August 2023
+                                    </h5>
+                                    <ul style="font-size: 14px;">
+                                        <li>
+                                            Rolled out a comprehensive
+                                            multi-mode payment system, resulting
+                                            in a 25% increase in transaction
+                                            volume and catering to the
+                                            preferences of over 10,000 active
+                                            users.
+                                        </li>
+                                        <li>
+                                            Facilitated over 1500 monthly
+                                            transactions using reward points,
+                                            boosting user loyalty and promoting
+                                            a 10% increase in user retention.
+                                        </li>
+                                        <li>
+                                            Seamlessly integrated both prepaid
+                                            and postpaid payment methodologies,
+                                            catering to the diverse needs of our
+                                            user base and facilitating an
+                                            additional 1000 transactions
+                                            monthly.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>
+                                        <strong>Control MOP | Merchant Control
+                                            Over Payment Configuration</strong>
+                                        <br>
+                                        Fynd, Shopsense Retail Technologies
+                                        Limited • June 2023 - July 2023
+                                    </h5>
+                                    <ul style="font-size: 14px;">
+                                        <li>
+                                            Implemented 'Control MOP', granting
+                                            merchants direct oversight over
+                                            payment configurations, leading to a
+                                            20% uptick in merchant satisfaction
+                                            scores within the first quarter.
+                                        </li>
+                                        <li>
+                                            Enabled over 500+ merchants to
+                                            customize their payment gateways,
+                                            resulting in a 15% increase in
+                                            transaction completions due to more
+                                            tailored user experiences.
+                                        </li>
+                                        <li>
+                                            The 'Control MOP' feature
+                                            facilitated smoother integration
+                                            with diverse payment systems,
+                                            reducing merchant onboarding time by
+                                            30% and accelerating go-live
+                                            processes.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>
+                                        <strong>Razorpay Partnership Model
+                                            Integration</strong>
+                                        <br>
+                                        Fynd, Shopsense Retail Technologies
+                                        Limited • May 2023 - May 2023
+                                    </h5>
+                                    <ul style="font-size: 14px;">
+                                        <li>
+                                            Seamlessly integrated the Razorpay
+                                            partnership model across 100+
+                                            merchants, adhering to RBI
+                                            guidelines and ensuring consistent
+                                            payment industry compliance.
+                                        </li>
+                                        <li>
+                                            Boosted security protocols for all
+                                            transactions, implementing a
+                                            no-storage policy for merchant
+                                            credentials, resulting in a 30%
+                                            reduction in security-related
+                                            incidents and safeguarding data for
+                                            over 10,000 monthly transactions.
+                                        </li>
+                                        <li>
+                                            Optimized the transaction system by
+                                            minimizing our intervention as a
+                                            payment gateway, resulting in a 20%
+                                            improvement in payment processing
+                                            speed and elevating the user
+                                            experience for over 10,000 monthly
+                                            users.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h5>
+                                        <strong>UPIAS | UPI at Store Payment
+                                            Mode for Store OS</strong>
+                                        <br>
+                                        Fynd, Shopsense Retail Technologies
+                                        Limited • April 2023 - April 2023
+                                    </h5>
+                                    <ul style="font-size: 14px;">
+                                        <li>
+                                            Developed and implemented UPIAS
+                                            Payment modes feature which
+                                            increased store payment collection
+                                            3x within stipulated timeline.
+                                        </li>
+                                        <li>
+                                            Developed solutions to customer
+                                            Problems as per guidelines with
+                                            proper functionality, interacting
+                                            with other teams for the same and
+                                            for cross product/ platform
+                                            integrations.
+                                        </li>
+                                        <li>
+                                            Utilized existing infrastructures
+                                            and technologies for payment
+                                            solutions and optimized backend
+                                            processes to ensure reliable and
+                                            secure payment processing.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12">
+                        <h3>CERTIFICATIONS</h3>
+                        <hr />
+                        <ul style="font-size: 14px; margin-bottom: 15px;">
+                            <li>
+                                <strong>Infosys Python Certificate</strong><br>
+                                Infosys • 2020<br>
+                                Secured the Infosys Python Certificate,
+                                underscoring proficiency in Python programming
+                                and solidifying foundational and advanced coding
+                                competencies.
+                            </li>
+                            <li>
+                                <strong>Internship Python Developer</strong><br>
+                                Datapure, Indore • 2019<br>
+                                Undertook a Python Developer Internship at
+                                DataPure, where in a span of 45 days, I honed
+                                skills in web scraping, data analytics, and
+                                computer vision. Spearheaded the design of
+                                specialized Python tools for data extraction and
+                                image processing, contributing significantly to
+                                data-driven projects in the Indore area.
+                            </li>
+                            <li>
+                                <strong>Cyber Security Certification</strong><br>
+                                BIET, Jhansi • 2019<br>
+                                Secured the "PDA Cyber Security" certification
+                                from PDA, Bangalore, underscoring a
+                                comprehensive understanding of methods to
+                                protect digital assets and fortify networks
+                                against cyber vulnerabilities.
+                            </li>
+                            <li>
+                                <strong>ACM-ICPC 2018 Regionals</strong><br>
+                                ACM-ICPC, Gwalior • 2018<br>
+                                Qualified and participated in the prestigious
+                                ACM-ICPC 2018 Regionals, showcasing advanced
+                                problem-solving skills and coding expertise
+                                among top-tier competitors.
+                            </li>
+                            <li>
+                                <strong>Coders Cup 2016 | COSSCO</strong><br>
+                                BIET, Jhansi • 2016<br>
+                                Awarded the CodersCup Certificate in recognition
+                                of exceptional coding prowess and technical
+                                acumen during competitive programming
+                                challenges.
+                            </li>
+                            <li>
+                                <strong>Certification in Information and
+                                    Communication Technology</strong><br>
+                                JNV Faizabad • 2014<br>
+                                Achieved a Certification in Information and
+                                Communication Technology, exemplified further by
+                                developing "JaySoft:GDMA", a C++ CLI-based
+                                application tailored for robust data management
+                                across diverse systems.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="12">
+                        <h3>COURSEWORK</h3>
+                        <hr />
+                        <ul style="font-size: 14px; margin-bottom: 15px;">
+                            <li>
+                                <strong>Python Advance Course</strong><br>
+                                Udemy • 2022 • Python<br>
+                                • Successfully completed Udemy's
+                                "Python Advance Course", enhancing expertise in
+                                deeper nuances and advanced functionalities of
+                                Python programming.
+                            </li>
+                            <li>
+                                <strong>Django Full Stack</strong><br>
+                                Udemy • 2022 • Django, Python<br>
+                                • Completed the "Django Full Stack" course on
+                                Udemy, strengthening end-to-end web development
+                                skills using Django's robust framework.
+                            </li>
+                            <li>
+                                <strong>Web with Flask</strong><br>
+                                Udemy • 2022 • Flask, Python<br>
+                                • Accomplished the "Web with Flask" course on
+                                Udemy, honing skills in crafting dynamic web
+                                applications using the Flask framework.
+                            </li>
+                            <li>
+                                <strong>Machine Learning A-Z™</strong><br>
+                                Udemy • 2022 • Machine Learning, AI, Pandas,
+                                Python, Data Science<br>
+                                • Concluded the "Machine Learning A-Z™" course
+                                on Udemy, solidifying a comprehensive
+                                understanding of machine learning techniques and
+                                applications.
+                            </li>
+                            <li>
+                                <strong>HTML and CSS | Web Development</strong><br>
+                                Udemy • 2022 • HTML, CSS, Bootstrap<br>
+                                • Completed the "HTML and CSS" course on Udemy,
+                                mastering the core principles of web design and
+                                crafting visually appealing, responsive
+                                websites.
+                            </li>
+                        </ul>
+                        <hr />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
