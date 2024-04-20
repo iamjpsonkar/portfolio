@@ -29,6 +29,72 @@
 
         <link rel="icon" href="../images/icons/resume_icon.png"
             type="image/x-icon">
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const skills = [
+    { name: 'Python Programming', icon: 'python_icon.png', rating: 5 },
+    { name: 'Git & GitHub', icon: 'github_icon.png', rating: 4 },
+    { name: 'Data Structure & Algorithms', icon: 'dsa_icon.png', rating: 4 },
+    { name: 'Flask Framework', icon: 'flask_icon.png', rating: 3 },
+    { name: 'Sanic Framework', icon: 'sanic_icon.png', rating: 3 },
+    { name: 'Web Development', icon: 'web_d_icon.png', rating: 3 },
+    { name: 'Scripting & Automation', icon: 'yocto_icon.png', rating: 3 },
+    { name: 'Database & SQL', icon: 'database_icon.png', rating: 3 },
+    { name: 'Django Framework', icon: 'django_icon.png', rating: 2 },
+    { name: 'Kubernetes commands', icon: 'kubernetes_icon.png', rating: 1 },
+    { name: 'Bash/Linux System', icon: 'linux_icon.png', rating: 1 },
+    { name: 'Docker Concepts', icon: 'docker_icon.png', rating: 1 }
+];
+    const container = document.querySelector('.technical-skills');
+    let skillSet = null; // Declare skillSet outside the loop
+
+    skills.forEach((skill, index) => {
+        if (index % 3 === 0) {
+            skillSet = document.createElement('div'); // Initialize a new skill-set
+            skillSet.className = 'skill-set';
+            container.appendChild(skillSet);
+        }
+
+        const skillRow = document.createElement('div');
+        skillRow.className = 'skill-row';
+
+        const skillDetail = document.createElement('span');
+        skillDetail.className = 'skill-detail';
+
+        const img = document.createElement('img');
+        img.src = `../images/icons/${skill.icon}`;
+        img.alt = `${skill.name}_logo`;
+        img.width = 15;
+        img.height = 15;
+        img.className = 'rounded';
+
+        const skillName = document.createElement('span');
+        skillName.className = 'skills';
+        skillName.textContent = skill.name;
+
+        skillDetail.appendChild(img);
+        skillDetail.appendChild(skillName);
+
+        const stars = document.createElement('span');
+        stars.className = 'stars';
+        for (let i = 0; i < 5; i++) {
+            const star = document.createElement('img');
+            star.src = i < skill.rating ? '../images/icons/cstar_icon.png' : '../images/icons/ostar_icon.png';
+            star.alt = '*';
+            star.width = 15;
+            star.height = 15;
+            star.className = 'rounded';
+            stars.appendChild(star);
+        }
+
+        skillRow.appendChild(skillDetail);
+        skillRow.appendChild(stars);
+        skillSet.appendChild(skillRow); // Append to the current skill-set
+    });
+});
+
+
+        </script>
 
     </head>
     <body>
@@ -496,364 +562,8 @@
                 </div>
                 <hr />
                 <h4 style="margin-left: 20px;">Technical Skills</h4>
-                <div class="technical-skills"
-                    style="margin-left: 30px;margin-right:30px;">
-                    <div class="skill-set">
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/python_icon.png"
-                                    alt="Python_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills">
-                                    Python
-                                </span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/cstar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/flask_icon.png"
-                                    alt="Flask_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills">Flask</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                        <span class="skill-row">
-                            <img src="../images/icons/django_icon.png"
-                                alt="Django_logo" width="15" height="15"
-                                class="rounded">
-                            <span class="skills">Django</span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                    </div>
-                    <div class="skill-set">
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/sanic_icon.png"
-                                    alt="Linux_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills">Sanic</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img
-                                    src="../images/icons/datascience_ml_icon.png"
-                                    alt="DataScience_ML_logo" width="15"
-                                    height="15" class="rounded">
-                                <span class="skills"> Data Science</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/github_icon.png"
-                                    alt="Github_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills"> Git</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                    </div>
-                    <div class="skill-set">
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/dsa_icon.png"
-                                    alt="DSA_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills">DS &amp; Algo</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/web_d_icon.png"
-                                    alt="Web_D_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills">Web Dev.</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/yocto_icon.png"
-                                    alt="Yocto_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills">Yocto</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                    </div>
-                    <div class="skill-set">
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/database_icon.png"
-                                    alt="DB_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills"> DB &amp; SQL</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/linux_icon.png"
-                                    alt="Linux_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills"> Bash/Linux</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/docker_icon.png"
-                                    alt="Linux_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills"> Docker</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                    </div>
-                    <div class="skill-set">
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/aws_icon.png"
-                                    alt="DB_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills"> AWS Cloud</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/gcp_icon.png"
-                                    alt="Linux_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills"> GCP Cloud</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                        <span class="skill-row">
-                            <span class="skill-detail">
-                                <img src="../images/icons/kubernetes_icon.png"
-                                    alt="Linux_logo" width="15" height="15"
-                                    class="rounded">
-                                <span class="skills"> Kubernetes</span>
-                            </span>
-                            <span class="stars">
-                                <img src="../images/icons/cstar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png"
-                                    alt="*" width="15" height="15"
-                                    class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                                <img src="../images/icons/ostar_icon.png" alt
-                                    width="15" height="15" class="rounded">
-                            </span>
-                        </span>
-                    </div>
+                <div class="technical-skills" style="margin-left: 30px; margin-right: 30px;">
+
                 </div>
                 <hr style="margin-top:30px;" />
                 <h4 style="margin-left: 20px;">
