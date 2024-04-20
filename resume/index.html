@@ -1,1315 +1,1115 @@
 <!doctype html>
 <html lang="en">
-    <head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description"
-            content="Jay Prakash Sonkar Resume. Experience in Python, Java, and AI/ML development.">
-        <meta name="keywords"
-            content="Jay Prakash Sonkar, Software Developer, Python Developer, AI Developer, Resume">
-        <meta name="author" content="Jay Prakash Sonkar">
+<head>
 
-        <meta property="og:image" content="../images/icons/resume_icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jay Prakash Sonkar Resume. Experience in Python, Java, and AI/ML development.">
+    <meta name="keywords" content="Jay Prakash Sonkar, Software Developer, Python Developer, AI Developer, Resume">
+    <meta name="author" content="Jay Prakash Sonkar">
 
-        <title>Jay Prakash Sonkar - Software Developer</title>
+    <meta property="og:image" content="../images/icons/resume_icon.png">
 
-        <!-- Bootstrap -->
-        <link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
+    <title>Jay Prakash Sonkar - Software Developer</title>
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
 
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="../js/popper.min.js"></script>
-        <script src="../js/bootstrap-4.4.1.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
 
-        <link href="../css/stylesheet.css" rel="stylesheet">
-        <script src="../js/javascript.js" defer></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap-4.4.1.js"></script>
 
-        <link rel="icon" href="../images/icons/resume_icon.png"
-            type="image/x-icon">
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
+    <link href="../css/stylesheet.css" rel="stylesheet">
+    <script src="../js/javascript.js" defer></script>
+
+    <link rel="icon" href="../images/icons/resume_icon.png" type="image/x-icon">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
             const skills = [
-    { name: 'Python Programming', icon: 'python_icon.png', rating: 5 },
-    { name: 'Git & GitHub', icon: 'github_icon.png', rating: 4 },
-    { name: 'Data Structure & Algorithms', icon: 'dsa_icon.png', rating: 4 },
-    { name: 'Flask Framework', icon: 'flask_icon.png', rating: 3 },
-    { name: 'Sanic Framework', icon: 'sanic_icon.png', rating: 3 },
-    { name: 'Web Development', icon: 'web_d_icon.png', rating: 3 },
-    { name: 'Scripting & Automation', icon: 'yocto_icon.png', rating: 3 },
-    { name: 'Database & SQL', icon: 'database_icon.png', rating: 3 },
-    { name: 'Django Framework', icon: 'django_icon.png', rating: 2 },
-    { name: 'Kubernetes commands', icon: 'kubernetes_icon.png', rating: 1 },
-    { name: 'Bash/Linux System', icon: 'linux_icon.png', rating: 1 },
-    { name: 'Docker Concepts', icon: 'docker_icon.png', rating: 1 }
-];
-    const container = document.querySelector('.technical-skills');
-    let skillSet = null; // Declare skillSet outside the loop
+                { name: 'Python Programming', icon: 'python_icon.png', rating: 5 },
+                { name: 'Git & GitHub', icon: 'github_icon.png', rating: 4 },
+                { name: 'Data Structure & Algorithms', icon: 'dsa_icon.png', rating: 4 },
+                { name: 'Flask Framework', icon: 'flask_icon.png', rating: 3 },
+                { name: 'Sanic Framework', icon: 'sanic_icon.png', rating: 3 },
+                { name: 'Web Development', icon: 'web_d_icon.png', rating: 3 },
+                { name: 'Scripting & Automation', icon: 'script_icon.png', rating: 3 },
+                { name: 'Database & SQL', icon: 'database_icon.png', rating: 3 },
+                { name: 'Django Framework', icon: 'django_icon.png', rating: 2 },
+                { name: 'Kubernetes commands', icon: 'kubernetes_icon.png', rating: 1 },
+                { name: 'Bash/Linux System', icon: 'linux_icon.png', rating: 1 },
+                { name: 'Docker Concepts', icon: 'docker_icon.png', rating: 1 }
+            ];
+            const container = document.querySelector('.technical-skills');
+            let skillSet = null; // Declare skillSet outside the loop
 
-    skills.forEach((skill, index) => {
-        if (index % 3 === 0) {
-            skillSet = document.createElement('div'); // Initialize a new skill-set
-            skillSet.className = 'skill-set';
-            container.appendChild(skillSet);
-        }
+            skills.forEach((skill, index) => {
+                if (index % 3 === 0) {
+                    skillSet = document.createElement('div'); // Initialize a new skill-set
+                    skillSet.className = 'skill-set';
+                    container.appendChild(skillSet);
+                }
 
-        const skillRow = document.createElement('div');
-        skillRow.className = 'skill-row';
+                const skillRow = document.createElement('div');
+                skillRow.className = 'skill-row';
 
-        const skillDetail = document.createElement('span');
-        skillDetail.className = 'skill-detail';
+                const skillDetail = document.createElement('span');
+                skillDetail.className = 'skill-detail';
 
-        const img = document.createElement('img');
-        img.src = `../images/icons/${skill.icon}`;
-        img.alt = `${skill.name}_logo`;
-        img.width = 15;
-        img.height = 15;
-        img.className = 'rounded';
+                const img = document.createElement('img');
+                img.src = `../images/icons/${skill.icon}`;
+                img.alt = `${skill.name}_logo`;
+                img.width = 15;
+                img.height = 15;
+                img.className = 'rounded';
 
-        const skillName = document.createElement('span');
-        skillName.className = 'skills';
-        skillName.textContent = skill.name;
+                const skillName = document.createElement('span');
+                skillName.className = 'skills';
+                skillName.textContent = skill.name;
 
-        skillDetail.appendChild(img);
-        skillDetail.appendChild(skillName);
+                skillDetail.appendChild(img);
+                skillDetail.appendChild(skillName);
 
-        const stars = document.createElement('span');
-        stars.className = 'stars';
-        for (let i = 0; i < 5; i++) {
-            const star = document.createElement('img');
-            star.src = i < skill.rating ? '../images/icons/cstar_icon.png' : '../images/icons/ostar_icon.png';
-            star.alt = '*';
-            star.width = 15;
-            star.height = 15;
-            star.className = 'rounded';
-            stars.appendChild(star);
-        }
+                const stars = document.createElement('span');
+                stars.className = 'stars';
+                for (let i = 0; i < 5; i++) {
+                    const star = document.createElement('img');
+                    star.src = i < skill.rating ? '../images/icons/cstar_icon.png' : '../images/icons/ostar_icon.png';
+                    star.alt = '*';
+                    star.width = 15;
+                    star.height = 15;
+                    star.className = 'rounded';
+                    stars.appendChild(star);
+                }
 
-        skillRow.appendChild(skillDetail);
-        skillRow.appendChild(stars);
-        skillSet.appendChild(skillRow); // Append to the current skill-set
-    });
-});
+                skillRow.appendChild(skillDetail);
+                skillRow.appendChild(stars);
+                skillSet.appendChild(skillRow); // Append to the current skill-set
+            });
+        });
 
 
-        </script>
+    </script>
 
-    </head>
-    <body>
-        <div class="main-div">
-            <hr />
-            <div class="top-header-div">
-                <!-- Profile Image -->
-                <div class="profile-section">
-                    <a href="https://iamjpsonkar.github.io/portfolio/resume">
-                        <img src="../images/icons/myself_icon.png"
-                            alt="Jay Prakash Sonkar's Profile Picture"
-                            width="180"
-							height="180"
-                            >
+</head>
+
+<body>
+    <div class="main-div">
+        <hr />
+        <div class="top-header-div">
+            <!-- Profile Image -->
+            <div class="profile-section">
+                <a href="https://iamjpsonkar.github.io/portfolio/resume">
+                    <img src="../images/icons/myself_icon.png" alt="Jay Prakash Sonkar's Profile Picture" width="180"
+                        height="180">
+                </a>
+            </div>
+
+            <!-- Personal & Work Info -->
+            <div class="personal-info">
+                <h3>
+                    Jay Prakash Sonkar
+                    <a target="_blank" rel="noopener noreferrer" href="https://iamjpsonkar.github.io/portfolio/resume/">
+                        <img src="../images/icons/resume_icon.png" alt="(Resume)" width="30" height="30" />
                     </a>
-                </div>
+                </h3>
+                <ul>
+                    <li>Python Developer | Backend Developer</li>
+                    <li>Software Development Engineer</li>
+                    <li>Fynd, Shopsense Retail Technologies Limited</li>
+                    <li>Noida, Uttar Pradesh</li>
+                </ul>
+            </div>
 
-                <!-- Personal & Work Info -->
-                <div class="personal-info">
-                    <h3>
-                        Jay Prakash Sonkar
-                        <a
-							target="_blank" rel="noopener noreferrer"
-							href="https://iamjpsonkar.github.io/portfolio/resume/">
-							<img
-								src="../images/icons/resume_icon.png"
-								alt="(Resume)"
-								width="30"
-								height="30" />
-						</a>
-                    </h3>
+            <div class="contact-info">
+                <ul>
+                    <li>
+                        <img src="../images/icons/phone_icon.png" height="25" width="25" alt="Phone Icon">
+                        +91-8004023840
+                    </li>
+                    <li>
+                        <a href="mailto:iamjpsonkar@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <img src="../images/icons/gmail_icon.png" height="25" width="25" alt="Email Icon">
+                            iamjpsonkar@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/iamjpsonkar/" target="_blank" rel="noopener noreferrer">
+                            <img src="../images/icons/linkedin_icon.png" height="25" width="25" alt="LinkedIn Icon">
+                            LinkedIn: iamjpsonkar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/iamjpsonkar/" target="_blank" rel="noopener noreferrer">
+                            <img src="../images/icons/github_icon.png" height="25" width="25" alt="GitHub Icon">
+                            Github: iamjpsonkar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="coding-prof">
+                <ul>
+                    <li>
+                        <a href="https://leetcode.com/iamjpsonkar/" target="_blank" rel="noopener noreferrer">
+                            <img src="../images/icons/leetcode_icon.png" height="25" width="25" alt="LeetCode Icon">
+                            Leetcode: iamjpsonkar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="../images/icons/geeksforgeeks_icon.png" height="25" width="25"
+                                alt="Geegksforgeeks Logo">
+                            GeeksForGeeks: iamjpsonkar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.hackerrank.com/iamjpsonkar/" target="_blank" rel="noopener noreferrer">
+                            <img src="../images/icons/hackerrank_icon.png" height="25" width="25" alt="Hackerrank Logo">
+                            Hackerrank: iamjpsonkar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.hackerearth.com/@iamjpsonkar" target="_blank" rel="noopener noreferrer">
+                            <img src="../images/icons/hackerearth_icon.png" height="25" width="25"
+                                alt="Hackerearth Logo">
+                            Hackerearth: iamjpsonkar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <hr />
+        <div class="bottom-header-div">
+            <!-- Summary -->
+            <p class="summary">
+                Software Engineer with
+                <span id="eYear">2</span> Years and
+                <span id="eMonth">7</span> Months of hands-on experience in
+                Python-based web application development and backend
+                engineering. Demonstrated expertise in designing,
+                developing, and optimizing dynamic web applications.
+                Proficient in Python, data structures and algorithms, and
+                familiar with Machine Learning and AI principles. Seeking
+                roles in Software Development, Backend Engineering, Python
+                Development, AI, and Data Science.
+            </p>
+            <!-- Highlights -->
+            <div class="extras">
+                <div class="column">
+                    <!-- First Column Content -->
                     <ul>
-                        <li>Python Developer | Backend Developer</li>
-                        <li>Software Development Engineer</li>
-                        <li>Fynd, Shopsense Retail Technologies Limited</li>
-                        <li>Noida, Uttar Pradesh</li>
+                        <li><strong>Backend Development:</strong> Developed
+                            the Payments and Refund System.</li>
+                        <li><strong>Integration Expertise:</strong>
+                            Integrated <b>Razorpay Partnership Model</b>,
+                            &amp; Custom Checkout Integration for <b>Jio1Pay,
+                                Tirabeauty</b>.</li>
+                        <li><strong>API Development:</strong> Automated
+                            APIs, enhanced Payment and Refund APIs, and
+                            extended Payment functionalities.</li>
+                        <li><strong>Database Management:</strong> Handled
+                            SQL Scripts and Migrations for efficient data
+                            processing.</li>
+                        <li><strong>Scripting Skills:</strong> Proficient in
+                            Bash, and Python scripting for varied
+                            applications.</li>
                     </ul>
                 </div>
-
-                <div class="contact-info">
+                <div class="column">
+                    <!-- Second Column Content -->
                     <ul>
-                        <li>
-                            <img src="../images/icons/phone_icon.png"
-                                height="25" width="25" alt="Phone Icon">
-                            +91-8004023840
+                        <li><strong>Data Structures & Algorithms:</strong>
+                            Solved <b>700+ DSA problems</b>, showcasing
+                            problem-solving capabilities.</li>
+                        <li><strong>Competitive Coding:</strong> Qualified
+                            for <b>ACM-ICPC 2018 Regionals</b>.</li>
+                        <li><strong>Teaching & Mentorship:</strong> Resolved
+                            <b>1300+</b> student doubts on Chegg.
                         </li>
-                        <li>
-                            <a href="mailto:iamjpsonkar@gmail.com"
-                                target="_blank" rel="noopener noreferrer">
-                                <img src="../images/icons/gmail_icon.png"
-                                    height="25" width="25" alt="Email Icon">
-                                iamjpsonkar@gmail.com
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/iamjpsonkar/"
-                                target="_blank" rel="noopener noreferrer">
-                                <img src="../images/icons/linkedin_icon.png"
-                                    height="25" width="25" alt="LinkedIn Icon">
-                                LinkedIn: iamjpsonkar
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/iamjpsonkar/"
-                                target="_blank" rel="noopener noreferrer">
-                                <img src="../images/icons/github_icon.png"
-                                    height="25" width="25" alt="GitHub Icon">
-                                Github: iamjpsonkar
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="coding-prof">
-                    <ul>
-                        <li>
-                            <a href="https://leetcode.com/iamjpsonkar/"
-                                target="_blank" rel="noopener noreferrer">
-                                <img src="../images/icons/leetcode_icon.png"
-                                    height="25" width="25" alt="LeetCode Icon">
-                                Leetcode: iamjpsonkar
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://auth.geeksforgeeks.org/user/iamjpsonkar/profile"
-                                target="_blank" rel="noopener noreferrer">
-                                <img
-                                    src="../images/icons/geeksforgeeks_icon.png"
-                                    height="25" width="25"
-                                    alt="Geegksforgeeks Logo">
-                                GeeksForGeeks: iamjpsonkar
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.hackerrank.com/iamjpsonkar/"
-                                target="_blank" rel="noopener noreferrer">
-                                <img src="../images/icons/hackerrank_icon.png"
-                                    height="25" width="25" alt="Hackerrank Logo">
-                                Hackerrank: iamjpsonkar
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.hackerearth.com/@iamjpsonkar"
-                                target="_blank" rel="noopener noreferrer">
-                                <img src="../images/icons/hackerearth_icon.png"
-                                    height="25" width="25"
-                                    alt="Hackerearth Logo">
-                                Hackerearth: iamjpsonkar
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <hr />
-            <div class="bottom-header-div">
-                <!-- Summary -->
-                <p class="summary">
-                    Software Engineer with
-                    <span id="eYear">2</span> Years and
-                    <span id="eMonth">7</span> Months of hands-on experience in
-                    Python-based web application development and backend
-                    engineering. Demonstrated expertise in designing,
-                    developing, and optimizing dynamic web applications.
-                    Proficient in Python, data structures and algorithms, and
-                    familiar with Machine Learning and AI principles. Seeking
-                    roles in Software Development, Backend Engineering, Python
-                    Development, AI, and Data Science.
-                </p>
-                <!-- Highlights -->
-                <div class="extras">
-                    <div class="column">
-                        <!-- First Column Content -->
-                        <ul>
-                            <li><strong>Backend Development:</strong> Developed
-                                the Payments and Refund System.</li>
-                            <li><strong>Integration Expertise:</strong>
-                                Integrated <b>Razorpay Partnership Model</b>,
-                                &amp; Custom Checkout Integration for <b>Jio1Pay,
-                                    Tirabeauty</b>.</li>
-                            <li><strong>API Development:</strong> Automated
-                                APIs, enhanced Payment and Refund APIs, and
-                                extended Payment functionalities.</li>
-                            <li><strong>Database Management:</strong> Handled
-                                SQL Scripts and Migrations for efficient data
-                                processing.</li>
-                            <li><strong>Scripting Skills:</strong> Proficient in
-                                Bash, and Python scripting for varied
-                                applications.</li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <!-- Second Column Content -->
-                        <ul>
-                            <li><strong>Data Structures & Algorithms:</strong>
-                                Solved <b>700+ DSA problems</b>, showcasing
-                                problem-solving capabilities.</li>
-                            <li><strong>Competitive Coding:</strong> Qualified
-                                for <b>ACM-ICPC 2018 Regionals</b>.</li>
-                            <li><strong>Teaching & Mentorship:</strong> Resolved
-                                <b>1300+</b> student doubts on Chegg.</li>
-                            <li><strong>Open-Source Contributions:</strong>
-                                Maintained <b>70+ repositories</b> on GitHub,
-                                highlighting active participation in the
-                                developer community.</li>
-                            <li><strong>Awards & Recognition:</strong> Earned
-                                10+ accolades and certifications for technical
-                                proficiency and achievements in software
-                                development.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <hr />
-            <div class="middle">
-                <h4 style="margin-left: 20px;">
-                    Work Experience | Projects
-                </h4>
-                <div class="work-experience" style="margin-left: 30px;">
-                    <div name="fynd">
-                        <div class="Fynd">
-                            <table>
-                                <tr>
-                                    <!-- Company Logo -->
-                                    <td style="padding-right: 12px;">
-                                        <img src="../images/icons/fynd_icon.png"
-                                            alt="Fynd Logo" width="75"
-                                            height="75" class="rounded" />
-                                    </td>
-
-                                    <!-- Company Details -->
-                                    <td style="padding-left: 12px;">
-                                        <strong>Fynd, Shopsense Retail
-                                            Technologies Limited</strong><br>
-                                        Payments &amp; Refunds | Dec 2022 to
-                                        Present<br>
-                                        <i>Software Development Engineer, <span
-                                                id="fYear">0</span>.<span
-                                                id="fMonth">5</span> Years</i>
-                                    </td>
-
-                                    <!-- Projects -->
-                                    <td class="highlight">
-                                        <ul>
-                                            <li><a
-                                                    href="https://platform.fynd.com/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer">Fynd
-                                                    Platform</a></li>
-                                            <li><a
-                                                    href="https://swadeshlife.swadeshz0.de/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer">Swadesh</a></li>
-                                        </ul>
-                                    </td>
-                                    <td class="highlight">
-                                        <ul>
-                                            <li><a
-                                                    href="https://www.gofynd.com/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer">GoFynd</a></li>
-                                            <li><a
-                                                    href="https://www.scan-and-go.in/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer">Scan
-                                                    &amp; Go</a></li>
-                                        </ul>
-                                    </td>
-                                    <td class="highlight">
-                                        <ul>
-                                            <li><a
-                                                    href="https://www.tirabeauty.com/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer">Tira
-                                                    Beauty</a></li>
-                                            <li><a
-                                                    href="https://www.fresh-pick.in/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer">Freshpick</a></li>
-                                        </ul>
-                                    </td>
-                                    <td class="highlight">
-                                        <ul>
-                                            <li><a
-                                                    href="https://www.jiomartpartners.com/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer">Jiomart
-                                                    Partners</a></li>
-                                            <li><a
-                                                    href="https://www.reliancedigital.in"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer">Jiomart
-                                                    Digital</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="tasks">
-                            <ul>
-                                <li>
-                                    Led integration of Pyfit with AIOKafka, AIORedis, and FAST Api, ensuring cross-functional collaboration and technical support.
-                                </li>
-                                <li>
-                                    Implemented complex logic for order amount apportioning, ensuring accurate discounts and refunds through collaboration with JioMart and extension teams.
-                                </li>
-                                <li>
-                                    Engineered and deployed CRUD APIs for
-                                    Payments & Refunds on the Fynd Platform,
-                                    managing over 10K+ daily transactions across
-                                    multiple aggregators and users.
-                                </li>
-                                <li>
-                                    Integrated multiple databases with Payment
-                                    Gateway APIs, enhancing payment, refund, and
-                                    payout success rate by 15%.
-                                </li>
-                                <li>
-                                    Successfully launched <span
-                                        class="highlight">Jio1Pay custom
-                                        checkout for Tirabeauty</span>, driving
-                                    a
-                                    20% increase in user checkout efficiency.
-                                </li>
-                                <li>
-                                    Formulated SDK methods for Swift and Kotlin
-                                    platforms, resulting in a 25% reduction in
-                                    API integration time.
-                                </li>
-                                <li>
-                                    Instituted callbacks and webhooks for
-                                    real-time payment processing, and harnessed
-                                    Kafka for managing 10K+ daily events related
-                                    to payments and refunds.
-                                </li>
-                                <li>
-                                    Pioneered the <span class="highlight">'UPI At Store'
-                                        (UPIAS)</span>
-                                    feature on Fynd, increasing in-store UPI
-                                    transactions by 30%.
-                                </li>
-                                <li>
-                                    Rolled out a versatile <span
-                                        class="highlight">multi-mode payment
-                                        system</span>, bolstering user
-                                    transaction
-                                    choices by 50% with reward points, wallets,
-                                    and varied payment methods.
-                                </li>
-                                <li>
-                                    Implemented secure wallet link,
-                                    verification, and delinking protocols,
-                                    utilizing encryption to safely store tokens
-                                    and boost security measures.
-                                </li>
-                                <li>
-                                    Compliantly integrated <span
-                                        class="highlight">Razorpay
-                                        partnership model</span> in line with
-                                    RBI
-                                    guidelines, ensuring secure transactions
-                                    without storing merchant credentials.
-                                </li>
-                                <li>
-                                    Maintained and optimized APIs regularly,
-                                    achieving a 98% uptime and enhancing
-                                    response time by 15%.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr />
-                    <div name="tcs">
-                        <div class="TCS">
-                            <table>
-                                <tr>
-                                    <!-- Company Logo -->
-                                    <td style="padding-right: 12px;">
-                                        <img src="../images/icons/tcs_icon.png"
-                                            alt="TCS Logo" width="75"
-                                            height="75" class="rounded" />
-                                    </td>
-
-                                    <!-- Company Details -->
-                                    <td style="padding-left: 12px;">
-                                        <strong>Tata Consultancy Services [TCS]</strong><br>
-                                        Ericsson | Oct 2020 to Dec 2022<br>
-                                        <i>System Engineer (Digital), <span
-                                                id="tYear">2</span>.<span
-                                                id="tMonth">2</span> Years</i>
-                                    </td>
-
-                                    <!-- Projects -->
-                                    <td class="highlight">
-                                        <ul>
-                                            <li>Component Uplifts</li>
-                                            <li>Feature Development</li>
-                                        </ul>
-                                    </td>
-                                    <td class="highlight">
-                                        <ul>
-                                            <li>JaySoft-LogViewer</li>
-                                            <li>JaySoft-TestRunners</li>
-                                        </ul>
-                                    </td>
-                                    <td class="highlight">
-                                        <ul>
-                                            <li>JaySoft-WM_Grepper</li>
-                                            <li>JaySoft-BB_Downloader</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="tasks">
-                            <ul>
-                                <li>
-                                    Spearheaded Telecom domain initiatives,
-                                    achieving a 25% improvement in system
-                                    efficiency and streamlining feature
-                                    enhancements.
-                                </li>
-                                <li>
-                                    Engineered and enhanced Python scripts,
-                                    boosting operational process efficiency by
-                                    20%.
-                                </li>
-                                <li>
-                                    Managed system image upgrades via
-                                    Yocto(Bitbake Build System), resulting in a
-                                    15% increase in system reliability and
-                                    performance.
-                                </li>
-                                <li>
-                                    Drove critical enhancements for Ericsson
-                                    Telecom, achieving a 10% increase in
-                                    announcement sector efficiency.
-                                </li>
-                                <li>
-                                    Architected advanced security features for
-                                    Ericsson Telecom, improving system integrity
-                                    by 30% and reducing security threats.
-                                </li>
-                                <li>
-                                    Introduced utilities like <span
-                                        class="highlight">JaySoft-LogViewer</span>
-                                    and <span class="highlight">JaySoft-TestRunners</span>,
-                                    boosting
-                                    system operation efficiency by 20%.
-                                </li>
-                                <li>
-                                    Developed and refined tools such as <span
-                                        class="highlight">JaySoft-WM_Grepper</span>
-                                    and <span class="highlight">JaySoft-BB_Downloader</span>,
-                                    enhancing
-                                    system functionality by 18%.
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-                <hr />
-                <h4 style="margin-left: 20px;">
-                    Education &amp; Qualifications
-                </h4>
-                <div class="education">
-                    <table>
-                        <!-- B.Tech Details -->
-                        <tr>
-                            <td><img src="../images/icons/BIET_icon.png"
-                                    alt="BIET Logo" width="45" height="45"></td>
-                            <td>
-                                <strong>B.Tech, Computer Science &amp;
-                                    Engineering</strong><br>
-                                BIET, Jhansi (Affiliated to AKTU)<br>
-                                Duration: July 2016 - Sep 2020<br>
-                                Percentage: 71.94%
-                            </td>
-
-                            <!-- Intermediate Details -->
-                            <td><img src="../images/icons/JNV_icon.png"
-                                    alt="JNV Logo" width="45" height="45"></td>
-                            <td>
-                                <strong>Intermediate (12th Grade)</strong><br>
-                                JNV, Faizabad (Affiliated to CBSE)<br>
-                                Duration: April 2014 - March 2015<br>
-                                Percentage: 81.60%
-                            </td>
-
-                            <!-- High School Details -->
-                            <td><img src="../images/icons/JNV_icon.png"
-                                    alt="JNV Logo" width="45" height="45"></td>
-                            <td>
-                                <strong>High School (10th Grade)</strong><br>
-                                JNV, Faizabad (Affiliated to CBSE)<br>
-                                Duration: April 2013 - March 2014<br>
-                                Percentage: 81.70% (CGPA: 8.6)
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <hr />
-                <h4 style="margin-left: 20px;">Technical Skills</h4>
-                <div class="technical-skills" style="margin-left: 30px; margin-right: 30px;">
-
-                </div>
-                <hr style="margin-top:30px;" />
-                <h4 style="margin-left: 20px;">
-                    <img
-                        src="../images/cert_icons/udemy_icon.png"
-                        width="25" height="25"
-                        style="margin:2px;" class="rounded"
-                        alt="Udemy Icon" />
-                    Udemy Certifications
-                </h4>
-                <div class="udemy-certificates"
-                    style="margin-left: 30px;margin-right:30px;">
-                    <div class="Udemy">
-                        <ul>
-                            <li>
-                                <a
-                                    href="https://drive.google.com/file/d/1MMa6OnPcbMgXBfZfN9Ns5Mj-COqd03KF/view?usp=sharing"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        src="../images/icons/resume_icon.png"
-                                        width="25" height="25"
-                                        style="margin:2px;" class="rounded"
-                                        alt="cert_icon" />
-                                </a>
-                                <a
-                                    href="https://www.udemy.com/certificate/UC-04c4e63e-3d09-4b03-bac2-5362094a32c8/"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <strong>Python Advance</strong>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://drive.google.com/file/d/1z54QuBoWfqwPcEtgFDpNkDn9r9QQwHbW/view?usp=sharing"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        src="../images/icons/resume_icon.png"
-                                        width="25" height="25"
-                                        style="margin:2px;" class="rounded"
-                                        alt="cert_icon" />
-                                </a>
-                                <a
-                                    href="https://www.udemy.com/certificate/UC-dbe260a7-4173-4913-afec-850a2bb35dde/"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <strong>GUI with Tkinter</strong>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="Udemy">
-                        <ul>
-                            <li>
-                                <a
-                                    href="https://drive.google.com/file/d/1TVC7bhE6c-j3W2hyI8KKMQrqk6WrtRtY/view?usp=sharing"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        src="../images/icons/resume_icon.png"
-                                        width="25" height="25"
-                                        style="margin:2px;" class="rounded"
-                                        alt="cert_icon" />
-                                </a>
-                                <a
-                                    href="https://www.udemy.com/certificate/UC-7294146a-f05d-475c-bfa9-72c17f7ba3ef/"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <strong>Python3 OOPs</strong>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://drive.google.com/file/d/122bblOW7o98vYnYWmnBUT2AXQVw0DjUK/view?usp=sharing"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        src="../images/icons/resume_icon.png"
-                                        width="25" height="25"
-                                        style="margin:2px;" class="rounded"
-                                        alt="cert_icon" />
-                                </a>
-                                <a
-                                    href="https://www.udemy.com/certificate/UC-71df7363-fc5d-4c57-b621-5e09a41c4bb1/"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <strong>Web with Flask</strong>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="Udemy">
-                        <ul>
-                            <li>
-                                <a
-                                    href="https://drive.google.com/file/d/1qOHGYS2rGD2XqAmnM2NMSu2M2kNVY9xK/view?usp=sharing"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        src="../images/icons/resume_icon.png"
-                                        width="25" height="25"
-                                        style="margin:2px;" class="rounded"
-                                        alt="cert_icon" />
-                                </a>
-                                <a
-                                    href="https://www.udemy.com/certificate/UC-75dbdf82-be3d-466b-8f8c-cdde811a5bbd/"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <strong>Django Full Stack</strong>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://drive.google.com/file/d/1NU7P3n1iaAgMOZMSUuvPdjnDyJ11JKUm/view?usp=sharing"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        src="../images/icons/resume_icon.png"
-                                        width="25" height="25"
-                                        style="margin:2px;" class="rounded"
-                                        alt="cert_icon" />
-                                </a>
-                                <a
-                                    href="https://www.udemy.com/certificate/UC-cd2c33e9-7cc6-4e3d-86e6-304b7002250e/"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <strong>Machine Learning <sup>A-Z™</sup></strong>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="Udemy">
-                        <ul>
-                            <li>
-                                <a
-                                    href="https://drive.google.com/file/d/1QmKSVIMgWMahwmr_j8Fpjo8kYSpQh89U/view?usp=sharing"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <img
-                                        src="../images/icons/resume_icon.png"
-                                        width="25" height="25"
-                                        style="margin:2px;" class="rounded"
-                                        alt="cert_icon" />
-                                </a>
-                                <a
-                                    href="https://www.udemy.com/certificate/UC-ce97f306-2ca2-46c3-909b-4749d93b1e32/"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <strong>HTML and CSS</strong>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <hr />
-            <h4 style="margin-left: 20px;">Technical Certifications</h4>
-            <div name="n_cert" class="t-certificates"
-                style="margin-left: 30px;margin-right:30px;">
-                <div class certificates>
-                    <span class="c-skill">
-                        <img src="../images/icons/codechef_icon.png"
-                            alt="BIET_Logo" width="20" height="20"
-                            class="rounded" />
-                        <span>Snackdown </span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/1cERRpjlI_-RsRdGex0kiaERCQ75pM_js/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                17
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>,
-                            <a
-                                href="https://drive.google.com/file/d/1OAwbp1kmHSgMpucM4j75oHhgpD6U2Dkd/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">19
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>&amp;
-                            <a
-                                href="https://drive.google.com/file/d/1Ru6Q5FYrvjGUhLIhB8yfxeiJQjxR_XFZ/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                21
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                    <br />
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/hackerrank_icon.png"
-                            width="20" height="20" class="rounded"
-                            alt="cert_icon" />
-                        <span>Hackerrank</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/17rkuC4zVATpoFHrKESMqhkZ1TfAf7IEg/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                Python Certificate
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                    <br />
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/hackerrank_icon.png"
-                            width="20" height="20" class="rounded"
-                            alt="cert_icon" />
-                        <span>Hackerrank</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/1D2gPItEWfPWQMvrbXKJal76rQH04a9dc/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                Problem Solving
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-
-                </div>
-                <div class certificates>
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/techgig_icon.png"
-                            width="20" height="20" class="rounded"
-                            alt="cert_icon" />
-                        <span>Techgig</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/157J5vDNOTvdml02SKPonSURRtIrzZtoT/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                C,C++
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                    <br />
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/techgig_icon.png"
-                            width="20" height="20" class="rounded"
-                            alt="cert_icon" />
-                        <span>Techgig</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/1dHS1kEnEloSj9IjCAMzSENBbxYQAKRJJ/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                Python
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                    <br />
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/teqip_icon.png"
-                            width="20" height="28" class="rounded"
-                            alt="cert_icon" />
-                        <span>TEQIP-3</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/169BSTEJNAnHqtCTGJW5diMIHRC9HlN61/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                AI & ML
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                </div>
-                <div class certificates>
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/datapure_icon.png"
-                            width="20" height="20" class="rounded"
-                            alt="cert_icon" />
-                        <span>Datapure</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/1U81Rx549w_VkZsojJOCTwhkTfI4t146-/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                Internship
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                    <br />
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/datapure_icon.png"
-                            width="20" height="20" class="rounded"
-                            alt="cert_icon" />
-                        <span>Datapure</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/1fQlyGyTgqANvOpt38TMA2A0U_EvwI45V/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                Recommendation
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                    <br />
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/programr_icon.png"
-                            width="20" height="20" class="rounded"
-                            alt="cert_icon" />
-                        <span>Programmr</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/1_cQ7gQEJPlE5M_s3c3Kmq9iQjhiC3Tvr/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                Internship
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                </div>
-                <div class="certificates">
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/acm_icpc_icon.png"
-                            width="20" height="20" class="rounded"
-                            alt="cert_icon" />
-                        <span>ACM ICPC</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/1XYMO1p31tg-SeVV_GbxcrV7uiwV6DQsb/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                2018 Regionals
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                    <br />
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/infytq_icon.png"
-                            width="20" height="20" class="rounded"
-                            alt="cert_icon" />
-                        <span>Infosys</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/1K9FrcH-dlY6TJhaRchVsqJ6OwOpY8ctF/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">
-                                Python Certificate
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                    <br />
-                    <span class="c-skill">
-                        <img src="../images/cert_icons/PDA_icon.png"
-                            width="20" height="20" class="rounded"
-                            alt="cert_icon" />
-                        <span>PDA</span>
-                    </span>
-                    <span class="c-skill-cert">
-                        <strong>
-                            <a
-                                href="https://drive.google.com/file/d/1bAcYNi3yJQk4aZIfCFpEzg9H0xGgTJ2C/view?usp=share_link"
-                                target="_blank" rel="noopener noreferrer">
-                                Cyber Security
-                                <img
-                                    src="../images/icons/resume_icon.png"
-                                    width="25" height="25"
-                                    style="margin:2px;" class="rounded"
-                                    alt="cert_icon" /></a>
-                        </strong>
-                    </span>
-                </div>
-            </div>
-            <hr />
-            <br>
-            <hr />
-            <div class="footer">
-                <h4 style="margin-left: 20px;">
-                    Internship & Part-time Roles
-                </h4>
-                <div class="work-experience" style="margin-left: 30px;">
-
-                    <!-- Chegg Expert Role -->
-                    <div class="Chegg">
-                        <div class="company-info">
-                            <div class="company-logo">
-                                <img src="../images/icons/chegg_icon.png"
-                                    alt="Chegg Logo" width="75" height="75"
-                                    class="rounded" />
-                            </div>
-                            <div class="company-detail">
-                                <strong>
-                                    Chegg Expert
-                                    <a target="_blank" rel="noopener noreferrer"
-                                        href="https://drive.google.com/file/d/18of8cTw2rmZZxaXWkhOHUebz-Pt_Ofic/view?usp=share_link">
-                                        <img
-                                            src="../images/icons/resume_icon.png"
-                                            alt="Chegg Expert Details"
-                                            width="30"
-                                            height="30">
-                                    </a>
-                                </strong>
-                                <br />
-                                <span>Chegg India · Part-time</span><br />
-                                <span>Sept 2019 - Dec 2022 · 3 years, 4 months</span><br />
-                                <span>Remote</span><br />
-                            </div>
-                            <div class="tasks">
-                                <ul>
-                                    <li>Actively addressed and resolved student
-                                        queries from around the globe.</li>
-                                    <li>Successfully tackled over 1300
-                                        challenges
-                                        presented by students on the Chegg
-                                        platform.</li>
-                                    <li>Demonstrated proficiency in Web
-                                        Development
-                                        and Data Structures & Algorithms (DSA).</li>
-                                    <li>Expertise in multiple programming
-                                        languages
-                                        including Python, C++, and Java.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-
-                    <!-- Software Engineer Intern at Programmr.com -->
-                    <div class="Programmr">
-                        <div class="company-info">
-                            <div class="company-logo">
-                                <img src="../images/icons/programr_icon.png"
-                                    alt="Programmr.com Logo" width="75"
-                                    height="75"
-                                    class="rounded" />
-                            </div>
-                            <div class="company-detail">
-                                <strong>
-                                    Software Engineer Intern
-                                    <a target="_blank" rel="noopener noreferrer"
-                                        href="https://drive.google.com/file/d/1_cQ7gQEJPlE5M_s3c3Kmq9iQjhiC3Tvr/view?usp=share_link">
-                                        <img
-                                            src="../images/icons/resume_icon.png"
-                                            alt="Internship Details" width="30"
-                                            height="30">
-                                    </a>
-                                </strong>
-                                <br />
-                                <span>Programmr.com · Internship</span><br />
-                                <span>May 2019 - Jun 2019 · 45 days</span><br />
-                                <span>India · Remote</span><br />
-                            </div>
-                            <div class="tasks">
-                                <ul>
-                                    <li>Formulated interview challenges for
-                                        student
-                                        evaluations.</li>
-                                    <li>Devised a series of Python-based
-                                        exercises
-                                        for practice.</li>
-                                    <li>Offered structured solutions for the
-                                        provided Python problems.</li>
-                                    <li>Assisted students in understanding
-                                        Python
-                                        problem-solving techniques.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-
-                    <!-- Python Developer at DataPure -->
-                    <div class="DataPure">
-                        <div class="company-info">
-                            <div class="company-logo">
-                                <img src="../images/icons/datapure_icon.png"
-                                    alt="DataPure Logo" width="75" height="75"
-                                    class="rounded" />
-                            </div>
-                            <div class="company-detail">
-                                <strong>
-                                    Python Developer
-                                    <a target="_blank" rel="noopener noreferrer"
-                                        href="https://drive.google.com/file/d/1U81Rx549w_VkZsojJOCTwhkTfI4t146-/view?usp=share_link">
-                                        <img
-                                            src="../images/icons/resume_icon.png"
-                                            alt="Internship Letter" width="30"
-                                            height="30">
-                                    </a>
-                                </strong><br />
-                                <span>DataPure · Internship</span><br />
-                                <span>May 2019 - Jun 2019 · 45 days</span><br />
-                                <span>Indore Area, India</span><br />
-                            </div>
-                            <div class="tasks">
-                                <ul>
-                                    <li>Developed Python scripts for automated
-                                        web
-                                        scraping and data collection.</li>
-                                    <li>Designed a Python tool for data
-                                        extraction
-                                        from varied image sets.</li>
-                                    <li>Engaged in data analytics to derive
-                                        actionable insights from datasets.</li>
-                                    <li>Functioned as a Computer Vision Expert,
-                                        working on image processing and
-                                        recognition
-                                        projects.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-
-                </div>
-                <hr />
-                <h4 style="margin-left: 20px;">
-                    Freelancing Contribution
-                    [<i>Github Projects</i>]
-                </h4>
-                <div class="Projects"
-                    style="margin-left: 30px;margin-right:30px;">
-                    <ul class="project-container">
-                        <div class="project-row">
-                            <li class="project-item">
-                                <span class="project-year">[2023]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="http://jsonkar.pythonanywhere.com/">
-                                    <img class="project-logo"
-                                        src="../images/icons/PED_icon.png"
-                                        alt="PED_tools_logo">
-                                    <strong class="project-title">JaySoft:PED_tools</strong></a>
-                                <div class="project-description">Web application
-                                    for
-                                    handling JSON data: prettification,
-                                    encryption,
-                                    and decryption.</div>
-                            </li>
-                            <li class="project-item">
-                                <span class="project-year">[2022]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="http://iamjpsonkar.pythonanywhere.com/">
-                                    <img class="project-logo"
-                                        src="../images/icons/JS_Code_icon.png"
-                                        alt="JS_Code_logo">
-                                    <strong class="project-title">JaySoft:JS_Code</strong></a>
-                                <div class="project-description">Online Python
-                                    IDE
-                                    with Flask. Real-time compilation, code
-                                    sharing,
-                                    and debugging.</div>
-                            </li>
-                        </div>
-                        <div class="project-row">
-                            <li class="project-item">
-                                <span class="project-year">[2021]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="http://imsoftkid.pythonanywhere.com/">
-                                    <img class="project-logo"
-                                        src="../images/icons/bietcoder_icon.png"
-                                        alt="BIETCoders_logo">
-                                    <strong class="project-title">JaySoft:BIETCoders</strong></a>
-                                <div class="project-description">Social
-                                    Networking
-                                    Website for college students built on Python
-                                    Flask.</div>
-                            </li>
-                            <li class="project-item">
-                                <span class="project-year">[2020]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/iamjpsonkar/IASTool">
-                                    <img class="project-logo"
-                                        src="../images/icons/folder_icon.png"
-                                        alt="Github_logo">
-                                    <strong class="project-title">JaySoft:IASTapp</strong></a>
-                                <div class="project-description">Image
-                                    Annotation &
-                                    Segmentation Tool for training machine
-                                    learning
-                                    models.</div>
-                            </li>
-                        </div>
-                        <div class="project-row">
-                            <li class="project-item">
-                                <span class="project-year">[2019]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/iamjpsonkar/JaySoft-Paint">
-                                    <img class="project-logo"
-                                        src="../images/icons/folder_icon.png"
-                                        alt="Github_logo">
-                                    <strong class="project-title">JaySoft:JS_Paint</strong></a>
-                                <div class="project-description">GUI-based Paint
-                                    Application in Python with tools like
-                                    layering
-                                    and color palettes.</div>
-                            </li>
-                            <li class="project-item">
-                                <span class="project-year">[2019]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/iamjpsonkar/JaySoft-ImageViewer">
-                                    <img class="project-logo"
-                                        src="../images/icons/folder_icon.png"
-                                        alt="Github_logo">
-                                    <strong class="project-title">JaySoft:ImgView</strong></a>
-                                <div class="project-description">Image Viewer
-                                    with
-                                    features like zoom and slideshow, built with
-                                    Python's PyQt5.</div>
-                            </li>
-                        </div>
-                        <div class="project-row">
-                            <li class="project-item">
-                                <span class="project-year">[2019]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/iamjpsonkar/Youtube_trending">
-                                    <img class="project-logo"
-                                        src="../images/icons/folder_icon.png"
-                                        alt="Github_logo">
-                                    <strong class="project-title">JaySoft:YT-Trend</strong></a>
-                                <div class="project-description">Web scraping
-                                    script
-                                    to fetch top 50 trending YouTube videos.</div>
-                            </li>
-                            <li class="project-item">
-                                <span class="project-year">[2019]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/iamjpsonkar/Know-The-Tweets">
-                                    <img class="project-logo"
-                                        src="../images/icons/folder_icon.png"
-                                        alt="Github_logo">
-                                    <strong class="project-title">JaySoft:KT-Tweets</strong></a>
-                                <div class="project-description">Tweet Grabber
-                                    to
-                                    retrieve top 100 tweets for a keyword,
-                                    useful
-                                    for analysis.</div>
-                            </li>
-                        </div>
-                        <div class="project-row">
-                            <li class="project-item">
-                                <span class="project-year">[2019]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/iamjpsonkar/JSText">
-                                    <img class="project-logo"
-                                        src="../images/icons/folder_icon.png"
-                                        alt="Github_logo">
-                                    <strong class="project-title">JaySoft:JSText</strong></a>
-                                <div class="project-description">Efficient Text
-                                    Editor in Python supporting .jst files with
-                                    syntax highlighting.</div>
-                            </li>
-                            <li class="project-item">
-                                <span class="project-year">[2018]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/iamjpsonkar/JaySoftDictionary">
-                                    <img class="project-logo"
-                                        src="../images/icons/folder_icon.png"
-                                        alt="Github_logo">
-                                    <strong class="project-title">JaySoft:Dict</strong></a>
-                                <div class="project-description">Offline
-                                    Dictionary
-                                    in Python for quick word lookups, synonyms,
-                                    and
-                                    antonyms.</div>
-                            </li>
-                        </div>
-                        <div class="project-row">
-                            <li class="project-item">
-                                <span class="project-year">[2018]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/iamjpsonkar/H2E-translator">
-                                    <img class="project-logo"
-                                        src="../images/icons/folder_icon.png"
-                                        alt="Github_logo">
-                                    <strong class="project-title">JaySoft:H2Etrans</strong></a>
-                                <div class="project-description">CLI-based
-                                    translator leveraging Google's services for
-                                    real-time English translations.</div>
-                            </li>
-                            <li class="project-item">
-                                <span class="project-year">[2018]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/iamjpsonkar/MusicPlayer">
-                                    <img class="project-logo"
-                                        src="../images/icons/folder_icon.png"
-                                        alt="Github_logo">
-                                    <strong class="project-title">JaySoft:M-Player</strong></a>
-                                <div class="project-description">Music Player in
-                                    Python offering features like playlists,
-                                    shuffle, and repeat.</div>
-                            </li>
-                        </div>
-                        <div class="project-row">
-                            <li class="project-item">
-                                <span class="project-year">[2014]</span>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://drive.google.com/file/d/1hKQ29AQuPgOhSb8w3kXQyDSG2ftYKcS_/view?usp=sharing">
-                                    <img class="project-logo"
-                                        src="../images/icons/ict_icon.png"
-                                        alt="ict_logo">
-                                    <strong class="project-title">JaySoft:GDMA</strong></a>
-                                <div class="project-description">CLI-based
-                                    application in C++ for advanced data
-                                    management
-                                    in a universal system.</div>
-                            </li>
-                        </div>
+                        <li><strong>Open-Source Contributions:</strong>
+                            Maintained <b>70+ repositories</b> on GitHub,
+                            highlighting active participation in the
+                            developer community.</li>
+                        <li><strong>Awards & Recognition:</strong> Earned
+                            10+ accolades and certifications for technical
+                            proficiency and achievements in software
+                            development.</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </body>
+        <hr />
+        <div class="middle">
+            <h4 style="margin-left: 20px;">
+                Work Experience | Projects
+            </h4>
+            <div class="work-experience" style="margin-left: 30px;">
+                <div name="fynd">
+                    <div class="Fynd">
+                        <table>
+                            <tr>
+                                <!-- Company Logo -->
+                                <td style="padding-right: 12px;">
+                                    <img src="../images/icons/fynd_icon.png" alt="Fynd Logo" width="75" height="75"
+                                        class="rounded" />
+                                </td>
+
+                                <!-- Company Details -->
+                                <td style="padding-left: 12px;">
+                                    <strong>Fynd, Shopsense Retail
+                                        Technologies Limited</strong><br>
+                                    Payments &amp; Refunds | Dec 2022 to
+                                    Present<br>
+                                    <i>Software Development Engineer, <span id="fYear">0</span>.<span
+                                            id="fMonth">5</span> Years</i>
+                                </td>
+
+                                <!-- Projects -->
+                                <td class="highlight">
+                                    <ul>
+                                        <li><a href="https://platform.fynd.com/" target="_blank"
+                                                rel="noopener noreferrer">Fynd
+                                                Platform</a></li>
+                                        <li><a href="https://swadeshlife.swadeshz0.de/" target="_blank"
+                                                rel="noopener noreferrer">Swadesh</a></li>
+                                    </ul>
+                                </td>
+                                <td class="highlight">
+                                    <ul>
+                                        <li><a href="https://www.gofynd.com/" target="_blank"
+                                                rel="noopener noreferrer">GoFynd</a></li>
+                                        <li><a href="https://www.scan-and-go.in/" target="_blank"
+                                                rel="noopener noreferrer">Scan
+                                                &amp; Go</a></li>
+                                    </ul>
+                                </td>
+                                <td class="highlight">
+                                    <ul>
+                                        <li><a href="https://www.tirabeauty.com/" target="_blank"
+                                                rel="noopener noreferrer">Tira
+                                                Beauty</a></li>
+                                        <li><a href="https://www.fresh-pick.in/" target="_blank"
+                                                rel="noopener noreferrer">Freshpick</a></li>
+                                    </ul>
+                                </td>
+                                <td class="highlight">
+                                    <ul>
+                                        <li><a href="https://www.jiomartpartners.com/" target="_blank"
+                                                rel="noopener noreferrer">Jiomart
+                                                Partners</a></li>
+                                        <li><a href="https://www.reliancedigital.in" target="_blank"
+                                                rel="noopener noreferrer">Jiomart
+                                                Digital</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="tasks">
+                        <ul>
+                            <li>
+                                Led integration of Pyfit with AIOKafka, AIORedis, and FAST Api, ensuring
+                                cross-functional collaboration and technical support.
+                            </li>
+                            <li>
+                                Implemented complex logic for order amount apportioning, ensuring accurate discounts and
+                                refunds through collaboration with JioMart and extension teams.
+                            </li>
+                            <li>
+                                Engineered and deployed CRUD APIs for
+                                Payments & Refunds on the Fynd Platform,
+                                managing over 10K+ daily transactions across
+                                multiple aggregators and users.
+                            </li>
+                            <li>
+                                Integrated multiple databases with Payment
+                                Gateway APIs, enhancing payment, refund, and
+                                payout success rate by 15%.
+                            </li>
+                            <li>
+                                Successfully launched <span class="highlight">Jio1Pay custom
+                                    checkout for Tirabeauty</span>, driving
+                                a
+                                20% increase in user checkout efficiency.
+                            </li>
+                            <li>
+                                Formulated SDK methods for Swift and Kotlin
+                                platforms, resulting in a 25% reduction in
+                                API integration time.
+                            </li>
+                            <li>
+                                Instituted callbacks and webhooks for
+                                real-time payment processing, and harnessed
+                                Kafka for managing 10K+ daily events related
+                                to payments and refunds.
+                            </li>
+                            <li>
+                                Pioneered the <span class="highlight">'UPI At Store'
+                                    (UPIAS)</span>
+                                feature on Fynd, increasing in-store UPI
+                                transactions by 30%.
+                            </li>
+                            <li>
+                                Rolled out a versatile <span class="highlight">multi-mode payment
+                                    system</span>, bolstering user
+                                transaction
+                                choices by 50% with reward points, wallets,
+                                and varied payment methods.
+                            </li>
+                            <li>
+                                Implemented secure wallet link,
+                                verification, and delinking protocols,
+                                utilizing encryption to safely store tokens
+                                and boost security measures.
+                            </li>
+                            <li>
+                                Compliantly integrated <span class="highlight">Razorpay
+                                    partnership model</span> in line with
+                                RBI
+                                guidelines, ensuring secure transactions
+                                without storing merchant credentials.
+                            </li>
+                            <li>
+                                Maintained and optimized APIs regularly,
+                                achieving a 98% uptime and enhancing
+                                response time by 15%.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr />
+                <div name="tcs">
+                    <div class="TCS">
+                        <table>
+                            <tr>
+                                <!-- Company Logo -->
+                                <td style="padding-right: 12px;">
+                                    <img src="../images/icons/tcs_icon.png" alt="TCS Logo" width="75" height="75"
+                                        class="rounded" />
+                                </td>
+
+                                <!-- Company Details -->
+                                <td style="padding-left: 12px;">
+                                    <strong>Tata Consultancy Services [TCS]</strong><br>
+                                    Ericsson | Oct 2020 to Dec 2022<br>
+                                    <i>System Engineer (Digital), <span id="tYear">2</span>.<span id="tMonth">2</span>
+                                        Years</i>
+                                </td>
+
+                                <!-- Projects -->
+                                <td class="highlight">
+                                    <ul>
+                                        <li>Component Uplifts</li>
+                                        <li>Feature Development</li>
+                                    </ul>
+                                </td>
+                                <td class="highlight">
+                                    <ul>
+                                        <li>JaySoft-LogViewer</li>
+                                        <li>JaySoft-TestRunners</li>
+                                    </ul>
+                                </td>
+                                <td class="highlight">
+                                    <ul>
+                                        <li>JaySoft-WM_Grepper</li>
+                                        <li>JaySoft-BB_Downloader</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="tasks">
+                        <ul>
+                            <li>
+                                Spearheaded Telecom domain initiatives,
+                                achieving a 25% improvement in system
+                                efficiency and streamlining feature
+                                enhancements.
+                            </li>
+                            <li>
+                                Engineered and enhanced Python scripts,
+                                boosting operational process efficiency by
+                                20%.
+                            </li>
+                            <li>
+                                Managed system image upgrades via
+                                Yocto(Bitbake Build System), resulting in a
+                                15% increase in system reliability and
+                                performance.
+                            </li>
+                            <li>
+                                Drove critical enhancements for Ericsson
+                                Telecom, achieving a 10% increase in
+                                announcement sector efficiency.
+                            </li>
+                            <li>
+                                Architected advanced security features for
+                                Ericsson Telecom, improving system integrity
+                                by 30% and reducing security threats.
+                            </li>
+                            <li>
+                                Introduced utilities like <span class="highlight">JaySoft-LogViewer</span>
+                                and <span class="highlight">JaySoft-TestRunners</span>,
+                                boosting
+                                system operation efficiency by 20%.
+                            </li>
+                            <li>
+                                Developed and refined tools such as <span class="highlight">JaySoft-WM_Grepper</span>
+                                and <span class="highlight">JaySoft-BB_Downloader</span>,
+                                enhancing
+                                system functionality by 18%.
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <hr />
+            <h4 style="margin-left: 20px;">
+                Education &amp; Qualifications
+            </h4>
+            <div class="education">
+                <table>
+                    <!-- B.Tech Details -->
+                    <tr>
+                        <td><img src="../images/icons/BIET_icon.png" alt="BIET Logo" width="45" height="45"></td>
+                        <td>
+                            <strong>B.Tech, Computer Science &amp;
+                                Engineering</strong><br>
+                            BIET, Jhansi (Affiliated to AKTU)<br>
+                            Duration: July 2016 - Sep 2020<br>
+                            Percentage: 71.94%
+                        </td>
+
+                        <!-- Intermediate Details -->
+                        <td><img src="../images/icons/JNV_icon.png" alt="JNV Logo" width="45" height="45"></td>
+                        <td>
+                            <strong>Intermediate (12th Grade)</strong><br>
+                            JNV, Faizabad (Affiliated to CBSE)<br>
+                            Duration: April 2014 - March 2015<br>
+                            Percentage: 81.60%
+                        </td>
+
+                        <!-- High School Details -->
+                        <td><img src="../images/icons/JNV_icon.png" alt="JNV Logo" width="45" height="45"></td>
+                        <td>
+                            <strong>High School (10th Grade)</strong><br>
+                            JNV, Faizabad (Affiliated to CBSE)<br>
+                            Duration: April 2013 - March 2014<br>
+                            Percentage: 81.70% (CGPA: 8.6)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr />
+            <h4 style="margin-left: 20px;">Technical Skills</h4>
+            <div class="technical-skills" style="margin-left: 30px; margin-right: 30px;">
+
+            </div>
+            <hr style="margin-top:30px;" />
+            <h4 style="margin-left: 20px;">
+                <img src="../images/cert_icons/udemy_icon.png" width="25" height="25" style="margin:2px;"
+                    class="rounded" alt="Udemy Icon" />
+                Udemy Certifications
+            </h4>
+            <div class="udemy-certificates" style="margin-left: 30px;margin-right:30px;">
+                <div class="Udemy">
+                    <ul>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1MMa6OnPcbMgXBfZfN9Ns5Mj-COqd03KF/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                    class="rounded" alt="cert_icon" />
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-04c4e63e-3d09-4b03-bac2-5362094a32c8/"
+                                target="_blank" rel="noopener noreferrer">
+                                <strong>Python Advance</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1z54QuBoWfqwPcEtgFDpNkDn9r9QQwHbW/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                    class="rounded" alt="cert_icon" />
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-dbe260a7-4173-4913-afec-850a2bb35dde/"
+                                target="_blank" rel="noopener noreferrer">
+                                <strong>GUI with Tkinter</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Udemy">
+                    <ul>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1TVC7bhE6c-j3W2hyI8KKMQrqk6WrtRtY/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                    class="rounded" alt="cert_icon" />
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-7294146a-f05d-475c-bfa9-72c17f7ba3ef/"
+                                target="_blank" rel="noopener noreferrer">
+                                <strong>Python3 OOPs</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/122bblOW7o98vYnYWmnBUT2AXQVw0DjUK/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                    class="rounded" alt="cert_icon" />
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-71df7363-fc5d-4c57-b621-5e09a41c4bb1/"
+                                target="_blank" rel="noopener noreferrer">
+                                <strong>Web with Flask</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Udemy">
+                    <ul>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1qOHGYS2rGD2XqAmnM2NMSu2M2kNVY9xK/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                    class="rounded" alt="cert_icon" />
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-75dbdf82-be3d-466b-8f8c-cdde811a5bbd/"
+                                target="_blank" rel="noopener noreferrer">
+                                <strong>Django Full Stack</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1NU7P3n1iaAgMOZMSUuvPdjnDyJ11JKUm/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                    class="rounded" alt="cert_icon" />
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-cd2c33e9-7cc6-4e3d-86e6-304b7002250e/"
+                                target="_blank" rel="noopener noreferrer">
+                                <strong>Machine Learning <sup>A-Z™</sup></strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Udemy">
+                    <ul>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1QmKSVIMgWMahwmr_j8Fpjo8kYSpQh89U/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                    class="rounded" alt="cert_icon" />
+                            </a>
+                            <a href="https://www.udemy.com/certificate/UC-ce97f306-2ca2-46c3-909b-4749d93b1e32/"
+                                target="_blank" rel="noopener noreferrer">
+                                <strong>HTML and CSS</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <h4 style="margin-left: 20px;">Technical Certifications</h4>
+        <div name="n_cert" class="t-certificates" style="margin-left: 30px;margin-right:30px;">
+            <div class certificates>
+                <span class="c-skill">
+                    <img src="../images/icons/codechef_icon.png" alt="BIET_Logo" width="20" height="20"
+                        class="rounded" />
+                    <span>Snackdown </span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/1cERRpjlI_-RsRdGex0kiaERCQ75pM_js/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            17
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>,
+                        <a href="https://drive.google.com/file/d/1OAwbp1kmHSgMpucM4j75oHhgpD6U2Dkd/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">19
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>&amp;
+                        <a href="https://drive.google.com/file/d/1Ru6Q5FYrvjGUhLIhB8yfxeiJQjxR_XFZ/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            21
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+                <br />
+                <span class="c-skill">
+                    <img src="../images/cert_icons/hackerrank_icon.png" width="20" height="20" class="rounded"
+                        alt="cert_icon" />
+                    <span>Hackerrank</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/17rkuC4zVATpoFHrKESMqhkZ1TfAf7IEg/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            Python Certificate
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+                <br />
+                <span class="c-skill">
+                    <img src="../images/cert_icons/hackerrank_icon.png" width="20" height="20" class="rounded"
+                        alt="cert_icon" />
+                    <span>Hackerrank</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/1D2gPItEWfPWQMvrbXKJal76rQH04a9dc/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            Problem Solving
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+
+            </div>
+            <div class certificates>
+                <span class="c-skill">
+                    <img src="../images/cert_icons/techgig_icon.png" width="20" height="20" class="rounded"
+                        alt="cert_icon" />
+                    <span>Techgig</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/157J5vDNOTvdml02SKPonSURRtIrzZtoT/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            C,C++
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+                <br />
+                <span class="c-skill">
+                    <img src="../images/cert_icons/techgig_icon.png" width="20" height="20" class="rounded"
+                        alt="cert_icon" />
+                    <span>Techgig</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/1dHS1kEnEloSj9IjCAMzSENBbxYQAKRJJ/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            Python
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+                <br />
+                <span class="c-skill">
+                    <img src="../images/cert_icons/teqip_icon.png" width="20" height="28" class="rounded"
+                        alt="cert_icon" />
+                    <span>TEQIP-3</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/169BSTEJNAnHqtCTGJW5diMIHRC9HlN61/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            AI & ML
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+            </div>
+            <div class certificates>
+                <span class="c-skill">
+                    <img src="../images/cert_icons/datapure_icon.png" width="20" height="20" class="rounded"
+                        alt="cert_icon" />
+                    <span>Datapure</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/1U81Rx549w_VkZsojJOCTwhkTfI4t146-/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            Internship
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+                <br />
+                <span class="c-skill">
+                    <img src="../images/cert_icons/datapure_icon.png" width="20" height="20" class="rounded"
+                        alt="cert_icon" />
+                    <span>Datapure</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/1fQlyGyTgqANvOpt38TMA2A0U_EvwI45V/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            Recommendation
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+                <br />
+                <span class="c-skill">
+                    <img src="../images/cert_icons/programr_icon.png" width="20" height="20" class="rounded"
+                        alt="cert_icon" />
+                    <span>Programmr</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/1_cQ7gQEJPlE5M_s3c3Kmq9iQjhiC3Tvr/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            Internship
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+            </div>
+            <div class="certificates">
+                <span class="c-skill">
+                    <img src="../images/cert_icons/acm_icpc_icon.png" width="20" height="20" class="rounded"
+                        alt="cert_icon" />
+                    <span>ACM ICPC</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/1XYMO1p31tg-SeVV_GbxcrV7uiwV6DQsb/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            2018 Regionals
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+                <br />
+                <span class="c-skill">
+                    <img src="../images/cert_icons/infytq_icon.png" width="20" height="20" class="rounded"
+                        alt="cert_icon" />
+                    <span>Infosys</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/1K9FrcH-dlY6TJhaRchVsqJ6OwOpY8ctF/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer">
+                            Python Certificate
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+                <br />
+                <span class="c-skill">
+                    <img src="../images/cert_icons/PDA_icon.png" width="20" height="20" class="rounded"
+                        alt="cert_icon" />
+                    <span>PDA</span>
+                </span>
+                <span class="c-skill-cert">
+                    <strong>
+                        <a href="https://drive.google.com/file/d/1bAcYNi3yJQk4aZIfCFpEzg9H0xGgTJ2C/view?usp=share_link"
+                            target="_blank" rel="noopener noreferrer">
+                            Cyber Security
+                            <img src="../images/icons/resume_icon.png" width="25" height="25" style="margin:2px;"
+                                class="rounded" alt="cert_icon" /></a>
+                    </strong>
+                </span>
+            </div>
+        </div>
+        <hr />
+        <br>
+        <hr />
+        <div class="footer">
+            <h4 style="margin-left: 20px;">
+                Internship & Part-time Roles
+            </h4>
+            <div class="work-experience" style="margin-left: 30px;">
+
+                <!-- Chegg Expert Role -->
+                <div class="Chegg">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <img src="../images/icons/chegg_icon.png" alt="Chegg Logo" width="75" height="75"
+                                class="rounded" />
+                        </div>
+                        <div class="company-detail">
+                            <strong>
+                                Chegg Expert
+                                <a target="_blank" rel="noopener noreferrer"
+                                    href="https://drive.google.com/file/d/18of8cTw2rmZZxaXWkhOHUebz-Pt_Ofic/view?usp=share_link">
+                                    <img src="../images/icons/resume_icon.png" alt="Chegg Expert Details" width="30"
+                                        height="30">
+                                </a>
+                            </strong>
+                            <br />
+                            <span>Chegg India · Part-time</span><br />
+                            <span>Sept 2019 - Dec 2022 · 3 years, 4 months</span><br />
+                            <span>Remote</span><br />
+                        </div>
+                        <div class="tasks">
+                            <ul>
+                                <li>Actively addressed and resolved student
+                                    queries from around the globe.</li>
+                                <li>Successfully tackled over 1300
+                                    challenges
+                                    presented by students on the Chegg
+                                    platform.</li>
+                                <li>Demonstrated proficiency in Web
+                                    Development
+                                    and Data Structures & Algorithms (DSA).</li>
+                                <li>Expertise in multiple programming
+                                    languages
+                                    including Python, C++, and Java.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <!-- Software Engineer Intern at Programmr.com -->
+                <div class="Programmr">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <img src="../images/icons/programr_icon.png" alt="Programmr.com Logo" width="75" height="75"
+                                class="rounded" />
+                        </div>
+                        <div class="company-detail">
+                            <strong>
+                                Software Engineer Intern
+                                <a target="_blank" rel="noopener noreferrer"
+                                    href="https://drive.google.com/file/d/1_cQ7gQEJPlE5M_s3c3Kmq9iQjhiC3Tvr/view?usp=share_link">
+                                    <img src="../images/icons/resume_icon.png" alt="Internship Details" width="30"
+                                        height="30">
+                                </a>
+                            </strong>
+                            <br />
+                            <span>Programmr.com · Internship</span><br />
+                            <span>May 2019 - Jun 2019 · 45 days</span><br />
+                            <span>India · Remote</span><br />
+                        </div>
+                        <div class="tasks">
+                            <ul>
+                                <li>Formulated interview challenges for
+                                    student
+                                    evaluations.</li>
+                                <li>Devised a series of Python-based
+                                    exercises
+                                    for practice.</li>
+                                <li>Offered structured solutions for the
+                                    provided Python problems.</li>
+                                <li>Assisted students in understanding
+                                    Python
+                                    problem-solving techniques.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <!-- Python Developer at DataPure -->
+                <div class="DataPure">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <img src="../images/icons/datapure_icon.png" alt="DataPure Logo" width="75" height="75"
+                                class="rounded" />
+                        </div>
+                        <div class="company-detail">
+                            <strong>
+                                Python Developer
+                                <a target="_blank" rel="noopener noreferrer"
+                                    href="https://drive.google.com/file/d/1U81Rx549w_VkZsojJOCTwhkTfI4t146-/view?usp=share_link">
+                                    <img src="../images/icons/resume_icon.png" alt="Internship Letter" width="30"
+                                        height="30">
+                                </a>
+                            </strong><br />
+                            <span>DataPure · Internship</span><br />
+                            <span>May 2019 - Jun 2019 · 45 days</span><br />
+                            <span>Indore Area, India</span><br />
+                        </div>
+                        <div class="tasks">
+                            <ul>
+                                <li>Developed Python scripts for automated
+                                    web
+                                    scraping and data collection.</li>
+                                <li>Designed a Python tool for data
+                                    extraction
+                                    from varied image sets.</li>
+                                <li>Engaged in data analytics to derive
+                                    actionable insights from datasets.</li>
+                                <li>Functioned as a Computer Vision Expert,
+                                    working on image processing and
+                                    recognition
+                                    projects.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+            </div>
+            <hr />
+            <h4 style="margin-left: 20px;">
+                Freelancing Contribution
+                [<i>Github Projects</i>]
+            </h4>
+            <div class="Projects" style="margin-left: 30px;margin-right:30px;">
+                <ul class="project-container">
+                    <div class="project-row">
+                        <li class="project-item">
+                            <span class="project-year">[2023]</span>
+                            <a target="_blank" rel="noopener noreferrer" href="http://jsonkar.pythonanywhere.com/">
+                                <img class="project-logo" src="../images/icons/PED_icon.png" alt="PED_tools_logo">
+                                <strong class="project-title">JaySoft:PED_tools</strong></a>
+                            <div class="project-description">Web application
+                                for
+                                handling JSON data: prettification,
+                                encryption,
+                                and decryption.</div>
+                        </li>
+                        <li class="project-item">
+                            <span class="project-year">[2022]</span>
+                            <a target="_blank" rel="noopener noreferrer" href="http://iamjpsonkar.pythonanywhere.com/">
+                                <img class="project-logo" src="../images/icons/JS_Code_icon.png" alt="JS_Code_logo">
+                                <strong class="project-title">JaySoft:JS_Code</strong></a>
+                            <div class="project-description">Online Python
+                                IDE
+                                with Flask. Real-time compilation, code
+                                sharing,
+                                and debugging.</div>
+                        </li>
+                    </div>
+                    <div class="project-row">
+                        <li class="project-item">
+                            <span class="project-year">[2021]</span>
+                            <a target="_blank" rel="noopener noreferrer" href="http://imsoftkid.pythonanywhere.com/">
+                                <img class="project-logo" src="../images/icons/bietcoder_icon.png"
+                                    alt="BIETCoders_logo">
+                                <strong class="project-title">JaySoft:BIETCoders</strong></a>
+                            <div class="project-description">Social
+                                Networking
+                                Website for college students built on Python
+                                Flask.</div>
+                        </li>
+                        <li class="project-item">
+                            <span class="project-year">[2020]</span>
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/iamjpsonkar/IASTool">
+                                <img class="project-logo" src="../images/icons/folder_icon.png" alt="Github_logo">
+                                <strong class="project-title">JaySoft:IASTapp</strong></a>
+                            <div class="project-description">Image
+                                Annotation &
+                                Segmentation Tool for training machine
+                                learning
+                                models.</div>
+                        </li>
+                    </div>
+                    <div class="project-row">
+                        <li class="project-item">
+                            <span class="project-year">[2019]</span>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/iamjpsonkar/JaySoft-Paint">
+                                <img class="project-logo" src="../images/icons/folder_icon.png" alt="Github_logo">
+                                <strong class="project-title">JaySoft:JS_Paint</strong></a>
+                            <div class="project-description">GUI-based Paint
+                                Application in Python with tools like
+                                layering
+                                and color palettes.</div>
+                        </li>
+                        <li class="project-item">
+                            <span class="project-year">[2019]</span>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/iamjpsonkar/JaySoft-ImageViewer">
+                                <img class="project-logo" src="../images/icons/folder_icon.png" alt="Github_logo">
+                                <strong class="project-title">JaySoft:ImgView</strong></a>
+                            <div class="project-description">Image Viewer
+                                with
+                                features like zoom and slideshow, built with
+                                Python's PyQt5.</div>
+                        </li>
+                    </div>
+                    <div class="project-row">
+                        <li class="project-item">
+                            <span class="project-year">[2019]</span>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/iamjpsonkar/Youtube_trending">
+                                <img class="project-logo" src="../images/icons/folder_icon.png" alt="Github_logo">
+                                <strong class="project-title">JaySoft:YT-Trend</strong></a>
+                            <div class="project-description">Web scraping
+                                script
+                                to fetch top 50 trending YouTube videos.</div>
+                        </li>
+                        <li class="project-item">
+                            <span class="project-year">[2019]</span>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/iamjpsonkar/Know-The-Tweets">
+                                <img class="project-logo" src="../images/icons/folder_icon.png" alt="Github_logo">
+                                <strong class="project-title">JaySoft:KT-Tweets</strong></a>
+                            <div class="project-description">Tweet Grabber
+                                to
+                                retrieve top 100 tweets for a keyword,
+                                useful
+                                for analysis.</div>
+                        </li>
+                    </div>
+                    <div class="project-row">
+                        <li class="project-item">
+                            <span class="project-year">[2019]</span>
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/iamjpsonkar/JSText">
+                                <img class="project-logo" src="../images/icons/folder_icon.png" alt="Github_logo">
+                                <strong class="project-title">JaySoft:JSText</strong></a>
+                            <div class="project-description">Efficient Text
+                                Editor in Python supporting .jst files with
+                                syntax highlighting.</div>
+                        </li>
+                        <li class="project-item">
+                            <span class="project-year">[2018]</span>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/iamjpsonkar/JaySoftDictionary">
+                                <img class="project-logo" src="../images/icons/folder_icon.png" alt="Github_logo">
+                                <strong class="project-title">JaySoft:Dict</strong></a>
+                            <div class="project-description">Offline
+                                Dictionary
+                                in Python for quick word lookups, synonyms,
+                                and
+                                antonyms.</div>
+                        </li>
+                    </div>
+                    <div class="project-row">
+                        <li class="project-item">
+                            <span class="project-year">[2018]</span>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/iamjpsonkar/H2E-translator">
+                                <img class="project-logo" src="../images/icons/folder_icon.png" alt="Github_logo">
+                                <strong class="project-title">JaySoft:H2Etrans</strong></a>
+                            <div class="project-description">CLI-based
+                                translator leveraging Google's services for
+                                real-time English translations.</div>
+                        </li>
+                        <li class="project-item">
+                            <span class="project-year">[2018]</span>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/iamjpsonkar/MusicPlayer">
+                                <img class="project-logo" src="../images/icons/folder_icon.png" alt="Github_logo">
+                                <strong class="project-title">JaySoft:M-Player</strong></a>
+                            <div class="project-description">Music Player in
+                                Python offering features like playlists,
+                                shuffle, and repeat.</div>
+                        </li>
+                    </div>
+                    <div class="project-row">
+                        <li class="project-item">
+                            <span class="project-year">[2014]</span>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://drive.google.com/file/d/1hKQ29AQuPgOhSb8w3kXQyDSG2ftYKcS_/view?usp=sharing">
+                                <img class="project-logo" src="../images/icons/ict_icon.png" alt="ict_logo">
+                                <strong class="project-title">JaySoft:GDMA</strong></a>
+                            <div class="project-description">CLI-based
+                                application in C++ for advanced data
+                                management
+                                in a universal system.</div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
