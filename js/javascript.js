@@ -27,6 +27,11 @@ function setExp()
 	document.getElementById("eYear").innerHTML = eYear;
 	document.getElementById("eMonth").innerHTML = eMonth;
 
+	if(eMonth===0){
+		document.getElementById('EXPMNTH').style.display = 'none';
+		document.getElementById("eYear").innerHTML = eYear+'.1';
+	}
+
 	document.getElementById("tYear").innerHTML = parseInt(texp/12);
 	document.getElementById("tMonth").innerHTML = texp % 12;
 
