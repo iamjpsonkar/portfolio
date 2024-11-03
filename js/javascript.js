@@ -24,6 +24,7 @@ function setExp()
 	var eYear = parseInt(exp/12);
 	var eMonth = exp % 12;
 
+	console.log(eYear+"-"+eMonth);
 	document.getElementById("eYear").innerHTML = eYear;
 	document.getElementById("eMonth").innerHTML = eMonth;
 
@@ -40,13 +41,13 @@ function setExp()
 
 	// Personal Experience
 	var pYear = "2+";
-	document.getElementById("pYear").innerHTML = PYear;
+	//document.getElementById("pYear").innerHTML = pYear;
 
 	// Last Working Day TCS
 	var LWD = TCS_resigniing_date;
 	const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 	var today = new Date();
 	var NPD = 1+Math.round(Math.abs((LWD - today) / oneDay));
-	document.getElementById("NPD").innerHTML = NPD;
+	//document.getElementById("NPD").innerHTML = NPD;
 }
 window.onload = setExp;
