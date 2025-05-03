@@ -9982,3 +9982,11 @@ h6,
   padding: 0;
   list-style-type: none;
 }
+
+.project-logo {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
