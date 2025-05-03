@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 ${certifications.udemy.map(cert => `
                     <div class="col-lg-4 col-md-6 text-center mb-5">
                         <div class="d-flex align-items-center justify-content-center mb-4">
-                            <img class="project-logo" src="../images/cert_icons/udemy_icon.png" alt="Udemy Icon">
+                            <img class="project-logo" src="./images/cert_icons/udemy_icon.png" alt="Udemy Icon">
                             <h4 class="font-weight-bold m-0">${cert.title}</h4>
                         </div>
                         <p>
