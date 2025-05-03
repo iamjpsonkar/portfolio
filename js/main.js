@@ -272,9 +272,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 platform: "Snackdown",
                 platformIcon: "./images/icons/codechef_icon.png",
                 certs: [
-                    { label: "17", link: "https://drive.google.com/file/d/1cERRpjlI_-RsRdGex0kiaERCQ75pM_js/view?usp=sharing" },
-                    { label: "19", link: "https://drive.google.com/file/d/1OAwbp1kmHSgMpucM4j75oHhgpD6U2Dkd/view?usp=sharing" },
-                    { label: "21", link: "https://drive.google.com/file/d/1Ru6Q5FYrvjGUhLIhB8yfxeiJQjxR_XFZ/view?usp=sharing" }
+                    { label: "2017", link: "https://drive.google.com/file/d/1cERRpjlI_-RsRdGex0kiaERCQ75pM_js/view?usp=sharing" },
+                    { label: "2019", link: "https://drive.google.com/file/d/1OAwbp1kmHSgMpucM4j75oHhgpD6U2Dkd/view?usp=sharing" },
+                    { label: "2021", link: "https://drive.google.com/file/d/1Ru6Q5FYrvjGUhLIhB8yfxeiJQjxR_XFZ/view?usp=sharing" }
                 ]
             },
             {
@@ -367,6 +367,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             
             <!-- Udemy Certifications -->
+            <h2 class="text-center text-primary">Udemy Certifications</h2>
+            <hr/>
             <div class="row pb-3">
                 ${certifications.udemy.map(cert => `
                     <div class="col-lg-4 col-md-6 text-center mb-5">
@@ -385,6 +387,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
             <!-- Technical Certifications -->
+            <h2 class="text-center text-primary">Other Certifications</h2>
+            <hr/>
             <div class="row pb-3">
                 ${certifications.technical.map(tech => `
                     <div class="col-lg-4 col-md-6 text-center mb-5">
