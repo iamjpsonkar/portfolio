@@ -9871,6 +9871,57 @@ h6,
   border-bottom: 11px solid transparent;
 }
 
+.btn-download {
+  position: relative;
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 50px;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+  background: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+}
+
+.btn-download:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50px;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.btn-download:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50px;
+  transition: all 200ms;
+}
+
+.btn-download span {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+}
+
+
 @keyframes pulse-border {
   0% {
     transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
