@@ -332,91 +332,78 @@
                     <div class="tasks">
                         <ul>
                             <li>
-                                Led integration of <b>Pyfit with AIOKafka, AIORedis, and FAST Api</b>, ensuring
-                                cross-functional collaboration and technical support.
+                                Delivered <b>499 tasks at 97.8% completion</b> across 3 years (2023–2026),
+                                with <b>7,400+ commits</b> across 19 repositories and <b>25+ version releases</b>
+                                on Fynd's payments platform (Gringotts). Received <b>6 quarterly Fynd Star
+                                awards</b> and the annual <b>"One Man Army" award</b>.
                             </li>
                             <li>
-                                Implemented complex logic for order <b>Amount Apportioning</b>, ensuring accurate discounts and
-                                refunds through collaboration with JioMart and payment extension teams.
+                                Led <b>encryption key rotation</b> (JCP-8065, 67 commits) across 5 repositories —
+                                multi-level encryption support, beneficiary details migration, CSV-based batch
+                                revert, and zero-downtime secret rotation spanning gringotts, fynd-platform,
+                                fynd-platform-helm, and api-specifications.
                             </li>
                             <li>
-                                Engineered and deployed CRUD APIs for
-                                Payments & Refunds on the Fynd Platform,
-                                managing over 10K+ daily transactions across
-                                multiple aggregators and users.
+                                Built <b>multi-aggregator payment outage handling</b> (JCP-10728, 80 commits) —
+                                V2 outage data in payment options response, per-aggregator resolution with
+                                merchant_code enrichment, and comprehensive E2E test coverage.
                             </li>
                             <li>
-                                Integrated multiple databases with Payment
-                                Gateway APIs, enhancing payment, refund, and
-                                payout success rate by 15%.
+                                Integrated <b>gRPC client for payment and refund init</b> (JCP-1650, 58 commits) —
+                                transaction ID handling, deadlock resolution, and Docker infrastructure updates.
                             </li>
                             <li>
-                                Successfully launched <b>Jio1Pay custom
-                                    checkout for Tirabeauty</b>, driving
-                                a
-                                20% increase in user checkout efficiency.
+                                Migrated platform from legacy framework to <b>FastAPI via pyFIT</b> (FPCO-22488) —
+                                AIOKafka, AIORedis integration, and framework-level infrastructure changes.
                             </li>
                             <li>
-                                Formulated SDK methods for Swift and Kotlin
-                                platforms, resulting in a 25% reduction in
-                                API integration time.
+                                Owned end-to-end <b>refund pipeline</b> — retry logic, currency mismatch fixes
+                                for international orders, stuck refund recovery, split refunds, and
+                                multi-aggregator refund flows (66+ tasks across the refund domain).
                             </li>
                             <li>
-                                Instituted callbacks and webhooks for
-                                real-time payment processing, and harnessed
-                                Kafka for managing 10K+ daily events related
-                                to payments and refunds.
+                                Launched <b>Jio1Pay custom checkout for Tirabeauty</b> (TIRA-7090, 88 commits) —
+                                custom checkout flow, TIRA platform integration, Redis keys, and load testing.
                             </li>
                             <li>
-                                Pioneered the <b>'UPI At Store'
-                                    (UPIAS)</b>
-                                feature on Fynd, increasing in-store UPI
-                                transactions by 30%.
+                                Integrated <b>Razorpay partnership model</b> in compliance with RBI guidelines —
+                                secure transactions without storing merchant credentials.
                             </li>
                             <li>
-                                Rolled out a versatile <b>multi-mode payment
-                                    system</b>, bolstering user
-                                transaction
-                                choices by 50% with reward points, wallets,
-                                and varied payment methods.
+                                Pioneered <b>UPI At Store (UPIAS)</b> — in-store UPI transactions for POS/EDC
+                                devices, offline payment modes, and cross-platform payment method integration.
                             </li>
                             <li>
-                                Implemented secure wallet link,
-                                verification, and delinking protocols,
-                                utilizing encryption to safely store tokens
-                                and boost security measures.
+                                Implemented <b>entity MOP visibility</b> (JCP-10152, 31 commits) — DB-backed
+                                entity types with dynamic cart field extraction, integrated into create_order
+                                and payment_options flows.
                             </li>
                             <li>
-                                Compliantly integrated <b>Razorpay
-                                    partnership model</b> in line with
-                                RBI
-                                guidelines, ensuring secure transactions
-                                without storing merchant credentials.
+                                Built <b>cart charge apportioning</b> (FPCO-34329, 30 commits) — cart charge
+                                distribution per MOP split with calculation scripts for JioMart.
                             </li>
                             <li>
-                                Maintained and optimized APIs regularly,
-                                achieving a 98% uptime and enhancing
-                                response time by 15%.
+                                Maintained <b>OpenAPI specifications</b> (283 commits in api-specifications) —
+                                Payment Options V2, entity MOP visibility, key rotation APIs, outage data
+                                schemas, FDK alignment, and SDK parity.
                             </li>
                             <li>
-                                Led <strong>encryption key rotation</strong> across 5 repositories
-                                (JCP-8065), ensuring zero-downtime secret migration and compliance
-                                hardening across the payments platform.
+                                Remediated security vulnerabilities — Fortify critical/high severity fixes
+                                (JCP-10889), hard-coded password removal (FPCO-41972), bank account exposure
+                                (DSOP-15735), CVE fixes across simple-python and cashfree-python.
                             </li>
                             <li>
-                                Built <strong>multi-aggregator outage handling</strong> (JCP-10728)
-                                enabling automatic failover across payment gateways during downtime,
-                                improving transaction success rates.
+                                Delivered <b>Python 3.13 upgrade</b> (JCP-3736, 45 commits) — pyFIT v1.2.0
+                                adoption, Docker/APK dependency updates, backward compatibility maintained.
                             </li>
                             <li>
-                                Delivered <strong>Python 3.13 upgrade</strong> and pyFIT v1.2.0
-                                (JCP-3736) across the platform, maintaining backward compatibility
-                                and resolving all dependency conflicts.
+                                Worked on <b>JioOnePay payment extension</b> (81 commits) — versioning system,
+                                decimal amount loss fixes, category ID and article price fixes, EMI changes.
                             </li>
                             <li>
-                                Received <strong>6 quarterly Fynd Star awards</strong> and the
-                                annual <strong>"One Man Army" award</strong> for independent
-                                end-to-end ownership of complex, cross-team features.
+                                Added <b>observability and tracing</b> — 24+ spans for refund webhooks,
+                                company_id, user_id; Sentry integration; resolved pod scaling
+                                (CrashLoopBackOff 19x → 110x) in Kubernetes.
                             </li>
                         </ul>
                     </div>
@@ -1011,35 +998,27 @@
                             <div class="project-description">All-in-one local development toolkit powered by Docker — pre-configured databases, Kafka, Redis, monitoring (Prometheus &amp; Grafana), and automated setup scripts.</div>
                         </li>
                         <li class="project-item">
-                            <span class="project-year">[2024]</span>
-                            <a target="_blank" rel="noopener noreferrer" href="https://jsonkar.pythonanywhere.com/proxy/">
-                                <img class="project-logo" src="../images/icons/proxy_server_icon.png" alt="JS_Proxy Logo">
-                                <strong class="project-title">JaySoft:PED_tools</strong></a>
-                            <div class="project-description">API proxy server with mock responses, request history, AES encryption/decryption, rate limiting, and migration CLI. 2,130 LOC built in 2 days.</div>
+                            <span class="project-year">[2025]</span>
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/iamjpsonkar">
+                                <img class="project-logo" src="../images/icons/folder_icon.png" alt="Kafka Docker Setup Logo">
+                                <strong class="project-title">Kafka Docker Setup</strong></a>
+                            <div class="project-description">Production-ready local Kafka environment (1,202 LOC) — 5-script architecture, 3-listener config, health checks, auto-recovery, JVM tuning, topic management. Used daily for Gringotts development.</div>
                         </li>
                     </div>
                     <div class="project-row">
                         <li class="project-item">
-                            <span class="project-year">[2023]</span>
+                            <span class="project-year">[2024]</span>
                             <a target="_blank" rel="noopener noreferrer" href="http://jsonkar.pythonanywhere.com/">
                                 <img class="project-logo" src="../images/icons/PED_icon.png" alt="PED_tools_logo">
                                 <strong class="project-title">JaySoft:PED_tools</strong></a>
-                            <div class="project-description">Web application
-                                for
-                                handling JSON data: prettification,
-                                encryption,
-                                and decryption.</div>
+                            <div class="project-description">API proxy server with mock responses, request history, AES encryption/decryption, rate limiting, and migration CLI. 2,130 LOC built in 2 days.</div>
                         </li>
                         <li class="project-item">
                             <span class="project-year">[2022]</span>
                             <a target="_blank" rel="noopener noreferrer" href="http://iamjpsonkar.pythonanywhere.com/">
                                 <img class="project-logo" src="../images/icons/JS_Code_icon.png" alt="JS_Code_logo">
                                 <strong class="project-title">JaySoft:JS_Code</strong></a>
-                            <div class="project-description">Online Python
-                                IDE
-                                with Flask. Real-time compilation, code
-                                sharing,
-                                and debugging.</div>
+                            <div class="project-description">Online Python IDE with Flask. Real-time compilation, code sharing, and debugging.</div>
                         </li>
                     </div>
                     <div class="project-row">
