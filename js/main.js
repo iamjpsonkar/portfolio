@@ -118,6 +118,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     const projects = [
         {
+            logo: "./images/icons/folder_icon.png",
+            alt: "PRView Logo",
+            title: "PRView",
+            desc: "Full-stack local PR review tool (FastAPI + React/TypeScript) — diff views, inline comments, threaded replies, merge/squash/rebase, conflict resolution. 6,300+ LOC built in ~2 weeks. Published on GitHub.",
+            link: "https://github.com/iamjpsonkar/PRView-by-JaySoft"
+        },
+        {
+            logo: "./images/icons/folder_icon.png",
+            alt: "DBMocker Logo",
+            title: "JaySoft:DBMocker",
+            desc: "Database mock data generator — 20,939 LOC, constraint-aware, parallel generation, 99.5% success rate across MySQL/PostgreSQL/SQLite. CLI + GUI. Packaged as pip-installable Python tool. Built in 6 days.",
+            link: "https://github.com/iamjpsonkar"
+        },
+        {
             logo: "./images/icons/devbox_icon.png",
             alt: "JS_DEVBOX Logo",
             title: "JaySoft:DevBox",
@@ -135,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
             logo: "./images/icons/PED_icon.png",
             alt: "PED_tools_logo",
             title: "JaySoft:PED_tools",
-            desc: "Developed a web application for managing JSON data with features like prettification, encryption, and decryption. It provides a user-friendly interface for formatting, securing, and validating JSON—ideal for API development and debugging.",
+            desc: "API proxy server with mock responses, request history, AES encryption/decryption, rate limiting, and migration CLI. 2,130 LOC built in 2 days. Ideal for testing payment aggregator APIs without hitting production endpoints.",
             link: "http://jsonkar.pythonanywhere.com/"
         },
         {

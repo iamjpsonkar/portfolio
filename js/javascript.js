@@ -29,6 +29,9 @@ function setExp()
 	if (document.getElementById("eYear")) {
 		document.getElementById("eYear").innerHTML = eYear;
 	}
+	if (document.getElementById("eYearAbout")) {
+		document.getElementById("eYearAbout").innerHTML = eYear;
+	}
 	if (document.getElementById("eMonth")) {
 		document.getElementById("eMonth").innerHTML = eMonth;
 	}
