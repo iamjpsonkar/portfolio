@@ -322,6 +322,17 @@ h3 {
     font-size: clamp(1.05rem, 1.6vw, 1.3rem);
 }
 
+.inline-accent {
+    color: var(--cyan);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--cyan) 38%, transparent);
+    text-underline-offset: 4px;
+}
+
+.inline-accent:hover {
+    text-decoration-color: var(--cyan);
+}
+
 .hero-actions,
 .contact-actions {
     display: flex;
@@ -687,6 +698,23 @@ h3 {
     align-self: flex-start;
     color: var(--cyan);
     font-weight: 700;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+}
+
+.install-command {
+    padding: 9px 13px;
+    border: 1px solid var(--line-strong);
+    border-radius: 9px;
+    color: var(--text);
+    background: rgba(85, 216, 255, 0.06);
+    font-family: "DM Mono", monospace;
+    font-size: 0.76rem;
 }
 
 .project-link {
