@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = ("index.html", "projects.html", "architecture.html", "resume/index.html", "404.html")
+SITEMAP_PAGES = ("index.html", "projects.html", "architecture.html", "resume/index.html")
 BASE_URL = "https://iamjpsonkar.github.io/portfolio/"
 
 class PageAudit(HTMLParser):
@@ -70,7 +71,7 @@ def main():
         sitemap = ET.parse(ROOT / "sitemap.xml")
         ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
         locations = {node.text.strip() for node in sitemap.findall(".//sm:loc", ns) if node.text}
-        for filename in PAGES:
+        for filename in SITEMAP_PAGES:
             expected = BASE_URL if filename == "index.html" else BASE_URL + ("resume/" if filename == "resume/index.html" else filename)
             if expected not in locations: errors.append(f"sitemap.xml: missing {expected}")
     except (ET.ParseError, OSError) as exc: errors.append(f"sitemap.xml: parse failed: {exc}")
