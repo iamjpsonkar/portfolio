@@ -38,6 +38,7 @@ Open http://localhost:4173/ when running inside this repository.
 
 ```bash
 node --check js/portfolio-v2.js
+node --check js/javascript.js
 python3 - <<'PY'
 from html.parser import HTMLParser
 from pathlib import Path
