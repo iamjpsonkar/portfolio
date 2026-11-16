@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="Engineering case studies by Jay Prakash Sonkar: payment infrastructure, codebase intelligence, pull request workflows, test data, and developer tooling.">
+  <meta name="author" content="Jay Prakash Sonkar">
+  <link rel="canonical" href="https://iamjpsonkar.github.io/portfolio/projects.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Engineering case studies — Jay Prakash Sonkar">
+  <meta property="og:description" content="The problems, engineering decisions, and outcomes behind selected backend and developer-tooling projects.">
+  <meta property="og:url" content="https://iamjpsonkar.github.io/portfolio/projects.html">
+  <title>Engineering case studies — Jay Prakash Sonkar</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio-v2.css">
+  <style>
+    .case-hero { padding: clamp(72px, 11vw, 132px) 0 54px; }
+    .case-hero h1 { max-width: 920px; }
+    .case-intro { max-width: 720px; color: var(--muted); font-size: 1.12rem; }
+    .case-list { display: grid; gap: 20px; padding-bottom: 100px; }
+    .case-study { display: grid; grid-template-columns: minmax(180px, .7fr) minmax(0, 1.5fr); gap: 34px; padding: clamp(24px, 4vw, 42px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); }
+    .case-meta { display: flex; flex-direction: column; gap: 12px; }
+    .case-number { color: var(--cyan); font: 500 .8rem "DM Mono", monospace; }
+    .case-meta h2 { margin: 0; font-size: clamp(1.55rem, 3vw, 2.25rem); }
+    .case-content p { color: var(--muted); }
+    .case-content h3 { margin: 24px 0 8px; font-size: 1rem; letter-spacing: -.02em; }
+    .case-content ul { color: var(--muted); padding-left: 20px; }
+    .case-content li { margin: 6px 0; }
+    .case-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+    .case-stack span { border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; color: var(--muted); font: .75rem "DM Mono", monospace; }
+    .case-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; }
+    @media (max-width: 720px) { .case-study { grid-template-columns: 1fr; gap: 16px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Jay Prakash Sonkar, home"><span class="brand-mark">iamjpsonkar</span><span class="brand-name">Portfolio</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle><span class="sr-only">Toggle navigation</span><span></span><span></span></button>
+      <div class="nav-links" id="nav-links" data-nav-links>
+        <a href="index.html#work">Selected work</a><a href="projects.html" aria-current="page">Case studies</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle><span aria-hidden="true" data-theme-icon>◐</span></button>
+    </nav>
+  </header>
+  <main id="main" class="shell">
+    <section class="case-hero">
+      <p class="eyebrow"><span class="status-dot"></span> Engineering work · Selected case studies</p>
+      <h1>Good engineering starts with <em>the problem.</em></h1>
+      <p class="case-intro">A closer look at the systems I build and maintain. These write-ups focus on the engineering problem, the design choices, and the capabilities delivered—not just a technology list.</p>
+      <div class="hero-actions"><a class="button button-primary" href="index.html#contact">Discuss a project <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="resume/">View résumé <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="case-list" aria-label="Project case studies">
+      <article class="case-study" id="jsat">
+        <div class="case-meta"><span class="case-number">CASE 01 · DEVELOPER EXPERIENCE</span><h2>JSAT — JaySoft AI Tools</h2><span class="badge">Open source · Python</span></div>
+        <div class="case-content">
+          <p><strong>The problem:</strong> AI assistants working in large repositories need dependable structural context. Repeatedly searching source files is slow, noisy, and can miss relationships between services, APIs, and data stores.</p>
+          <h3>Engineering approach</h3><p>Build a reusable codebase index that extracts symbols and relationships once, then makes that context available through developer-friendly interfaces.</p>
+          <ul><li>Indexes functions, services, endpoints, database tables, and Kafka topics.</li><li>Exposes the index through a CLI, Python SDK, and Model Context Protocol server.</li><li>Uses a local SQLite-backed index to keep repository context inspectable and reusable.</li></ul>
+          <div class="case-stack"><span>Python</span><span>Tree-sitter</span><span>SQLite</span><span>MCP</span><span>AI providers</span></div>
+          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-AI_Tools" target="_blank" rel="noopener">Source code ↗</a><a class="project-link" href="https://pypi.org/project/jsat/" target="_blank" rel="noopener">PyPI package ↗</a></div>
+        </div>
+      </article>
+      <article class="case-study" id="prview">
+        <div class="case-meta"><span class="case-number">CASE 02 · CODE REVIEW</span><h2>PRView</h2><span class="badge">Local-first workflow</span></div>
+        <div class="case-content">
+          <p><strong>The problem:</strong> Reviewing changes across branches often means switching between terminal commands, browser tabs, and disconnected review tools. A local workflow should make the repository state and review actions visible together.</p>
+          <h3>Engineering approach</h3><p>Bring the pull-request lifecycle into a local interface backed by Git operations, with review context and repository actions in one place.</p>
+          <ul><li>Supports multiple diff views and threaded code comments.</li><li>Includes review actions and conflict-resolution workflows.</li><li>Supports merge, squash, and rebase operations through the interface.</li></ul>
+          <div class="case-stack"><span>FastAPI</span><span>React</span><span>TypeScript</span><span>GitPython</span></div>
+          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/PRView-by-JaySoft" target="_blank" rel="noopener">Source code ↗</a></div>
+        </div>
+      </article>
+      <article class="case-study" id="ped-tools">
+        <div class="case-meta"><span class="case-number">CASE 03 · API INTEGRATION</span><h2>PED Tools</h2><span class="badge">Developer utility</span></div>
+        <div class="case-content">
+          <p><strong>The problem:</strong> Testing integrations against external APIs can be slow and unpredictable. Developers need to inspect traffic, simulate edge cases, and replay deterministic responses without depending on a live upstream service.</p>
+          <h3>Engineering approach</h3><p>Combine an HTTP proxy with a configurable mock server and an operator interface for inspecting and shaping request/response behavior.</p>
+          <ul><li>Configurable responses and conditional matching.</li><li>Request history, rate limits, and Postman export.</li><li>Encryption utilities for integration and payload workflows.</li></ul>
+          <div class="case-stack"><span>Flask</span><span>SQLite</span><span>HTTP</span><span>Postman</span></div>
+          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-PEDtool" target="_blank" rel="noopener">Source code ↗</a></div>
+        </div>
+      </article>
+      <article class="case-study" id="dbmocker">
+        <div class="case-meta"><span class="case-number">CASE 04 · DATA ENGINEERING</span><h2>JaySoft DBMocker</h2><span class="badge">Schema-aware test data</span></div>
+        <div class="case-content">
+          <p><strong>The problem:</strong> Realistic test data is difficult to generate when a database has foreign keys, unique constraints, checks, and relationships that must remain valid.</p>
+          <h3>Engineering approach</h3><p>Read database schemas and generate synthetic records while respecting the constraints that make the dataset useful for integration testing.</p>
+          <ul><li>Works with PostgreSQL, MySQL, and SQLite schemas.</li><li>Preserves foreign-key relationships and uniqueness constraints.</li><li>Supports realistic values and schema-driven generation.</li></ul>
+          <div class="case-stack"><span>Python</span><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span></div>
+          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-DBMocker" target="_blank" rel="noopener">Source code ↗</a></div>
+        </div>
+      </article>
+      <article class="case-study" id="payments">
+        <div class="case-meta"><span class="case-number">CASE 05 · PRODUCTION SYSTEMS</span><h2>Payments & refunds at Fynd</h2><span class="badge">Professional experience</span></div>
+        <div class="case-content">
+          <p><strong>The problem:</strong> Commerce payment platforms must support multiple gateways and payment modes while keeping order state, transaction state, and refund state consistent under retries, outages, and partial failures.</p>
+          <h3>Engineering contributions</h3><ul><li>Payment gateway and custom checkout integrations, including Razorpay partnership and Jio1Pay checkout.</li><li>Refund pipeline improvements covering retries, split refunds, international currency mismatches, and stuck-refund recovery.</li><li>Multi-aggregator outage handling and payment-option visibility.</li><li>Encryption-key rotation, Python runtime modernization, security remediation, and tracing improvements.</li><li>UPI at Store and payment-method integration across POS/EDC workflows.</li></ul>
+          <div class="case-stack"><span>Python</span><span>FastAPI</span><span>Kafka</span><span>Redis</span><span>Docker</span><span>Kubernetes</span></div>
+          <p><small>Selected work from professional experience. Implementation details are intentionally high-level and omit confidential system information.</small></p>
+          <div class="case-links"><a class="project-link" href="resume/">Detailed résumé ↗</a><a class="project-link" href="https://www.linkedin.com/in/iamjpsonkar/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><div><span class="brand-mark">iamjpsonkar</span><p>Built with intent, not a template.</p></div><p>© <span data-year></span> Jay Prakash Sonkar</p><a href="#main">Back to top ↑</a></div></footer>
+  <script src="js/portfolio-v2.js" defer></script>
+</body>
+</html>
