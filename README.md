@@ -29,7 +29,8 @@ Open http://localhost:4173/ when running inside this repository.
 - `css/portfolio-v2.css` — visual system and responsive layout
 - `js/portfolio-v2.js` — theme, navigation, scroll, and reveal interactions
 - `projects.html` — long-form engineering case studies
-- `docs/ARCHITECTURE.md` — conceptual system diagrams and architecture notes
+- `architecture.html` — rendered system diagrams
+- `docs/ARCHITECTURE.md` — editable Mermaid diagram source and architecture notes
 - `resume/` — detailed résumé
 - `robots.txt`, `sitemap.xml`, `site.webmanifest` — crawler and install metadata
 - `images/`, `img/` — visual assets
