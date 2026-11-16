@@ -16,8 +16,6 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Engineering case studies — Jay Prakash Sonkar">
   <meta name="twitter:description" content="Seven engineering case studies spanning developer tools, local AI, cloud learning, and payment infrastructure.">
-  <meta name="twitter:title" content="Engineering case studies — Jay Prakash Sonkar">
-  <meta name="twitter:description" content="Seven engineering case studies spanning developer tools, local AI, cloud learning, and payment infrastructure.">
   <meta name="twitter:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
   <title>Engineering case studies — Jay Prakash Sonkar</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -107,46 +105,6 @@
         </div>
       </article>
 <article class="case-study" id="jsat">
-        <div class="case-meta"><span class="case-number">CASE 01 · DEVELOPER EXPERIENCE</span><h2>JSAT — JaySoft AI Tools</h2><span class="badge">Open source · Python</span></div>
-        <div class="case-content">
-          <p><strong>The problem:</strong> AI assistants working in large repositories need dependable structural context. Repeatedly searching source files is slow, noisy, and can miss relationships between services, APIs, and data stores.</p>
-          <h3>Engineering approach</h3><p>Build a reusable codebase index that extracts symbols and relationships once, then makes that context available through developer-friendly interfaces.</p>
-          <ul><li>Indexes functions, services, endpoints, database tables, and Kafka topics.</li><li>Exposes the index through a CLI, Python SDK, and Model Context Protocol server.</li><li>Uses a local SQLite-backed index to keep repository context inspectable and reusable.</li></ul>
-          <div class="case-stack"><span>Python</span><span>Tree-sitter</span><span>SQLite</span><span>MCP</span><span>AI providers</span></div>
-          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-AI_Tools" target="_blank" rel="noopener">Source code ↗</a><a class="project-link" href="https://pypi.org/project/jsat/" target="_blank" rel="noopener">PyPI package ↗</a></div>
-        </div>
-      </article>
-      <article class="case-study" id="prview">
-        <div class="case-meta"><span class="case-number">CASE 02 · CODE REVIEW</span><h2>PRView</h2><span class="badge">Local-first workflow</span></div>
-        <div class="case-content">
-          <p><strong>The problem:</strong> Reviewing changes across branches often means switching between terminal commands, browser tabs, and disconnected review tools. A local workflow should make the repository state and review actions visible together.</p>
-          <h3>Engineering approach</h3><p>Bring the pull-request lifecycle into a local interface backed by Git operations, with review context and repository actions in one place.</p>
-          <ul><li>Supports multiple diff views and threaded code comments.</li><li>Includes review actions and conflict-resolution workflows.</li><li>Supports merge, squash, and rebase operations through the interface.</li></ul>
-          <div class="case-stack"><span>FastAPI</span><span>React</span><span>TypeScript</span><span>GitPython</span></div>
-          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/PRView-by-JaySoft" target="_blank" rel="noopener">Source code ↗</a></div>
-        </div>
-      </article>
-      <article class="case-study" id="ped-tools">
-        <div class="case-meta"><span class="case-number">CASE 03 · API INTEGRATION</span><h2>PED Tools</h2><span class="badge">Developer utility</span></div>
-        <div class="case-content">
-          <p><strong>The problem:</strong> Testing integrations against external APIs can be slow and unpredictable. Developers need to inspect traffic, simulate edge cases, and replay deterministic responses without depending on a live upstream service.</p>
-          <h3>Engineering approach</h3><p>Combine an HTTP proxy with a configurable mock server and an operator interface for inspecting and shaping request/response behavior.</p>
-          <ul><li>Configurable responses and conditional matching.</li><li>Request history, rate limits, and Postman export.</li><li>Encryption utilities for integration and payload workflows.</li></ul>
-          <div class="case-stack"><span>Flask</span><span>SQLite</span><span>HTTP</span><span>Postman</span></div>
-          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-PEDtool" target="_blank" rel="noopener">Source code ↗</a></div>
-        </div>
-      </article>
-      <article class="case-study" id="dbmocker">
-        <div class="case-meta"><span class="case-number">CASE 04 · DATA ENGINEERING</span><h2>JaySoft DBMocker</h2><span class="badge">Schema-aware test data</span></div>
-        <div class="case-content">
-          <p><strong>The problem:</strong> Realistic test data is difficult to generate when a database has foreign keys, unique constraints, checks, and relationships that must remain valid.</p>
-          <h3>Engineering approach</h3><p>Read database schemas and generate synthetic records while respecting the constraints that make the dataset useful for integration testing.</p>
-          <ul><li>Works with PostgreSQL, MySQL, and SQLite schemas.</li><li>Preserves foreign-key relationships and uniqueness constraints.</li><li>Supports realistic values and schema-driven generation.</li></ul>
-          <div class="case-stack"><span>Python</span><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span></div>
-          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-DBMocker" target="_blank" rel="noopener">Source code ↗</a></div>
-        </div>
-      </article>
-      <article class="case-study" id="jsat">
         <div class="case-meta"><span class="case-number">CASE 01 · DEVELOPER EXPERIENCE</span><h2>JSAT — JaySoft AI Tools</h2><span class="badge">Open source · Python</span></div>
         <div class="case-content">
           <p><strong>The problem:</strong> AI assistants working in large repositories need dependable structural context. Repeatedly searching source files is slow, noisy, and can miss relationships between services, APIs, and data stores.</p>
