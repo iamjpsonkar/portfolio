@@ -1,16 +1,14 @@
 # Jay Prakash Sonkar — Portfolio
 
-Personal portfolio for Jay Prakash Sonkar, Software Development Engineer II at Fynd and independent developer-tools builder.
+A static GitHub Pages portfolio presenting backend engineering, payment infrastructure, open-source developer tools, and hands-on engineering work.
 
 **Live site:** https://iamjpsonkar.github.io/portfolio/
 
-## What you'll find
+## Experience
 
-- Selected engineering projects: JSAT, PRView, PED Tools, DBMocker, LocalAI, and Cloud-Learnings
-- Dedicated project case studies in `projects.html` covering problem context, approach, and capabilities
-- Payment-platform impact and a concise career timeline
-- Recommendations, contact links, and résumé
-- Responsive layout, dark/light themes, keyboard-accessible navigation, reduced-motion support, and search/social metadata
+- **Homepage:** professional positioning, selected projects, engineering impact, capabilities, experience, recommendations, and contact.
+- **Case studies:** problem/approach/capabilities narratives for JSAT, PRView, PED Tools, DBMocker, LocalAI, Cloud-Learnings, and payment/refund platform work.
+- **Résumé:** detailed career history, skills, and a print-friendly Save as PDF action.
 
 ## Run locally
 
@@ -20,38 +18,28 @@ No build step or package install is required:
 python3 -m http.server 4173
 ```
 
-Open http://localhost:4173/ when running inside this repository.
+Open http://localhost:4173/ while the server is running.
 
-## Main files
+## Project structure
 
-- `index.html` — homepage content and metadata
-- `css/portfolio-v2.css` — visual system and responsive layout
-- `js/portfolio-v2.js` — theme, navigation, scroll, and reveal interactions
-- `projects.html` — long-form engineering case studies
-- `resume/` — detailed résumé
+- `index.html` — portfolio homepage
+- `projects.html` — engineering case studies
+- `resume/` — detailed résumé and print support
+- `css/portfolio-v2.css` — responsive visual system
+- `js/portfolio-v2.js` — theme, navigation, and reveal interactions
+- `scripts/check_site.py` — static HTML, metadata, local-link, image-alt, and sitemap checks
+- `404.html` — branded not-found page
 - `robots.txt`, `sitemap.xml`, `site.webmanifest` — crawler and install metadata
-- `images/`, `img/` — visual assets
 
 ## Quality checks
 
 ```bash
 node --check js/portfolio-v2.js
-python3 - <<'PY'
-from html.parser import HTMLParser
-from pathlib import Path
-
-class Checker(HTMLParser):
-    pass
-
-for path in (Path("index.html"), Path("resume/index.html")):
-    parser = Checker()
-    parser.feed(path.read_text(encoding="utf-8"))
-    parser.close()
-    print(f"Parsed: {path}")
-PY
+node --check resume/print.js
+python3 scripts/check_site.py
 ```
 
-This is a static GitHub Pages project. Updates to the publishing branch are served by GitHub Pages.
+GitHub Actions runs the same checks for pull requests targeting `main`.
 
 ## Attribution
 
