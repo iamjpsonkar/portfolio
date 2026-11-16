@@ -70,7 +70,7 @@
   }
 
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
+    if (event.key === "Escape" && navLinks && navLinks.classList.contains("is-open")) {
       closeNavigation();
       if (navToggle) navToggle.focus();
     }

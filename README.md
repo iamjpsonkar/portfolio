@@ -1,6 +1,6 @@
 # Jay Prakash Sonkar — Portfolio
 
-Personal portfolio for Jay Prakash Sonkar, Software Development Engineer II at Fynd and independent developer-tools builder.
+Personal portfolio for Jay Prakash Sonkar, Software Development Engineer II at Fynd and independent developer-tools builder. The résumé and portfolio are maintained together so role, experience, and project narratives stay consistent.
 
 **Live site:** https://iamjpsonkar.github.io/portfolio/
 
@@ -8,6 +8,7 @@ Personal portfolio for Jay Prakash Sonkar, Software Development Engineer II at F
 
 - Selected engineering projects: JSAT, PRView, PED Tools, DBMocker, LocalAI, and Cloud-Learnings
 - Dedicated project case studies in `projects.html` covering problem context, approach, and capabilities
+- High-level Mermaid architecture diagrams in `docs/ARCHITECTURE.md` for selected public projects and payment-platform contributions
 - Payment-platform impact and a concise career timeline
 - Recommendations, contact links, and résumé
 - Responsive layout, dark/light themes, keyboard-accessible navigation, reduced-motion support, and search/social metadata
@@ -28,6 +29,8 @@ Open http://localhost:4173/ when running inside this repository.
 - `css/portfolio-v2.css` — visual system and responsive layout
 - `js/portfolio-v2.js` — theme, navigation, scroll, and reveal interactions
 - `projects.html` — long-form engineering case studies
+- `architecture.html` — rendered system diagrams
+- `docs/ARCHITECTURE.md` — editable Mermaid diagram source and architecture notes
 - `resume/` — detailed résumé
 - `robots.txt`, `sitemap.xml`, `site.webmanifest` — crawler and install metadata
 - `images/`, `img/` — visual assets
@@ -36,6 +39,7 @@ Open http://localhost:4173/ when running inside this repository.
 
 ```bash
 node --check js/portfolio-v2.js
+node --check js/javascript.js
 python3 - <<'PY'
 from html.parser import HTMLParser
 from pathlib import Path

@@ -32,7 +32,9 @@ jobs:
           node-version: "22"
 
       - name: Check JavaScript syntax
-        run: node --check js/portfolio-v2.js
+        run: |
+          node --check js/portfolio-v2.js
+          node --check js/javascript.js
 
       - name: Validate HTML and XML
         run: |
@@ -45,7 +47,7 @@ jobs:
               def error(self, message):
                   raise ValueError(message)
 
-          for filename in ("index.html", "projects.html", "resume/index.html"):
+          for filename in ("index.html", "projects.html", "architecture.html", "resume/index.html"):
               parser = HTMLCheck()
               parser.feed(Path(filename).read_text(encoding="utf-8"))
               parser.close()
@@ -61,7 +63,7 @@ jobs:
           from pathlib import Path
           import re
 
-          for filename in ("index.html", "projects.html"):
+          for filename in ("index.html", "projects.html", "resume/index.html"):
               source = Path(filename).read_text(encoding="utf-8")
               for target in re.findall(r'(?:href|src)="([^"]+)"', source):
                   if target.startswith(("https://", "http://", "mailto:", "#", "data:")):
