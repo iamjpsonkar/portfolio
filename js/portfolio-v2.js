@@ -9,6 +9,7 @@
   const themeColor = document.querySelector("[data-theme-color]");
   const storageKey = "portfolio-theme";
   const lightPreference = window.matchMedia("(prefers-color-scheme: light)");
+  const mobileNavigation = window.matchMedia("(max-width: 980px)");
 
   function storedTheme() {
     try {
@@ -38,7 +39,20 @@
     }
   }
 
-  setTheme(storedTheme() || (lightPreference.matches ? "light" : "dark"), false);
+  const savedTheme = storedTheme();
+  setTheme(savedTheme || (lightPreference.matches ? "light" : "dark"), false);
+
+  if (!savedTheme && typeof lightPreference.addEventListener === "function") {
+    lightPreference.addEventListener("change", function (event) {
+      if (!storedTheme()) setTheme(event.matches ? "light" : "dark", false);
+    });
+  }
+
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey && (event.newValue === "light" || event.newValue === "dark")) {
+      setTheme(event.newValue, false);
+    }
+  });
 
   if (themeToggle) {
     themeToggle.addEventListener("click", function () {
@@ -75,6 +89,10 @@
       if (navToggle) navToggle.focus();
     }
   });
+
+  if (navLinks && navToggle) {
+    mobileNavigation.addEventListener("change", closeNavigation);
+  }
 
   let scrollPending = false;
   function updateHeader() {
