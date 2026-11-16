@@ -3,11 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#070b14">
+  <meta name="theme-color" content="#070b14" data-theme-color>
+  <meta name="color-scheme" content="dark light">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Engineering case studies by Jay Prakash Sonkar: payment infrastructure, codebase intelligence, local AI, cloud engineering, pull request workflows, and developer tooling.">
   <meta name="author" content="Jay Prakash Sonkar">
   <link rel="canonical" href="https://iamjpsonkar.github.io/portfolio/projects.html">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jay Prakash Sonkar — Portfolio">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
+  <meta property="og:image:alt" content="Jay Prakash Sonkar — engineering case studies">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Engineering case studies — Jay Prakash Sonkar">
+  <meta name="twitter:description" content="The problems, engineering decisions, and outcomes behind selected backend and developer-tooling projects.">
+  <meta name="twitter:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
   <meta property="og:title" content="Engineering case studies — Jay Prakash Sonkar">
   <meta property="og:description" content="The problems, engineering decisions, and outcomes behind selected backend and developer-tooling projects.">
   <meta property="og:url" content="https://iamjpsonkar.github.io/portfolio/projects.html">
@@ -29,6 +40,7 @@
     .case-hero h1 { max-width: 920px; }
     .case-intro { max-width: 720px; color: var(--muted); font-size: 1.12rem; }
     .case-list { display: grid; gap: 20px; padding-bottom: 100px; }
+    .case-study[id] { scroll-margin-top: calc(var(--header-height) + 24px); }
     .case-study { display: grid; grid-template-columns: minmax(180px, .7fr) minmax(0, 1.5fr); gap: 34px; padding: clamp(24px, 4vw, 42px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); }
     .case-meta { display: flex; flex-direction: column; gap: 12px; }
     .case-number { color: var(--cyan); font: 500 .8rem "DM Mono", monospace; }
