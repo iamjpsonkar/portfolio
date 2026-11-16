@@ -35,6 +35,24 @@
     <script src="../js/javascript.js" defer></script>
 
     <link rel="icon" href="../images/icons/resume_icon.png" type="image/x-icon">
+    <meta name="theme-color" content="#101827">
+    <style>
+        .resume-toolbar { display:flex; justify-content:space-between; align-items:center; gap:12px; max-width:1180px; margin:16px auto; padding:12px 18px; border:1px solid #d8deea; border-radius:12px; background:#fff; font:600 14px/1.4 Arial,sans-serif; }
+        .resume-toolbar a { color:#1756a9; text-decoration:none; }
+        .resume-toolbar button { border:0; border-radius:8px; padding:10px 14px; color:#fff; background:#1756a9; font:inherit; cursor:pointer; }
+        .resume-toolbar a:focus-visible,.resume-toolbar button:focus-visible { outline:3px solid #f0a500; outline-offset:3px; }
+        @media (max-width:600px) { .resume-toolbar { margin:10px; } }
+        @media print {
+            @page { size:A4; margin:12mm; }
+            .resume-toolbar { display:none !important; }
+            html,body { background:#fff !important; }
+            body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+            .main-div { width:100% !important; max-width:none !important; margin:0 !important; box-shadow:none !important; }
+            a { color:inherit !important; text-decoration:none !important; }
+            .project-item,.skill-row { break-inside:avoid; page-break-inside:avoid; }
+        }
+    </style>
+    <script src="print.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const skills = [
@@ -105,6 +123,10 @@
 </head>
 
 <body>
+    <nav class="resume-toolbar" aria-label="Résumé actions">
+        <a href="../">← Back to portfolio</a>
+        <button type="button" id="print-resume">Print / Save as PDF</button>
+    </nav>
     <div class="main-div" id="resume-root">
         <hr />
         <div class="top-header-div">
