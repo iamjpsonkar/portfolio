@@ -35,6 +35,7 @@ jobs:
         run: |
           node --check js/portfolio-v2.js
           node --check js/javascript.js
+          node --check resume/print.js
 
       - name: Validate HTML and XML
         run: |
@@ -57,19 +58,5 @@ jobs:
           print("XML parsed: sitemap.xml")
           PY
 
-      - name: Verify local navigation targets
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-
-          for filename in ("index.html", "projects.html", "resume/index.html"):
-              source = Path(filename).read_text(encoding="utf-8")
-              for target in re.findall(r'(?:href|src)="([^"]+)"', source):
-                  if target.startswith(("https://", "http://", "mailto:", "#", "data:")):
-                      continue
-                  path = target.split("#", 1)[0].split("?", 1)[0]
-                  if path and not Path(filename).parent.joinpath(path).exists():
-                      raise SystemExit(f"{filename}: missing local target: {target}")
-          print("Local navigation targets look good.")
-          PY
+      - name: Validate links, image text, and sitemap
+        run: python scripts/check_site.py
