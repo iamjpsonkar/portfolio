@@ -1,41 +1,58 @@
-# iamjpsonkar portfolio
+# Jay Prakash Sonkar — Portfolio
 
-The personal portfolio of Jay Prakash Sonkar—a senior backend engineer focused on payment infrastructure, developer tooling, local-first AI, and platform automation.
+Personal portfolio for Jay Prakash Sonkar, Software Development Engineer II at Fynd and independent developer-tools builder.
 
-![Portfolio preview](images/jaysoft-systems-banner.png)
+**Live site:** https://iamjpsonkar.github.io/portfolio/
 
-## Highlights
+## What you'll find
 
-- Responsive, framework-free homepage
-- Dark and light themes with saved preference
-- Accessible navigation, focus states, semantic landmarks, and reduced-motion support
-- Six evidence-backed engineering case studies
-- Career impact, experience timeline, principles, recommendations, and direct contact paths
-- Open Graph, Twitter Card, canonical, favicon, and Schema.org metadata
+- Selected engineering projects: JSAT, PRView, PED Tools, DBMocker, LocalAI, and Cloud-Learnings
+- Dedicated project case studies in `projects.html` covering problem context, approach, and capabilities
+- Payment-platform impact and a concise career timeline
+- Recommendations, contact links, and résumé
+- Responsive layout, dark/light themes, keyboard-accessible navigation, reduced-motion support, and search/social metadata
 
-## Local development
+## Run locally
 
-    python3 -m http.server 4173
+No build step or package install is required:
 
-Open `http://localhost:4173`.
+```bash
+python3 -m http.server 4173
+```
+
+Open http://localhost:4173/ when running inside this repository.
 
 ## Main files
 
-- `index.html` — homepage content and structure
-- `css/portfolio-v2.css` — responsive visual system
-- `js/portfolio-v2.js` — theme, mobile navigation, header, and reveal behavior
-- `images/jaysoft-systems-banner.png` — branded systems artwork
-- `resume/` — web résumé
+- `index.html` — homepage content and metadata
+- `css/portfolio-v2.css` — visual system and responsive layout
+- `js/portfolio-v2.js` — theme, navigation, scroll, and reveal interactions
+- `projects.html` — long-form engineering case studies
+- `resume/` — detailed résumé
+- `robots.txt`, `sitemap.xml`, `site.webmanifest` — crawler and install metadata
+- `images/`, `img/` — visual assets
 
-## Validation
+## Quality checks
 
-    node --check js/portfolio-v2.js
-    python3 -c "import html5lib; parser=html5lib.HTMLParser(strict=False); parser.parse(open('index.html', encoding='utf-8')); print(parser.errors)"
+```bash
+node --check js/portfolio-v2.js
+python3 - <<'PY'
+from html.parser import HTMLParser
+from pathlib import Path
 
-## Deployment
+class Checker(HTMLParser):
+    pass
 
-The repository is published through GitHub Pages at [iamjpsonkar.github.io/portfolio](https://iamjpsonkar.github.io/portfolio/).
+for path in (Path("index.html"), Path("resume/index.html")):
+    parser = Checker()
+    parser.feed(path.read_text(encoding="utf-8"))
+    parser.close()
+    print(f"Parsed: {path}")
+PY
+```
 
-## Credits
+This is a static GitHub Pages project. Updates to the publishing branch are served by GitHub Pages.
 
-Earlier pages and retained legacy assets originated from the FreeFolio template. See `READ-ME.txt` and `LICENSE.txt` for the original attribution and license.
+## Attribution
+
+The repository retains legacy assets and attribution files from the earlier FreeFolio template. See `READ-ME.txt` and `LICENSE.txt`.

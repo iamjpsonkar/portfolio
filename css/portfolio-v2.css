@@ -1218,3 +1218,30 @@ h3 {
         animation-iteration-count: 1 !important;
     }
 }
+
+
+/* Accessibility and responsive interaction refinements. */
+.skip-link {
+    position: fixed;
+    z-index: 1000;
+    top: 12px;
+    left: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #06121a;
+    background: var(--cyan);
+    font-weight: 800;
+    transform: translateY(-160%);
+}
+.skip-link:focus { transform: translateY(0); }
+section[id] { scroll-margin-top: calc(var(--header-height) + 22px); }
+::selection { color: #06121a; background: var(--cyan); }
+button:focus-visible, a:focus-visible { outline-offset: 4px; }
+@media (max-width: 980px) {
+    .nav-links { z-index: 20; max-height: calc(100dvh - 90px); overflow-y: auto; }
+}
+@media (max-width: 700px) {
+    .hero-visual { margin-top: 12px; }
+    .hero-meta { gap: 16px; }
+    .metric-grid article { padding: 26px 20px; }
+}
