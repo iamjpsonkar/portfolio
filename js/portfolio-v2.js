@@ -8,7 +8,9 @@
   const themeIcon = document.querySelector("[data-theme-icon]");
   const themeColor = document.querySelector("[data-theme-color]");
   const storageKey = "portfolio-theme";
-  const lightPreference = window.matchMedia("(prefers-color-scheme: light)");
+  const lightPreference = window.matchMedia
+    ? window.matchMedia("(prefers-color-scheme: light)")
+    : { matches: false, addEventListener: function () {} };
 
   function storedTheme() {
     try {
@@ -39,6 +41,18 @@
   }
 
   setTheme(storedTheme() || (lightPreference.matches ? "light" : "dark"), false);
+
+  if (lightPreference.addEventListener) {
+    lightPreference.addEventListener("change", function (event) {
+      if (!storedTheme()) setTheme(event.matches ? "light" : "dark", false);
+    });
+  }
+
+  window.addEventListener("storage", function (event) {
+    if (event.key === storageKey && (event.newValue === "light" || event.newValue === "dark")) {
+      setTheme(event.newValue, false);
+    }
+  });
 
   if (themeToggle) {
     themeToggle.addEventListener("click", function () {
@@ -75,6 +89,13 @@
       if (navToggle) navToggle.focus();
     }
   });
+
+  const desktopNavigation = window.matchMedia ? window.matchMedia("(min-width: 981px)") : null;
+  if (desktopNavigation && desktopNavigation.addEventListener) {
+    desktopNavigation.addEventListener("change", function (event) {
+      if (event.matches) closeNavigation();
+    });
+  }
 
   let scrollPending = false;
   function updateHeader() {
@@ -116,4 +137,22 @@
   document.querySelectorAll("[data-year]").forEach(function (item) {
     item.textContent = String(new Date().getFullYear());
   });
+
+  const sectionLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+  const sections = sectionLinks.map(function (link) {
+    return document.querySelector(link.getAttribute("href"));
+  }).filter(Boolean);
+
+  if ("IntersectionObserver" in window && sections.length) {
+    const sectionObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        sectionLinks.forEach(function (link) {
+          if (link.getAttribute("href") === "#" + entry.target.id) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+      });
+    }, { rootMargin: "-28% 0px -62% 0px", threshold: 0 });
+    sections.forEach(function (section) { sectionObserver.observe(section); });
+  }
 })();
