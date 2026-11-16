@@ -91,7 +91,11 @@
   });
 
   if (navLinks && navToggle) {
-    mobileNavigation.addEventListener("change", closeNavigation);
+    if (typeof mobileNavigation.addEventListener === "function") {
+      mobileNavigation.addEventListener("change", closeNavigation);
+    } else if (typeof mobileNavigation.addListener === "function") {
+      mobileNavigation.addListener(closeNavigation);
+    }
   }
 
   let scrollPending = false;
