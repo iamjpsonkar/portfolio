@@ -47,7 +47,7 @@ jobs:
               def error(self, message):
                   raise ValueError(message)
 
-          for filename in ("index.html", "projects.html", "resume/index.html"):
+          for filename in ("index.html", "projects.html", "architecture.html", "resume/index.html"):
               parser = HTMLCheck()
               parser.feed(Path(filename).read_text(encoding="utf-8"))
               parser.close()
