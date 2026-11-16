@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#070b14">
-  <meta name="description" content="Engineering case studies by Jay Prakash Sonkar: payment infrastructure, codebase intelligence, pull request workflows, test data, and developer tooling.">
+  <meta name="description" content="Engineering case studies by Jay Prakash Sonkar: payment infrastructure, codebase intelligence, local AI, cloud engineering, pull request workflows, and developer tooling.">
   <meta name="author" content="Jay Prakash Sonkar">
   <link rel="canonical" href="https://iamjpsonkar.github.io/portfolio/projects.html">
   <meta property="og:type" content="website">
@@ -104,8 +104,28 @@
           <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-DBMocker" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </article>
+      <article class="case-study" id="localai">
+        <div class="case-meta"><span class="case-number">CASE 05 · LOCAL AI</span><h2>JaySoft LocalAI</h2><span class="badge">Local-first developer tooling</span></div>
+        <div class="case-content">
+          <p><strong>The problem:</strong> Repository-aware coding workflows often depend on hosted services, network availability, and hardware assumptions that do not fit every developer environment.</p>
+          <h3>Engineering approach</h3><p>Package a local-first coding-agent workflow around a managed Ollama runtime, with Linux-oriented setup and resource-conscious model execution.</p>
+          <ul><li>Integrates a local Ollama service with a Codex-based coding workflow.</li><li>Focuses on practical repository work while keeping inference local.</li><li>Provides a repeatable Linux setup rather than a one-off manual configuration.</li></ul>
+          <div class="case-stack"><span>Rust</span><span>Ollama</span><span>Linux</span><span>Shell</span></div>
+          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-LocalAI" target="_blank" rel="noopener">Source code ↗</a></div>
+        </div>
+      </article>
+      <article class="case-study" id="cloud-learnings">
+        <div class="case-meta"><span class="case-number">CASE 06 · ENGINEERING EDUCATION</span><h2>Cloud-Learnings</h2><span class="badge">Hands-on learning platform</span></div>
+        <div class="case-content">
+          <p><strong>The problem:</strong> Cloud and DevOps knowledge is fragmented across tools, documentation, and disconnected tutorials. Learning becomes more durable when concepts are organized into paths and paired with runnable labs.</p>
+          <h3>Engineering approach</h3><p>Build a vendor-neutral knowledge base and practical lab ecosystem spanning cloud foundations, containers, Kubernetes, security, and SRE.</p>
+          <ul><li>Organizes learning paths and notes across cloud and platform engineering topics.</li><li>Includes hands-on Docker and Kubernetes exercises.</li><li>Extends the material with a FastAPI and React lab platform.</li></ul>
+          <div class="case-stack"><span>Docker</span><span>Kubernetes</span><span>FastAPI</span><span>React</span><span>SRE</span></div>
+          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/Cloud-Learnings" target="_blank" rel="noopener">Source code ↗</a></div>
+        </div>
+      </article>
       <article class="case-study" id="payments">
-        <div class="case-meta"><span class="case-number">CASE 05 · PRODUCTION SYSTEMS</span><h2>Payments & refunds at Fynd</h2><span class="badge">Professional experience</span></div>
+        <div class="case-meta"><span class="case-number">CASE 07 · PRODUCTION SYSTEMS</span><h2>Payments & refunds at Fynd</h2><span class="badge">Professional experience</span></div>
         <div class="case-content">
           <p><strong>The problem:</strong> Commerce payment platforms must support multiple gateways and payment modes while keeping order state, transaction state, and refund state consistent under retries, outages, and partial failures.</p>
           <h3>Engineering contributions</h3><ul><li>Payment gateway and custom checkout integrations, including Razorpay partnership and Jio1Pay checkout.</li><li>Refund pipeline improvements covering retries, split refunds, international currency mismatches, and stuck-refund recovery.</li><li>Multi-aggregator outage handling and payment-option visibility.</li><li>Encryption-key rotation, Python runtime modernization, security remediation, and tracing improvements.</li><li>UPI at Store and payment-method integration across POS/EDC workflows.</li></ul>
