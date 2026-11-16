@@ -6,6 +6,8 @@ on:
       - main
       - "redesign/**"
       - "improve/**"
+      - "audit/**"
+      - "fix/**"
   pull_request:
     branches:
       - main
@@ -46,10 +48,12 @@ jobs:
           import xml.etree.ElementTree as ET
 
           class HTMLCheck(HTMLParser):
-              def error(self, message):
-                  raise ValueError(message)
+              pass
 
-          for filename in ("index.html", "projects.html", "architecture.html", "resume/index.html", "404.html"):
+          for filename in (
+              "index.html", "projects.html", "architecture.html",
+              "resume/index.html", "404.html", "portfolio.html", "doc/index.html"
+          ):
               parser = HTMLCheck()
               parser.feed(Path(filename).read_text(encoding="utf-8"))
               parser.close()
@@ -59,5 +63,5 @@ jobs:
           print("XML parsed: sitemap.xml")
           PY
 
-      - name: Validate links, image text, and sitemap
+      - name: Validate links, fragments, image text, CSS assets, metadata, and sitemap
         run: python scripts/check_site.py
