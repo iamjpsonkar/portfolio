@@ -6,7 +6,7 @@ Personal portfolio for Jay Prakash Sonkar, Software Development Engineer II at F
 
 ## What you'll find
 
-- Selected engineering projects: JSAT, PRView, PED Tools, DBMocker, LocalAI, and Cloud-Learnings
+- Seven detailed case studies: JSAT, PRView, PED Tools, DBMocker, LocalAI, Cloud-Learnings, and production payments/refunds
 - Dedicated project case studies in `projects.html` covering problem context, approach, and capabilities, including LocalAI and Cloud-Learnings
 - High-level Mermaid architecture diagrams in `docs/ARCHITECTURE.md` for selected public projects and payment-platform contributions
 - Payment-platform impact and a concise career timeline
@@ -24,6 +24,8 @@ python3 -m http.server 4173
 Open http://localhost:4173/ when running inside this repository.
 
 ## Main files
+
+- `404.html` — branded GitHub Pages not-found page
 
 - `index.html` — homepage content and metadata
 - `css/portfolio-v2.css` — visual system and responsive layout
