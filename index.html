@@ -17,12 +17,15 @@
     <meta property="og:title" content="Jay Prakash Sonkar — Building the tools behind better software">
     <meta property="og:description" content="Backend systems, payment infrastructure, AI-native developer experience, and platform automation.">
     <meta property="og:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
+    <meta property="og:image:alt" content="Engineering systems spanning code intelligence, local compute, databases, and cloud infrastructure">
+    <meta name="twitter:image:alt" content="Engineering systems spanning code intelligence, local compute, databases, and cloud infrastructure">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jay Prakash Sonkar — Backend Engineer & Builder">
     <meta name="twitter:description" content="Payment infrastructure, backend systems, and developer tools.">
     <meta name="twitter:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="preload" as="image" href="images/jaysoft-systems-banner.png" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -62,6 +65,7 @@
             <div class="nav-links" id="nav-links" data-nav-links>
                 <a href="#work">Selected work</a>
                 <a href="projects.html">Case studies</a>
+                <a href="#capabilities">Capabilities</a>
                 <a href="#impact">Impact</a>
                 <a href="#experience">Experience</a>
                 <a href="#about">About</a>
@@ -98,7 +102,7 @@
 
             <div class="hero-visual reveal">
                 <div class="systems-card">
-                    <img src="images/jaysoft-systems-banner.png" alt="Code, compute, databases, and cloud infrastructure connected as one system">
+                    <img src="images/jaysoft-systems-banner.png" alt="Code, compute, databases, and cloud infrastructure connected as one system" fetchpriority="high" decoding="async">
                     <div class="systems-caption">
                         <span>Code intelligence</span>
                         <span>Local compute</span>
@@ -106,7 +110,7 @@
                     </div>
                 </div>
                 <div class="identity-card">
-                    <img src="img/profile.jpg" alt="Jay Prakash Sonkar">
+                    <img src="img/profile.jpg" alt="Portrait of Jay Prakash Sonkar" decoding="async">
                     <div>
                         <strong>Jay Prakash Sonkar</strong>
                         <span>Python · distributed systems · DX</span>
@@ -242,9 +246,25 @@
             </div>
         </section>
 
+        <section class="section section-contrast" id="capabilities">
+            <div class="shell">
+                <header class="section-heading reveal">
+                    <p class="eyebrow">03 · Engineering capabilities</p>
+                    <h2>A practical stack for systems that need to run.</h2>
+                    <p>My strongest work sits where backend application design meets data, infrastructure, and developer experience.</p>
+                </header>
+                <div class="capability-grid">
+                    <article class="capability-card reveal"><span class="capability-index">01 / APPLICATIONS</span><h3>Backend & APIs</h3><p>Designing services, integrations, and reliable interfaces.</p><ul class="tag-list"><li>Python</li><li>FastAPI</li><li>Flask</li><li>Django</li><li>Sanic</li><li>REST</li><li>OpenAPI</li></ul></article>
+                    <article class="capability-card reveal"><span class="capability-index">02 / DATA</span><h3>Data & messaging</h3><p>Working with persistence, caching, event flows, and migrations.</p><ul class="tag-list"><li>PostgreSQL</li><li>MySQL</li><li>Redis</li><li>Kafka</li><li>SQLAlchemy</li><li>Alembic</li></ul></article>
+                    <article class="capability-card reveal"><span class="capability-index">03 / OPERATIONS</span><h3>Platform & reliability</h3><p>Building repeatable environments and operable production systems.</p><ul class="tag-list"><li>Docker</li><li>Kubernetes</li><li>Linux</li><li>Bash</li><li>CI/CD</li><li>GCP</li><li>Observability</li></ul></article>
+                    <article class="capability-card reveal"><span class="capability-index">04 / PRODUCTIVITY</span><h3>Developer experience</h3><p>Turning repetitive engineering work into reusable tools and workflows.</p><ul class="tag-list"><li>Tree-sitter</li><li>MCP</li><li>pytest</li><li>Selenium</li><li>Git</li><li>AI tooling</li><li>Automation</li></ul></article>
+                </div>
+                <a class="text-link reveal" href="projects.html">Explore the engineering case studies <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
         <section class="section shell" id="experience">
             <header class="section-heading reveal">
-                <p class="eyebrow">03 · Experience</p>
+                <p class="eyebrow">04 · Experience</p>
                 <h2>From telecom systems to payment platforms.</h2>
             </header>
             <div class="timeline">
@@ -266,7 +286,7 @@
         <section class="section section-contrast" id="about">
             <div class="shell about-grid">
                 <div class="about-copy reveal">
-                    <p class="eyebrow">04 · Builder's operating system</p>
+                    <p class="eyebrow">05 · Builder's operating system</p>
                     <h2>Practical curiosity, compounded.</h2>
                     <p>I started with algorithms, desktop utilities, scrapers, and small Python applications. That curiosity expanded into web systems, distributed infrastructure, developer platforms, and local AI.</p>
                     <p>The thread is consistent: learn the primitive, build the product, automate the friction, and share the system.</p>
@@ -283,7 +303,7 @@
 
         <section class="section shell">
             <header class="section-heading reveal">
-                <p class="eyebrow">05 · What collaborators say</p>
+                <p class="eyebrow">06 · What collaborators say</p>
                 <h2>Technical depth without the lone-wolf routine.</h2>
             </header>
             <div class="quote-grid">
@@ -300,7 +320,7 @@
 
         <section class="contact section shell" id="contact">
             <div class="contact-panel reveal">
-                <p class="eyebrow">06 · Start a conversation</p>
+                <p class="eyebrow">07 · Start a conversation</p>
                 <h2>Have a difficult backend, payment, or developer-tooling problem?</h2>
                 <p>Tell me what is slow, fragile, or unnecessarily complicated. That is usually where the useful work starts.</p>
                 <div class="contact-actions">
