@@ -1,62 +1,58 @@
 # Jay Prakash Sonkar — Portfolio
 
-Personal portfolio for Jay Prakash Sonkar, Software Development Engineer II at Fynd and independent developer-tools builder. The résumé and portfolio are maintained together so role, experience, and project narratives stay consistent.
+Personal portfolio for Jay Prakash Sonkar, Software Development Engineer II at Fynd and independent developer-tools builder.
 
 **Live site:** https://iamjpsonkar.github.io/portfolio/
 
-## What you'll find
+## Portfolio map
 
-- Selected engineering projects: JSAT, PRView, PED Tools, DBMocker, LocalAI, and Cloud-Learnings
-- Dedicated project case studies in `projects.html` covering problem context, approach, and capabilities
-- High-level Mermaid architecture diagrams in `docs/ARCHITECTURE.md` for selected public projects and payment-platform contributions
-- Payment-platform impact and a concise career timeline
-- Recommendations, contact links, and résumé
-- Responsive layout, dark/light themes, keyboard-accessible navigation, reduced-motion support, and search/social metadata
+- index.html — professional positioning, selected projects, engineering impact, experience, recommendations, and contact
+- projects.html — engineering case studies covering JSAT, PRView, PED Tools, DBMocker, LocalAI, Cloud-Learnings, and payment systems
+- resume/ — detailed résumé
+- 404.html — branded not-found page
+- css/portfolio-v2.css and js/portfolio-v2.js — responsive design system and accessible interactions
 
 ## Run locally
 
-No build step or package install is required:
+No build step or package installation is required:
 
-```bash
+~~~bash
 python3 -m http.server 4173
-```
+~~~
 
-Open http://localhost:4173/ when running inside this repository.
-
-## Main files
-
-- `index.html` — homepage content and metadata
-- `css/portfolio-v2.css` — visual system and responsive layout
-- `js/portfolio-v2.js` — theme, navigation, scroll, and reveal interactions
-- `projects.html` — long-form engineering case studies
-- `architecture.html` — rendered system diagrams
-- `docs/ARCHITECTURE.md` — editable Mermaid diagram source and architecture notes
-- `resume/` — detailed résumé
-- `robots.txt`, `sitemap.xml`, `site.webmanifest` — crawler and install metadata
-- `images/`, `img/` — visual assets
+Open http://localhost:4173/.
 
 ## Quality checks
 
-```bash
+The GitHub Actions workflow validates JavaScript syntax, parses every public HTML page, checks duplicate IDs and broken local links/fragments, validates the sitemap, and verifies that sitemap URLs correspond to published pages.
+
+Run the lightweight checks locally:
+
+~~~bash
 node --check js/portfolio-v2.js
-node --check js/javascript.js
 python3 - <<'PY'
 from html.parser import HTMLParser
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
-class Checker(HTMLParser):
+class PageCheck(HTMLParser):
     pass
 
-for path in (Path("index.html"), Path("resume/index.html")):
-    parser = Checker()
-    parser.feed(path.read_text(encoding="utf-8"))
+for page in ("index.html", "projects.html", "404.html", "resume/index.html"):
+    parser = PageCheck()
+    parser.feed(Path(page).read_text(encoding="utf-8"))
     parser.close()
-    print(f"Parsed: {path}")
-PY
-```
+    print("Parsed:", page)
 
-This is a static GitHub Pages project. Updates to the publishing branch are served by GitHub Pages.
+ET.parse("sitemap.xml")
+print("Parsed: sitemap.xml")
+PY
+~~~
+
+## Deployment
+
+This is a static GitHub Pages site. The publishing branch and custom domain settings are managed in the repository's Pages configuration.
 
 ## Attribution
 
-The repository retains legacy assets and attribution files from the earlier FreeFolio template. See `READ-ME.txt` and `LICENSE.txt`.
+The repository retains legacy assets and attribution files from the earlier FreeFolio template. See READ-ME.txt and LICENSE.txt.
