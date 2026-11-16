@@ -6,7 +6,7 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ("index.html", "projects.html", "architecture.html", "resume/index.html")
+PAGES = ("index.html", "projects.html", "architecture.html", "resume/index.html", "404.html")
 BASE_URL = "https://iamjpsonkar.github.io/portfolio/"
 
 class PageAudit(HTMLParser):
