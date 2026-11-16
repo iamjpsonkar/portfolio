@@ -8,9 +8,13 @@
   const themeIcon = document.querySelector("[data-theme-icon]");
   const themeColor = document.querySelector("[data-theme-color]");
   const storageKey = "portfolio-theme";
-  const lightPreference = window.matchMedia
-    ? window.matchMedia("(prefers-color-scheme: light)")
+  const matchMedia = typeof window.matchMedia === "function" ? window.matchMedia.bind(window) : null;
+  const lightPreference = matchMedia
+    ? matchMedia("(prefers-color-scheme: light)")
     : { matches: false, addEventListener: function () {} };
+  const mobileNavigation = matchMedia
+    ? matchMedia("(max-width: 980px)")
+    : { addEventListener: function () {}, addListener: function () {} };
 
   function storedTheme() {
     try {
@@ -67,6 +71,12 @@
   }
 
   if (navToggle && navLinks) {
+    if (typeof mobileNavigation.addEventListener === "function") {
+      mobileNavigation.addEventListener("change", closeNavigation);
+    } else if (typeof mobileNavigation.addListener === "function") {
+      mobileNavigation.addListener(closeNavigation);
+    }
+
     navToggle.addEventListener("click", function () {
       const isOpen = navLinks.classList.toggle("is-open");
       navToggle.setAttribute("aria-expanded", String(isOpen));
