@@ -1,0 +1,73 @@
+name: Portfolio quality checks
+
+on:
+  push:
+    branches:
+      - main
+      - "redesign/**"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate static site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check JavaScript syntax
+        run: node --check js/portfolio-v2.js
+
+      - name: Validate HTML and XML
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          class HTMLCheck(HTMLParser):
+              def error(self, message):
+                  raise ValueError(message)
+
+          for filename in ("index.html", "projects.html", "resume/index.html"):
+              parser = HTMLCheck()
+              parser.feed(Path(filename).read_text(encoding="utf-8"))
+              parser.close()
+              print(f"HTML parsed: {filename}")
+
+          ET.parse("sitemap.xml")
+          print("XML parsed: sitemap.xml")
+          PY
+
+      - name: Verify local navigation targets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          for filename in ("index.html", "projects.html"):
+              source = Path(filename).read_text(encoding="utf-8")
+              for target in re.findall(r'(?:href|src)="([^"]+)"', source):
+                  if target.startswith(("https://", "http://", "mailto:", "#", "data:")):
+                      continue
+                  path = target.split("#", 1)[0].split("?", 1)[0]
+                  if path and not Path(filename).parent.joinpath(path).exists():
+                      raise SystemExit(f"{filename}: missing local target: {target}")
+          print("Local navigation targets look good.")
+          PY
