@@ -112,7 +112,9 @@
   }, { passive: true });
 
   const revealItems = document.querySelectorAll(".reveal");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reduceMotion = window.matchMedia
+    ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    : false;
 
   if ("IntersectionObserver" in window && !reduceMotion) {
     const observer = new IntersectionObserver(function (entries, currentObserver) {
