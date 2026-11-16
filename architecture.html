@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b14" data-theme-color>
+  <meta name="description" content="High-level architecture diagrams for JSAT, PRView, PED Tools, DBMocker, and payment-platform engineering by Jay Prakash Sonkar.">
+  <meta name="author" content="Jay Prakash Sonkar">
+  <link rel="canonical" href="https://iamjpsonkar.github.io/portfolio/architecture.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="System architecture notes — Jay Prakash Sonkar">
+  <meta property="og:description" content="Conceptual system diagrams for backend platforms and developer tools.">
+  <meta property="og:url" content="https://iamjpsonkar.github.io/portfolio/architecture.html">
+  <meta property="og:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="System architecture notes — Jay Prakash Sonkar">
+  <meta name="twitter:description" content="Conceptual system diagrams for backend platforms and developer tools.">
+  <meta name="twitter:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
+  <title>System architecture notes — Jay Prakash Sonkar</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio-v2.css">
+  <style>
+    .architecture-hero { padding: clamp(76px, 11vw, 132px) 0 48px; }
+    .architecture-hero h1 { max-width: 900px; }
+    .architecture-intro { max-width: 760px; color: var(--muted); font-size: 1.08rem; }
+    .architecture-list { display: grid; gap: 22px; padding-bottom: 100px; }
+    .architecture-card { padding: clamp(22px, 4vw, 38px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); }
+    .architecture-card h2 { margin: 0 0 10px; font-size: clamp(1.45rem, 3vw, 2rem); }
+    .architecture-card > p { color: var(--muted); }
+    .architecture-card .diagram { margin: 24px 0; padding: 20px; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-md); background: #080f1c; }
+    .architecture-card .mermaid { min-width: 620px; text-align: center; color: #eaf2ff; }
+    .architecture-card .note { margin-bottom: 0; font-size: .92rem; }
+    .architecture-disclaimer { padding: 18px 20px; border-left: 3px solid var(--cyan); border-radius: 0 10px 10px 0; color: var(--muted); background: var(--surface); }
+    @media (max-width: 700px) { .architecture-card .diagram { margin-inline: -8px; padding: 12px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Jay Prakash Sonkar, home"><span class="brand-mark">iamjpsonkar</span><span class="brand-name">Portfolio</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle><span class="sr-only">Toggle navigation</span><span></span><span></span></button>
+      <div class="nav-links" id="nav-links" data-nav-links>
+        <a href="index.html#work">Selected work</a>
+        <a href="projects.html">Case studies</a>
+        <a href="architecture.html" aria-current="page">Architecture</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle><span aria-hidden="true" data-theme-icon>◐</span></button>
+    </nav>
+  </header>
+  <main id="main" class="shell">
+    <section class="architecture-hero">
+      <p class="eyebrow"><span class="status-dot"></span> Engineering notes · System design</p>
+      <h1>How the pieces fit <em>together.</em></h1>
+      <p class="architecture-intro">A set of high-level diagrams for selected developer tools and backend engineering work. The goal is to communicate responsibilities, boundaries, and design intent—not to expose implementation details that should remain private.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="projects.html">Read the case studies <span aria-hidden="true">↗</span></a>
+        <a class="button button-secondary" href="docs/ARCHITECTURE.md">View diagram source <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <p class="architecture-disclaimer">These diagrams are conceptual summaries based on public project descriptions. They are not production deployment diagrams, exhaustive data-flow maps, or representations of employer-internal architecture.</p>
+    <section class="architecture-list" aria-label="System architecture diagrams">
+      <article class="architecture-card" id="jsat">
+        <p class="eyebrow">01 · Codebase intelligence</p>
+        <h2>JSAT — JaySoft AI Tools</h2>
+        <p>Build a local structural index once, then expose repository context through multiple developer and AI interfaces.</p>
+        <div class="diagram"><pre class="mermaid">flowchart TD
+    Repo[Source repository] --> Parser[Language-aware parsing]
+    Parser --> Extract[Symbols and relationship extraction]
+    Extract --> Index[Local SQLite index]
+    Index --> API[Query and context APIs]
+    API --> CLI[CLI]
+    API --> SDK[Python SDK]
+    API --> MCP[MCP server]
+    CLI --> Dev[Developer]
+    SDK --> App[Developer application]
+    MCP --> Agent[AI assistant]</pre></div>
+        <p class="note"><strong>Design themes:</strong> index once, query repeatedly; keep the index local and inspectable; expose the same repository context through multiple interfaces.</p>
+      </article>
+      <article class="architecture-card" id="prview">
+        <p class="eyebrow">02 · Code review workflow</p>
+        <h2>PRView</h2>
+        <p>Bring repository comparison, review feedback, and Git operations into one local workflow.</p>
+        <div class="diagram"><pre class="mermaid">flowchart LR
+    User[Developer] --> UI[Web interface]
+    UI --> API[Application API]
+    API --> Git[Git repository operations]
+    Git --> Diff[Diff and change views]
+    API --> Review[Review comments and decisions]
+    API --> Conflict[Conflict-resolution workflow]
+    API --> Actions[Merge, squash, and rebase]
+    Diff --> UI
+    Review --> UI
+    Conflict --> UI
+    Actions --> Repo[(Local repository)]</pre></div>
+        <p class="note"><strong>Design themes:</strong> keep review context close to the repository; make Git operations explicit; present feedback and repository state in one place.</p>
+      </article>
+      <article class="architecture-card" id="ped-tools">
+        <p class="eyebrow">03 · API integration tooling</p>
+        <h2>PED Tools</h2>
+        <p>Inspect API traffic and simulate upstream behavior during integration and testing.</p>
+        <div class="diagram"><pre class="mermaid">flowchart TD
+    Client[Application under test] --> Proxy[HTTP proxy]
+    Proxy --> Match{Matching mock rule?}
+    Match -->|Yes| Mock[Mock response engine]
+    Match -->|No| Upstream[Configured upstream API]
+    Mock --> Response[HTTP response]
+    Upstream --> Response
+    Proxy --> History[Request history]
+    Mock --> Rules[Conditional response rules]
+    Operator[Developer / operator UI] --> Rules
+    Operator --> History
+    Operator --> Limits[Rate-limit configuration]</pre></div>
+        <p class="note"><strong>Design themes:</strong> deterministic test behavior, visibility into requests, and fewer dependencies on live third-party services.</p>
+      </article>
+      <article class="architecture-card" id="dbmocker">
+        <p class="eyebrow">04 · Schema-aware test data</p>
+        <h2>JaySoft DBMocker</h2>
+        <p>Use schema information to generate useful test data while preserving relational constraints.</p>
+        <div class="diagram"><pre class="mermaid">flowchart TD
+    Schema[(Database schema)] --> Inspect[Schema introspection]
+    Inspect --> Model[Tables, columns, and constraints]
+    Model --> Plan[Dependency-aware generation plan]
+    Plan --> Generate[Synthetic record generation]
+    Generate --> Validate[Constraint and relationship validation]
+    Validate --> Dataset[(Test dataset)]
+    Dataset --> Target[(Test database)]</pre></div>
+        <p class="note"><strong>Design themes:</strong> schema-driven generation, referential integrity, and repeatable datasets for integration testing.</p>
+      </article>
+      <article class="architecture-card" id="payments">
+        <p class="eyebrow">05 · Payment infrastructure</p>
+        <h2>Payment and refund platform contributions</h2>
+        <p>A contribution-level view of the problem space; it deliberately avoids depicting internal services or production topology.</p>
+        <div class="diagram"><pre class="mermaid">flowchart LR
+    Commerce[Checkout / order flow] --> Payment[Payment orchestration]
+    Payment --> Connectors[Gateway and payment-mode integrations]
+    Connectors --> Providers[External payment providers]
+    Providers --> Result[Provider response / transaction outcome]
+    Result --> State[Order and payment state]
+    State --> Refund[Refund lifecycle]
+    Refund --> Recovery[Retry, reconciliation, and recovery paths]
+    Ops[Operational tooling and observability] -. supports .-> Payment
+    Ops -. supports .-> Refund</pre></div>
+        <p class="note"><strong>Engineering concerns:</strong> idempotent operations, retries, provider failures, transaction-state consistency, secure integration boundaries, and observable recovery paths.</p>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><div><span class="brand-mark">iamjpsonkar</span><p>Built with intent, not a template.</p></div><p>© <span data-year></span> Jay Prakash Sonkar</p><a href="#main">Back to top ↑</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.mermaid) {
+        window.mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "dark" });
+        window.mermaid.run({ querySelector: ".mermaid" });
+      }
+    });
+  </script>
+  <script src="js/portfolio-v2.js" defer></script>
+</body>
+</html>
