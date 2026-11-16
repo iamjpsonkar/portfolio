@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - "redesign/**"
+      - "improve/**"
   pull_request:
     branches:
       - main
@@ -35,7 +36,6 @@ jobs:
         run: |
           node --check js/portfolio-v2.js
           node --check js/javascript.js
-          node --check resume/print.js
           node --check resume/print.js
 
       - name: Validate HTML and XML
