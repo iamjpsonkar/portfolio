@@ -3,20 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#070b14">
-  <meta name="description" content="Engineering case studies by Jay Prakash Sonkar: payment infrastructure, codebase intelligence, pull request workflows, test data, and developer tooling.">
+  <meta name="theme-color" content="#070b14" data-theme-color>
+  <meta name="color-scheme" content="dark light">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Engineering case studies by Jay Prakash Sonkar: payment infrastructure, codebase intelligence, local AI, cloud engineering, pull request workflows, and developer tooling.">
   <meta name="author" content="Jay Prakash Sonkar">
   <link rel="canonical" href="https://iamjpsonkar.github.io/portfolio/projects.html">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jay Prakash Sonkar — Portfolio">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
+  <meta property="og:image:alt" content="Jay Prakash Sonkar — engineering case studies">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Engineering case studies — Jay Prakash Sonkar">
+  <meta name="twitter:description" content="The problems, engineering decisions, and outcomes behind selected backend and developer-tooling projects.">
+  <meta name="twitter:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
   <meta property="og:title" content="Engineering case studies — Jay Prakash Sonkar">
   <meta property="og:description" content="The problems, engineering decisions, and outcomes behind selected backend and developer-tooling projects.">
   <meta property="og:url" content="https://iamjpsonkar.github.io/portfolio/projects.html">
-  <meta property="og:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
-  <meta property="og:image:alt" content="A visual overview of software, compute, data, and cloud systems">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Engineering case studies — Jay Prakash Sonkar">
-  <meta name="twitter:description" content="Seven engineering case studies spanning developer tools, local AI, cloud learning, and payment infrastructure.">
-  <meta name="twitter:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
   <title>Engineering case studies — Jay Prakash Sonkar</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
@@ -29,6 +34,7 @@
     .case-hero h1 { max-width: 920px; }
     .case-intro { max-width: 720px; color: var(--muted); font-size: 1.12rem; }
     .case-list { display: grid; gap: 20px; padding-bottom: 100px; }
+    .case-study[id] { scroll-margin-top: calc(var(--header-height) + 24px); }
     .case-study { display: grid; grid-template-columns: minmax(180px, .7fr) minmax(0, 1.5fr); gap: 34px; padding: clamp(24px, 4vw, 42px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); }
     .case-meta { display: flex; flex-direction: column; gap: 12px; }
     .case-number { color: var(--cyan); font: 500 .8rem "DM Mono", monospace; }
@@ -104,48 +110,28 @@
           <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-DBMocker" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </article>
-<article class="case-study" id="jsat">
-        <div class="case-meta"><span class="case-number">CASE 01 · DEVELOPER EXPERIENCE</span><h2>JSAT — JaySoft AI Tools</h2><span class="badge">Open source · Python</span></div>
+      <article class="case-study" id="localai">
+        <div class="case-meta"><span class="case-number">CASE 05 · LOCAL AI</span><h2>JaySoft LocalAI</h2><span class="badge">Local-first developer tooling</span></div>
         <div class="case-content">
-          <p><strong>The problem:</strong> AI assistants working in large repositories need dependable structural context. Repeatedly searching source files is slow, noisy, and can miss relationships between services, APIs, and data stores.</p>
-          <h3>Engineering approach</h3><p>Build a reusable codebase index that extracts symbols and relationships once, then makes that context available through developer-friendly interfaces.</p>
-          <ul><li>Indexes functions, services, endpoints, database tables, and Kafka topics.</li><li>Exposes the index through a CLI, Python SDK, and Model Context Protocol server.</li><li>Uses a local SQLite-backed index to keep repository context inspectable and reusable.</li></ul>
-          <div class="case-stack"><span>Python</span><span>Tree-sitter</span><span>SQLite</span><span>MCP</span><span>AI providers</span></div>
-          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-AI_Tools" target="_blank" rel="noopener">Source code ↗</a><a class="project-link" href="https://pypi.org/project/jsat/" target="_blank" rel="noopener">PyPI package ↗</a></div>
+          <p><strong>The problem:</strong> Repository-aware coding workflows often depend on hosted services, network availability, and hardware assumptions that do not fit every developer environment.</p>
+          <h3>Engineering approach</h3><p>Package a local-first coding-agent workflow around a managed Ollama runtime, with Linux-oriented setup and resource-conscious model execution.</p>
+          <ul><li>Integrates a local Ollama service with a Codex-based coding workflow.</li><li>Focuses on practical repository work while keeping inference local.</li><li>Provides a repeatable Linux setup rather than a one-off manual configuration.</li></ul>
+          <div class="case-stack"><span>Rust</span><span>Ollama</span><span>Linux</span><span>Shell</span></div>
+          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-LocalAI" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </article>
-      <article class="case-study" id="prview">
-        <div class="case-meta"><span class="case-number">CASE 02 · CODE REVIEW</span><h2>PRView</h2><span class="badge">Local-first workflow</span></div>
+      <article class="case-study" id="cloud-learnings">
+        <div class="case-meta"><span class="case-number">CASE 06 · ENGINEERING EDUCATION</span><h2>Cloud-Learnings</h2><span class="badge">Hands-on learning platform</span></div>
         <div class="case-content">
-          <p><strong>The problem:</strong> Reviewing changes across branches often means switching between terminal commands, browser tabs, and disconnected review tools. A local workflow should make the repository state and review actions visible together.</p>
-          <h3>Engineering approach</h3><p>Bring the pull-request lifecycle into a local interface backed by Git operations, with review context and repository actions in one place.</p>
-          <ul><li>Supports multiple diff views and threaded code comments.</li><li>Includes review actions and conflict-resolution workflows.</li><li>Supports merge, squash, and rebase operations through the interface.</li></ul>
-          <div class="case-stack"><span>FastAPI</span><span>React</span><span>TypeScript</span><span>GitPython</span></div>
-          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/PRView-by-JaySoft" target="_blank" rel="noopener">Source code ↗</a></div>
+          <p><strong>The problem:</strong> Cloud and DevOps knowledge is fragmented across tools, documentation, and disconnected tutorials. Learning becomes more durable when concepts are organized into paths and paired with runnable labs.</p>
+          <h3>Engineering approach</h3><p>Build a vendor-neutral knowledge base and practical lab ecosystem spanning cloud foundations, containers, Kubernetes, security, and SRE.</p>
+          <ul><li>Organizes learning paths and notes across cloud and platform engineering topics.</li><li>Includes hands-on Docker and Kubernetes exercises.</li><li>Extends the material with a FastAPI and React lab platform.</li></ul>
+          <div class="case-stack"><span>Docker</span><span>Kubernetes</span><span>FastAPI</span><span>React</span><span>SRE</span></div>
+          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/Cloud-Learnings" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </article>
-      <article class="case-study" id="ped-tools">
-        <div class="case-meta"><span class="case-number">CASE 03 · API INTEGRATION</span><h2>PED Tools</h2><span class="badge">Developer utility</span></div>
-        <div class="case-content">
-          <p><strong>The problem:</strong> Testing integrations against external APIs can be slow and unpredictable. Developers need to inspect traffic, simulate edge cases, and replay deterministic responses without depending on a live upstream service.</p>
-          <h3>Engineering approach</h3><p>Combine an HTTP proxy with a configurable mock server and an operator interface for inspecting and shaping request/response behavior.</p>
-          <ul><li>Configurable responses and conditional matching.</li><li>Request history, rate limits, and Postman export.</li><li>Encryption utilities for integration and payload workflows.</li></ul>
-          <div class="case-stack"><span>Flask</span><span>SQLite</span><span>HTTP</span><span>Postman</span></div>
-          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-PEDtool" target="_blank" rel="noopener">Source code ↗</a></div>
-        </div>
-      </article>
-      <article class="case-study" id="dbmocker">
-        <div class="case-meta"><span class="case-number">CASE 04 · DATA ENGINEERING</span><h2>JaySoft DBMocker</h2><span class="badge">Schema-aware test data</span></div>
-        <div class="case-content">
-          <p><strong>The problem:</strong> Realistic test data is difficult to generate when a database has foreign keys, unique constraints, checks, and relationships that must remain valid.</p>
-          <h3>Engineering approach</h3><p>Read database schemas and generate synthetic records while respecting the constraints that make the dataset useful for integration testing.</p>
-          <ul><li>Works with PostgreSQL, MySQL, and SQLite schemas.</li><li>Preserves foreign-key relationships and uniqueness constraints.</li><li>Supports realistic values and schema-driven generation.</li></ul>
-          <div class="case-stack"><span>Python</span><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span></div>
-          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-DBMocker" target="_blank" rel="noopener">Source code ↗</a></div>
-        </div>
-      </article>
-            <article class="case-study" id="payments">
-        <div class="case-meta"><span class="case-number">CASE 05 · PRODUCTION SYSTEMS</span><h2>Payments & refunds at Fynd</h2><span class="badge">Professional experience</span></div>
+      <article class="case-study" id="payments">
+        <div class="case-meta"><span class="case-number">CASE 07 · PRODUCTION SYSTEMS</span><h2>Payments & refunds at Fynd</h2><span class="badge">Professional experience</span></div>
         <div class="case-content">
           <p><strong>The problem:</strong> Commerce payment platforms must support multiple gateways and payment modes while keeping order state, transaction state, and refund state consistent under retries, outages, and partial failures.</p>
           <h3>Engineering contributions</h3><ul><li>Payment gateway and custom checkout integrations, including Razorpay partnership and Jio1Pay checkout.</li><li>Refund pipeline improvements covering retries, split refunds, international currency mismatches, and stuck-refund recovery.</li><li>Multi-aggregator outage handling and payment-option visibility.</li><li>Encryption-key rotation, Python runtime modernization, security remediation, and tracing improvements.</li><li>UPI at Store and payment-method integration across POS/EDC workflows.</li></ul>
