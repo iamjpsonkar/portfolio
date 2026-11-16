@@ -43,6 +43,9 @@
     .case-content h3 { margin: 24px 0 8px; font-size: 1rem; letter-spacing: -.02em; }
     .case-content ul { color: var(--muted); padding-left: 20px; }
     .case-content li { margin: 6px 0; }
+    .case-impact { margin: 22px 0 18px; padding: 16px 18px; border-left: 3px solid var(--cyan); border-radius: 0 var(--radius-md) var(--radius-md) 0; background: var(--surface-strong, var(--surface)); }
+    .case-impact h3 { margin: 0 0 8px; color: var(--text); }
+    .case-impact p { margin: 0; }
     .case-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
     .case-stack span { border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; color: var(--muted); font: .75rem "DM Mono", monospace; }
     .case-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; }
@@ -76,6 +79,7 @@
           <p><strong>The problem:</strong> AI assistants working in large repositories need dependable structural context. Repeatedly searching source files is slow, noisy, and can miss relationships between services, APIs, and data stores.</p>
           <h3>Engineering approach</h3><p>Build a reusable codebase index that extracts symbols and relationships once, then makes that context available through developer-friendly interfaces.</p>
           <ul><li>Indexes functions, services, endpoints, database tables, and Kafka topics.</li><li>Exposes the index through a CLI, Python SDK, and Model Context Protocol server.</li><li>Uses a local SQLite-backed index to keep repository context inspectable and reusable.</li></ul>
+          <div class="case-impact"><h3>Impact</h3><p>Creates reusable, inspectable repository context for AI-assisted work, reducing the need to repeatedly rediscover code structure and making the same index available across CLI, SDK, and MCP workflows.</p></div>
           <div class="case-stack"><span>Python</span><span>Tree-sitter</span><span>SQLite</span><span>MCP</span><span>AI providers</span></div>
           <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-AI_Tools" target="_blank" rel="noopener">Source code ↗</a><a class="project-link" href="https://pypi.org/project/jsat/" target="_blank" rel="noopener">PyPI package ↗</a></div>
         </div>
@@ -86,6 +90,7 @@
           <p><strong>The problem:</strong> Reviewing changes across branches often means switching between terminal commands, browser tabs, and disconnected review tools. A local workflow should make the repository state and review actions visible together.</p>
           <h3>Engineering approach</h3><p>Bring the pull-request lifecycle into a local interface backed by Git operations, with review context and repository actions in one place.</p>
           <ul><li>Supports multiple diff views and threaded code comments.</li><li>Includes review actions and conflict-resolution workflows.</li><li>Supports merge, squash, and rebase operations through the interface.</li></ul>
+          <div class="case-impact"><h3>Impact</h3><p>Brings diff inspection, discussion, review decisions, and Git operations into one local workflow, helping developers keep review context close to the repository and the changes being evaluated.</p></div>
           <div class="case-stack"><span>FastAPI</span><span>React</span><span>TypeScript</span><span>GitPython</span></div>
           <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/PRView-by-JaySoft" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
@@ -96,6 +101,7 @@
           <p><strong>The problem:</strong> Testing integrations against external APIs can be slow and unpredictable. Developers need to inspect traffic, simulate edge cases, and replay deterministic responses without depending on a live upstream service.</p>
           <h3>Engineering approach</h3><p>Combine an HTTP proxy with a configurable mock server and an operator interface for inspecting and shaping request/response behavior.</p>
           <ul><li>Configurable responses and conditional matching.</li><li>Request history, rate limits, and Postman export.</li><li>Encryption utilities for integration and payload workflows.</li></ul>
+          <div class="case-impact"><h3>Impact</h3><p>Gives developers a controllable environment to inspect requests, reproduce integration scenarios, and exercise edge cases without relying on a live upstream API for every test.</p></div>
           <div class="case-stack"><span>Flask</span><span>SQLite</span><span>HTTP</span><span>Postman</span></div>
           <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-PEDtool" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
@@ -106,6 +112,7 @@
           <p><strong>The problem:</strong> Realistic test data is difficult to generate when a database has foreign keys, unique constraints, checks, and relationships that must remain valid.</p>
           <h3>Engineering approach</h3><p>Read database schemas and generate synthetic records while respecting the constraints that make the dataset useful for integration testing.</p>
           <ul><li>Works with PostgreSQL, MySQL, and SQLite schemas.</li><li>Preserves foreign-key relationships and uniqueness constraints.</li><li>Supports realistic values and schema-driven generation.</li></ul>
+          <div class="case-impact"><h3>Impact</h3><p>Makes repeatable test-data setup more practical while preserving the relationships and constraints that application code expects from a real relational database.</p></div>
           <div class="case-stack"><span>Python</span><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span></div>
           <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-DBMocker" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
@@ -116,6 +123,7 @@
           <p><strong>The problem:</strong> Repository-aware coding workflows often depend on hosted services, network availability, and hardware assumptions that do not fit every developer environment.</p>
           <h3>Engineering approach</h3><p>Package a local-first coding-agent workflow around a managed Ollama runtime, with Linux-oriented setup and resource-conscious model execution.</p>
           <ul><li>Integrates a local Ollama service with a Codex-based coding workflow.</li><li>Focuses on practical repository work while keeping inference local.</li><li>Provides a repeatable Linux setup rather than a one-off manual configuration.</li></ul>
+          <div class="case-impact"><h3>Impact</h3><p>Packages local inference and repository-oriented coding workflows into a reproducible setup, making offline-capable experimentation more approachable on modest Linux hardware.</p></div>
           <div class="case-stack"><span>Rust</span><span>Ollama</span><span>Linux</span><span>Shell</span></div>
           <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-LocalAI" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
@@ -126,6 +134,7 @@
           <p><strong>The problem:</strong> Cloud and DevOps knowledge is fragmented across tools, documentation, and disconnected tutorials. Learning becomes more durable when concepts are organized into paths and paired with runnable labs.</p>
           <h3>Engineering approach</h3><p>Build a vendor-neutral knowledge base and practical lab ecosystem spanning cloud foundations, containers, Kubernetes, security, and SRE.</p>
           <ul><li>Organizes learning paths and notes across cloud and platform engineering topics.</li><li>Includes hands-on Docker and Kubernetes exercises.</li><li>Extends the material with a FastAPI and React lab platform.</li></ul>
+          <div class="case-impact"><h3>Impact</h3><p>Connects conceptual learning with practical exercises: the repository documents a Docker lab setup with 19 labs and 14 profiles, plus an advanced platform with 30 structured exercises and validation.</p></div>
           <div class="case-stack"><span>Docker</span><span>Kubernetes</span><span>FastAPI</span><span>React</span><span>SRE</span></div>
           <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/Cloud-Learnings" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
@@ -135,6 +144,7 @@
         <div class="case-content">
           <p><strong>The problem:</strong> Commerce payment platforms must support multiple gateways and payment modes while keeping order state, transaction state, and refund state consistent under retries, outages, and partial failures.</p>
           <h3>Engineering contributions</h3><ul><li>Payment gateway and custom checkout integrations, including Razorpay partnership and Jio1Pay checkout.</li><li>Refund pipeline improvements covering retries, split refunds, international currency mismatches, and stuck-refund recovery.</li><li>Multi-aggregator outage handling and payment-option visibility.</li><li>Encryption-key rotation, Python runtime modernization, security remediation, and tracing improvements.</li><li>UPI at Store and payment-method integration across POS/EDC workflows.</li></ul>
+          <div class="case-impact"><h3>Impact</h3><p>Contributes to more resilient payment operations by addressing gateway diversity, refund recovery, outage handling, security maintenance, and payment-method support. These are qualitative outcomes; no unverified transaction-volume or percentage claims are made here.</p></div>
           <div class="case-stack"><span>Python</span><span>FastAPI</span><span>Kafka</span><span>Redis</span><span>Docker</span><span>Kubernetes</span></div>
           <p><small>Selected work from professional experience. Implementation details are intentionally high-level and omit confidential system information.</small></p>
           <div class="case-links"><a class="project-link" href="resume/">Detailed résumé ↗</a><a class="project-link" href="https://www.linkedin.com/in/iamjpsonkar/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
