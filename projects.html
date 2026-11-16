@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#070b14">
-  <meta name="description" content="Engineering case studies by Jay Prakash Sonkar: JSAT, PRView, PED Tools, DBMocker, LocalAI, Cloud-Learnings, and production payment systems.">
+  <meta name="description" content="Engineering case studies by Jay Prakash Sonkar: payment infrastructure, codebase intelligence, pull request workflows, test data, and developer tooling.">
   <meta name="author" content="Jay Prakash Sonkar">
   <link rel="canonical" href="https://iamjpsonkar.github.io/portfolio/projects.html">
   <meta property="og:type" content="website">
@@ -12,13 +12,13 @@
   <meta property="og:description" content="The problems, engineering decisions, and outcomes behind selected backend and developer-tooling projects.">
   <meta property="og:url" content="https://iamjpsonkar.github.io/portfolio/projects.html">
   <meta property="og:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
-  <meta property="og:image:alt" content="Engineering systems spanning code intelligence, local compute, databases, and cloud infrastructure">
+  <meta property="og:image:alt" content="A visual overview of software, compute, data, and cloud systems">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Engineering case studies — Jay Prakash Sonkar">
+  <meta name="twitter:description" content="The problems, engineering decisions, and outcomes behind selected backend and developer-tooling projects.">
   <meta name="twitter:title" content="Engineering case studies — Jay Prakash Sonkar">
   <meta name="twitter:description" content="Seven engineering case studies spanning developer tools, local AI, cloud learning, and payment infrastructure.">
   <meta name="twitter:image" content="https://iamjpsonkar.github.io/portfolio/images/jaysoft-systems-banner.png">
-  <meta name="twitter:image:alt" content="Engineering systems spanning code intelligence, local compute, databases, and cloud infrastructure">
-
   <title>Engineering case studies — Jay Prakash Sonkar</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
@@ -52,7 +52,7 @@
       <a class="brand" href="index.html" aria-label="Jay Prakash Sonkar, home"><span class="brand-mark">iamjpsonkar</span><span class="brand-name">Portfolio</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle><span class="sr-only">Toggle navigation</span><span></span><span></span></button>
       <div class="nav-links" id="nav-links" data-nav-links>
-        <a href="index.html#work">Selected work</a><a href="projects.html" aria-current="page">Case studies</a><a href="architecture.html">Architecture</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
+        <a href="index.html#work">Selected work</a><a href="projects.html" aria-current="page">Case studies</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
       </div>
       <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle><span aria-hidden="true" data-theme-icon>◐</span></button>
     </nav>
@@ -154,28 +154,6 @@
           <div class="case-stack"><span>Python</span><span>FastAPI</span><span>Kafka</span><span>Redis</span><span>Docker</span><span>Kubernetes</span></div>
           <p><small>Selected work from professional experience. Implementation details are intentionally high-level and omit confidential system information.</small></p>
           <div class="case-links"><a class="project-link" href="resume/">Detailed résumé ↗</a><a class="project-link" href="https://www.linkedin.com/in/iamjpsonkar/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
-        </div>
-      </article>
-      <article class="case-study" id="localai">
-        <div class="case-meta"><span class="case-number">CASE 06 · LOCAL AI</span><h2>JaySoft LocalAI</h2><span class="badge">Local-first · Linux</span></div>
-        <div class="case-content">
-          <p><strong>The problem:</strong> Repository-aware coding workflows can depend on remote services, API credits, and hardware assumptions that do not fit every developer environment.</p>
-          <h3>Engineering approach</h3>
-          <p>Package a local-first Linux coding agent around the Codex CLI runtime and a project-managed Ollama service, with local model execution after installation.</p>
-          <ul><li>Provides interactive and non-interactive coding-agent workflows, review, and session resume commands.</li><li>Manages an Ollama runtime and a small default coding model for CPU-first hardware.</li><li>Keeps inference, repository inspection, edits, and local tools on the developer machine; network-backed tools remain optional.</li></ul>
-          <div class="case-stack"><span>Rust</span><span>Ollama</span><span>Linux</span><span>Shell</span></div>
-          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/JaySoft-LocalAI" target="_blank" rel="noopener">Source code ↗</a></div>
-        </div>
-      </article>
-      <article class="case-study" id="cloud-learnings">
-        <div class="case-meta"><span class="case-number">CASE 07 · ENGINEERING EDUCATION</span><h2>Cloud-Learnings</h2><span class="badge">Hands-on knowledge platform</span></div>
-        <div class="case-content">
-          <p><strong>The problem:</strong> Cloud and DevOps knowledge is fragmented across vendor documentation, videos, and disconnected tutorials. Engineers need a structured path that connects concepts to working labs.</p>
-          <h3>Engineering approach</h3>
-          <p>Organize vendor-neutral learning paths around cloud, DevOps, security, and SRE topics, supported by hands-on Docker labs and an advanced local cloud-lab platform.</p>
-          <ul><li>Includes progressive learning paths, cheatsheets, troubleshooting guides, and interview preparation.</li><li>Provides a simple Docker lab environment with reusable profiles and exercises.</li><li>Includes an advanced FastAPI backend and React dashboard with structured labs, validation, and grading.</li></ul>
-          <div class="case-stack"><span>Cloud</span><span>Docker</span><span>Kubernetes</span><span>FastAPI</span><span>React</span><span>SRE</span></div>
-          <div class="case-links"><a class="project-link" href="https://github.com/iamjpsonkar/Cloud-Learnings" target="_blank" rel="noopener">Source code ↗</a></div>
         </div>
       </article>
     </section>
