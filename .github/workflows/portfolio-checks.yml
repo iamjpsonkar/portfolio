@@ -32,44 +32,85 @@ jobs:
           node-version: "22"
 
       - name: Check JavaScript syntax
-        run: |
-          node --check js/portfolio-v2.js
-          node --check js/javascript.js
+        run: node --check js/portfolio-v2.js
 
-      - name: Validate HTML and XML
+      - name: Validate HTML, duplicate IDs, local links, and sitemap
         run: |
           python - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
+          from urllib.parse import unquote, urlsplit
           import xml.etree.ElementTree as ET
 
-          class HTMLCheck(HTMLParser):
-              def error(self, message):
-                  raise ValueError(message)
+          pages = [Path("index.html"), Path("projects.html"), Path("404.html"), Path("resume/index.html")]
 
-          for filename in ("index.html", "projects.html", "architecture.html", "resume/index.html"):
-              parser = HTMLCheck()
-              parser.feed(Path(filename).read_text(encoding="utf-8"))
+          class PageParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.ids = set()
+                  self.references = []
+                  self.errors = []
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  element_id = attrs.get("id")
+                  if element_id:
+                      if element_id in self.ids:
+                          self.errors.append(f"duplicate id: {element_id}")
+                      self.ids.add(element_id)
+                  for attribute in ("href", "src"):
+                      value = attrs.get(attribute)
+                      if value:
+                          self.references.append((tag, attribute, value))
+
+          parsed = {}
+          for page in pages:
+              parser = PageParser()
+              parser.feed(page.read_text(encoding="utf-8"))
               parser.close()
-              print(f"HTML parsed: {filename}")
+              if parser.errors:
+                  raise SystemExit(f"{page}: " + "; ".join(parser.errors))
+              parsed[page] = parser
+              print(f"HTML parsed: {page}")
 
-          ET.parse("sitemap.xml")
-          print("XML parsed: sitemap.xml")
-          PY
-
-      - name: Verify local navigation targets
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-
-          for filename in ("index.html", "projects.html", "resume/index.html"):
-              source = Path(filename).read_text(encoding="utf-8")
-              for target in re.findall(r'(?:href|src)="([^"]+)"', source):
-                  if target.startswith(("https://", "http://", "mailto:", "#", "data:")):
+          for page, parser in parsed.items():
+              for tag, attribute, raw in parser.references:
+                  parts = urlsplit(raw)
+                  if parts.scheme or parts.netloc or raw.startswith(("data:", "javascript:", "tel:")):
                       continue
-                  path = target.split("#", 1)[0].split("?", 1)[0]
-                  if path and not Path(filename).parent.joinpath(path).exists():
-                      raise SystemExit(f"{filename}: missing local target: {target}")
-          print("Local navigation targets look good.")
+                  if not parts.path:
+                      if parts.fragment and unquote(parts.fragment) not in parser.ids:
+                          raise SystemExit(f"{page}: missing fragment #{parts.fragment}")
+                      continue
+                  target = (page.parent / unquote(parts.path)).resolve()
+                  if target.is_dir():
+                      target = target / "index.html"
+                  if not target.is_file():
+                      raise SystemExit(f"{page}: missing local {attribute}: {raw}")
+                  if parts.fragment:
+                      target_page = Path(target.relative_to(Path.cwd()))
+                      target_parser = parsed.get(target_page)
+                      if target_parser is None:
+                          target_parser = PageParser()
+                          target_parser.feed(target.read_text(encoding="utf-8"))
+                          target_parser.close()
+                          parsed[target_page] = target_parser
+                      if unquote(parts.fragment) not in target_parser.ids:
+                          raise SystemExit(f"{page}: missing fragment in {target_page}: #{parts.fragment}")
+
+          sitemap = ET.parse("sitemap.xml").getroot()
+          sitemap_urls = {
+              node.text.strip()
+              for node in sitemap.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")
+              if node.text
+          }
+          expected_urls = {
+              "https://iamjpsonkar.github.io/portfolio/",
+              "https://iamjpsonkar.github.io/portfolio/projects.html",
+              "https://iamjpsonkar.github.io/portfolio/resume/",
+          }
+          missing_urls = expected_urls - sitemap_urls
+          if missing_urls:
+              raise SystemExit("Sitemap is missing: " + ", ".join(sorted(missing_urls)))
+          print("Local links, fragments, duplicate IDs, and sitemap look good.")
           PY
