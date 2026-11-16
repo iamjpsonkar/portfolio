@@ -7,7 +7,7 @@ Personal portfolio for Jay Prakash Sonkar, Software Development Engineer II at F
 ## What you'll find
 
 - Selected engineering projects: JSAT, PRView, PED Tools, DBMocker, LocalAI, and Cloud-Learnings
-- Dedicated project case studies in `projects.html` covering problem context, approach, and capabilities
+- Dedicated project case studies in `projects.html` covering problem context, approach, and capabilities, including LocalAI and Cloud-Learnings
 - High-level Mermaid architecture diagrams in `docs/ARCHITECTURE.md` for selected public projects and payment-platform contributions
 - Payment-platform impact and a concise career timeline
 - Recommendations, contact links, and résumé
@@ -31,6 +31,8 @@ Open http://localhost:4173/ when running inside this repository.
 - `projects.html` — long-form engineering case studies
 - `architecture.html` — rendered system diagrams
 - `docs/ARCHITECTURE.md` — editable Mermaid diagram source and architecture notes
+- `scripts/check_site.py` — HTML, metadata, local-link, image-alt, and sitemap checks
+- `resume/print.js` — résumé print action
 - `resume/` — detailed résumé
 - `robots.txt`, `sitemap.xml`, `site.webmanifest` — crawler and install metadata
 - `images/`, `img/` — visual assets
@@ -40,22 +42,11 @@ Open http://localhost:4173/ when running inside this repository.
 ```bash
 node --check js/portfolio-v2.js
 node --check js/javascript.js
-python3 - <<'PY'
-from html.parser import HTMLParser
-from pathlib import Path
-
-class Checker(HTMLParser):
-    pass
-
-for path in (Path("index.html"), Path("resume/index.html")):
-    parser = Checker()
-    parser.feed(path.read_text(encoding="utf-8"))
-    parser.close()
-    print(f"Parsed: {path}")
-PY
+node --check resume/print.js
+python3 scripts/check_site.py
 ```
 
-This is a static GitHub Pages project. Updates to the publishing branch are served by GitHub Pages.
+The same checks run in GitHub Actions for pull requests targeting `main`.
 
 ## Attribution
 
