@@ -107,8 +107,10 @@ def main():
                 errors.append(f"{filename}: missing {tag} {attribute}: {reference}")
             if target is not None and target.suffix.lower() == ".css" and target.is_file():
                 stylesheets.add(target)
-            fragment = urlsplit(reference).fragment
-            if fragment and (target is None or target.suffix.lower() in ("", ".html", ".htm")):
+            parsed_reference = urlsplit(reference)
+            is_local_reference = not parsed_reference.scheme and not parsed_reference.netloc and not reference.startswith("//")
+            fragment = parsed_reference.fragment
+            if is_local_reference and fragment and (target is None or target.suffix.lower() in ("", ".html", ".htm")):
                 audits.setdefault(filename + "::fragments", []).append((target, unquote(fragment), reference))
 
     for key, fragments in list(audits.items()):
